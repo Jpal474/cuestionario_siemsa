@@ -1,0 +1,99 @@
+{% extends 'base2.html'%}
+{%block title %}Ad - Investigación{% endblock title %}
+{%block text%} Investigación {% endblock text%}
+{%block body%}
+<table class="table table-hover">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Pregunta</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+          <th scope="col"> # Respuestas</th>
+          <th scope="col">Editar</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>
+            <button type="button" class="btn btn-primary" ><ion-icon name="create-outline"></ion-icon></button>
+
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger"><ion-icon name="trash-outline"></ion-icon></button>
+          </td>
+          <td>
+            2
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><ion-icon name="create-outline"></ion-icon></button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><ion-icon name="trash-outline"></ion-icon></button>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Mark</td>
+          <td>
+            <button type="button" class="btn btn-primary"><ion-icon name="create-outline"></ion-icon></button>
+
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger"><ion-icon name="trash-outline"></ion-icon></button>
+          </td>
+          <td>
+            3
+          </td>
+          <td>
+            <button type="button" class="btn btn-primary"><ion-icon name="create-outline"></ion-icon></button>
+
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger"><ion-icon name="trash-outline"></ion-icon></button>
+
+          </td>
+        </tr>
+    
+  </table>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <style>
+      .table{
+          width: 93%;
+        position: absolute; 
+        top: 20%;
+         left: 6.5%; 
+         overflow-x: hidden;
+         background-color: var(--sidebar-color);
+         color: var(--primary-color);
+      }
+      .table-hover tbody tr:hover td{ 
+    background:var(--primary-color);
+      }
+      .table-hover tbody tr:hover th{ 
+    background:var(--primary-color);
+      }
+  </style>
+{%endblock body%}    

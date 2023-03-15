@@ -1,0 +1,245 @@
+{% extends 'base.html'%}
+{% block title %} Integracion Tecnologica {% endblock title%}
+
+{%block text%}Llene las siguientes preguntas{%endblock text%}
+{% block body%}
+<div class="wrapper">
+  <div class="form-box login">
+    <h2>Integracion Tecnologica</h2>
+    <form action="#">
+      <div  id ="div_investigacion" class="input-box">
+        <p>¿Cuenta con un grupo de investigación que pueda facilitar la evaluación inicial de factibilidad de la tecnología?</p>
+        <label>
+        <input type="radio" class="res" id="input_investigacion" name="investigacion" required onclick="javascript:activar_desactivar('investigacion');">
+         Sí
+        </label>
+        <label><input type="radio" id="input_investigacion2" class="res"  name="investigacion" required onclick="javascript:activar_desactivar('investigacion');">
+        No
+        </label>
+      </div>
+      <div id ="div_evidencia"class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
+      <label>
+      <input type="radio" name="evidencia_investigacion" class="res" required>
+       Sí
+      </label>
+      <label><input type="radio" name="evidencia_investigacion" class="res" required>
+      No
+      </label>
+      </div>
+      <div  id ="div_componentes" class="input-box">
+        <p>¿Tiene identificados todos los componentes de su invención tecnológica?</p>
+        <label>
+        <input id="input_componentes" type="radio" class="res" name="componentes" required onclick="javascript:activar_desactivar('componentes');">
+         Sí
+        </label>
+        <label><input id="input_componentes2" type="radio" class="res" name="componentes" required  onclick="javascript:activar_desactivar('componentes');">
+        No
+        </label>
+      </div>
+      <div  id="div_evidencia_componentes" class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
+        <label>
+        <input type="radio" class="res" name="evidencia_componentes" required>
+         Sí
+        </label>
+        <label><input type="radio" class="res" name="evidencia_componentes" required>
+        No
+        </label>
+      </div>
+      <div id="div_integracion_componentes" class="input-box">
+        <p>¿Ha integrado los componentes principales de su invención tecnológica?</p>
+        <label>
+        <input id="input_integracion_componentes" type="radio" class="res" name="integracion_componentes" required onclick="javascript:activar_desactivar('integracion_componentes');">
+         Sí
+        </label>
+        <label><input id="input_integracion_componentes2" type="radio" class="res" name="integracion_componentes" required onclick="javascript:activar_desactivar('integracion_componentes');">
+        No
+        </label>
+      </div>
+      <div  id="div_evidencia_integracion_componentes" class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+    <label>
+    <input type="radio" class="res" name="evidencia_integracion_componentes" required>
+     Sí
+    </label>
+    <label><input type="radio" class="res" name="evidencia_integracion_componentes" required>
+    No
+    </label>
+  </div>
+  
+  
+<div id="div_producto" class="input-box" style="position: absolute; top:13%; left: 52%;">
+    <p>¿Tiene alineado el nuevo producto con las tecnologías de producción?</p>
+    <label>
+    <input id="input_producto" type="radio" class="res" name="producto" required onclick="javascript:activar_desactivar('producto');">
+     Sí
+    </label>
+    <label><input id="input_producto2" type="radio" class="res" name="producto" required onclick="javascript:activar_desactivar('producto');">
+    No
+    </label>
+  </div>
+  <div  id="div_evidencia_producto" class="input-box" style="position: absolute; top: 28%; left: 52%;">
+    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+<label>
+<input type="radio" class="res" name="evidencia_producto" required>
+ Sí
+</label>
+<label><input type="radio" class="res" name="evidencia_producto" required>
+No
+</label>
+</div>
+
+  <button type="submit" class="btn">Registrar</button>
+    </form>
+  </div>
+  
+  </div>
+<img src="https://media.discordapp.net/attachments/713043245214597160/1082373330776105060/Mi_proyecto.png?width=619&height=413" class="img"> 
+
+<script>
+  function activar_desactivar(dato){
+  switch(dato){
+  case "investigacion":
+  if(document.getElementById('input_investigacion').checked){
+    document.getElementById('div_evidencia').style.display="block";
+    document.getElementById('div_principios').style.display="block";
+  }
+  else{
+    if(document.getElementById('input_investigacion2').checked){
+    document.getElementById('div_evidencia').style.display="none";
+    document.getElementById('div_principios').style.display="none";
+  }
+  }
+  break;
+  case "principios":
+  if(document.getElementById('input_principios').checked){
+    document.getElementById('div_evidencia_principios').style.display="block";
+  }
+  else{
+    if(document.getElementById('input_principios2').checked){
+    document.getElementById('div_evidencia_principios').style.display="none";
+  }
+  }
+  break;
+  case "analisis":
+    if(document.getElementById('input_analisis').checked){
+      document.getElementById('div_evidencia_analisis').style.display="block";
+    }
+    else{
+      if(document.getElementById('input_analisis2')){
+      document.getElementById('div_evidencia_analisis').style.display="none";
+    }
+    }
+    break;
+  
+  }
+  
+  }
+  
+  </script>
+
+
+
+<style>
+.wrapper{
+            width: 1100px;
+            height: 680px;
+            background: transparent;
+            border: 8px solid #d49d11;
+            position: relative;
+            margin: -25px 0 0 -25px;
+           
+            backdrop-filter: blur(15px);
+            box-shadow: 20px 20px 20px 0px rgba(0, 0, 0,.9);
+            top:15%;
+            left: 8%;
+           /*display: flex;
+           justify-content: center;
+           align-items: center;*/
+           margin-bottom: 10px;
+  
+           
+        }
+        .wrapper .form-box{
+            width: 100%;
+            padding: 40px;
+        }
+        
+        .form-box h2{
+          font-size: 2em;
+          color: white;
+          text-align: center;
+
+        }
+        #div_evidencia, #div_principios, #div_evidencia_principios, #div_evidencia_analisis{
+          display: none;
+        }
+         
+        .input-box{
+    width: 500px;
+   border-radius: 10px;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid #d49d11;
+    border-top: 2px solid #d49d11;
+    margin-bottom: 10px;
+                
+                
+            }
+      .res{
+        margin-bottom: 15px;
+      }
+
+        
+        
+       
+         .input-box p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+            }
+  .input-box label{
+    display: line;
+  position: relative;
+  left: 30%;
+  margin-right:10px ;
+  
+  border-bottom: 2px solid #d49d11;
+  margin-bottom: 20px;
+  }
+
+  
+      
+        .btn{
+          width: 30%;
+          height: 45px;
+          background: #162938;
+          border: none;
+          outline:none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 1em;
+          color:#fff;
+          font-weight: 500;
+          margin-top: 10px;
+          
+        }
+        .img{
+          position: absolute;
+          top: 30%;
+          left: 40%;
+        }
+        
+    </style>
+    
+
+</style>
+           
+      
+
+ 
+ 
+
+
+{%endblock body%}

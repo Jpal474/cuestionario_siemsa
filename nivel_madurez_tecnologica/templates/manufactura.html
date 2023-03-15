@@ -1,0 +1,321 @@
+{% extends 'base.html'%}
+{% block title %} Manufactura {% endblock title%}
+
+{%block text%}Llene las siguientes preguntas{%endblock text%}
+{% block body%}
+<div class="wrapper">
+  <div class="form-box login">
+    <h2>Manufactura</h2>
+    <form action="#">
+      <div  id ="div_manufacturabilidad" class="input-box">
+        <p>¿Ha explorado principios básicos de manufacturabilidad?</p>
+        <label>
+        <input type="radio" class="res" id="input_manufacturabilidad" name="manufacturabilidad" required onclick="javascript:activar_desactivar('manufacturabilidad');">
+         Sí
+        </label>
+        <label><input type="radio" id="input_manufacturabilidad" class="res"  name="manufacturabilidad" required onclick="javascript:activar_desactivar('manufacturabilidad');">
+        No
+        </label>
+      </div>
+      <div id ="div_evidencia"class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
+      <label>
+      <input type="radio" name="evidencia_manufacturabilidad" class="res" required>
+       Sí
+      </label>
+      <label><input type="radio" name="evidencia_manufacturabilidad" class="res" required>
+      No
+      </label>
+      </div>
+      <div  id ="div_exploracion" class="input-box">
+        <p>¿Ha explorado con mayor profundidad aspectos / certificaciones de manufacturabilidad relacionados con el desarrollo de su invención tecnológica? </p>
+        <label>
+        <input id="input_exploracion" type="radio" class="res" name="exploracion" required onclick="javascript:activar_desactivar('exploracion');">
+         Sí
+        </label>
+        <label><input id="input_exploracion2" type="radio" class="res" name="exploracion" required  onclick="javascript:activar_desactivar('exploracion');">
+        No
+        </label>
+      </div>
+      <div  id="div_evidencia_exploracion" class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
+        <label>
+        <input type="radio" class="res" name="evidencia_exploracion" required>
+         Sí
+        </label>
+        <label><input type="radio" class="res" name="evidencia_exploracion" required>
+        No
+        </label>
+      </div>
+      <div id="div_aspectos" class="input-box">
+        <p>¿Tiene plenamente identificados y considerados aspectos de manufacturabilidad del futuro producto?</p>
+        <label>
+        <input id="input_aspectos" type="radio" class="res" name="aspectos" required onclick="javascript:activar_desactivar('aspectos');">
+         Sí
+        </label>
+        <label><input id="input_aspectos2" type="radio" class="res" name="aspectos" required onclick="javascript:activar_desactivar('aspectos');">
+        No
+        </label>
+      </div>
+      <div  id="div_evidencia_aspectos" class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+    <label>
+    <input type="radio" class="res" name="evidencia_aspectos" required>
+     Sí
+    </label>
+    <label><input type="radio" class="res" name="evidencia_aspectos" required>
+    No
+    </label>
+  </div>
+  <div  id ="div_piloto" class="input-box">
+    <p>¿Tiene integradas las tecnologías de producto y manufactura en una planta piloto? (considerando todos los aspectos de manufacturabilidad)</p>
+    <label>
+    <input id="input_piloto" type="radio" class="res" name="piloto" required onclick="javascript:activar_desactivar('piloto');">
+     Sí
+    </label>
+    <label><input id="input_piloto2" type="radio" class="res" name="piloto" required  onclick="javascript:activar_desactivar('piloto');">
+    No
+    </label>
+  </div>
+  <div  id="div_evidencia_piloto" class="input-box">
+    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+<label>
+<input type="radio" class="res" name="evidencia_piloto" required>
+ Sí
+</label>
+<label><input type="radio" class="res" name="evidencia_piloto" required>
+No
+</label>
+</div>
+<div  id ="div_producto_comercializable" class="input-box2">
+    <p>¿Cuenta con un proceso de manufactura operacional en baja escala? (produciendo productos comerciales)</p>
+    <label>
+    <input id="input_producto" type="radio" class="res" name="producto" required onclick="javascript:activar_desactivar('producto');">
+     Sí
+    </label>
+    <label><input id="input_producto2" type="radio" class="res" name="producto" required  onclick="javascript:activar_desactivar('producto');">
+    No
+    </label>
+  </div>
+  <div  id="div_evidencia_producto" class="input-box2" style="top:23%">
+    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+<label>
+<input type="radio" class="res" name="evidencia_producto" required>
+ Sí
+</label>
+<label><input type="radio" class="res" name="evidencia_producto" required>
+No
+</label>
+</div>
+<div  id ="div_version" class="input-box2" style="top:31.5%">
+    <p>¿Se encuentra manufacturando el producto en su versión final?</p>
+    <label>
+    <input id="input_version" type="radio" class="res" name="version" required onclick="javascript:activar_desactivar('version');">
+     Sí
+    </label>
+    <label><input id="input_version2" type="radio" class="res" name="version" required  onclick="javascript:activar_desactivar('version');">
+    No
+    </label>
+  </div>
+  <div  id="div_evidencia_version" class="input-box2" style="top:44%">
+    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+<label>
+<input type="radio" class="res" name="evidencia_version" required>
+ Sí
+</label>
+<label><input type="radio" class="res" name="evidencia_version" required>
+No
+</label>
+</div>
+<div  id ="div_procesos_manufactura" class="input-box2" style="top:53%">
+    <p>¿Los procesos de manufactura y producción son optimizados a través de innovaciones incrementales?</p>
+    <label>
+    <input id="input_procesos" type="radio" class="res" name="procesos" required onclick="javascript:activar_desactivar('procesos');">
+     Sí
+    </label>
+    <label><input id="input_procesos2" type="radio" class="res" name="procesos" required  onclick="javascript:activar_desactivar('procesos');">
+    No
+    </label>
+  </div>
+  <div  id="div_evidencia_procesos" class="input-box2" style="top:66%">
+    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+<label>
+<input type="radio" class="res" name="evidencia_procesos" required>
+ Sí
+</label>
+<label><input type="radio" class="res" name="evidencia_procesos" required>
+No
+</label>
+</div>
+
+  <button type="submit" class="btn">Registrar</button>
+    </form>
+  </div>
+  
+  </div>
+<img src="https://media.discordapp.net/attachments/713043245214597160/1084673488591265792/hourglass.png?width=413&height=413" class="img"> 
+
+<script>
+  function activar_desactivar(dato){
+  switch(dato){
+  case "investigacion":
+  if(document.getElementById('input_investigacion').checked){
+    document.getElementById('div_evidencia').style.display="block";
+    document.getElementById('div_principios').style.display="block";
+  }
+  else{
+    if(document.getElementById('input_investigacion2').checked){
+    document.getElementById('div_evidencia').style.display="none";
+    document.getElementById('div_principios').style.display="none";
+  }
+  }
+  break;
+  case "principios":
+  if(document.getElementById('input_principios').checked){
+    document.getElementById('div_evidencia_principios').style.display="block";
+  }
+  else{
+    if(document.getElementById('input_principios2').checked){
+    document.getElementById('div_evidencia_principios').style.display="none";
+  }
+  }
+  break;
+  case "analisis":
+    if(document.getElementById('input_analisis').checked){
+      document.getElementById('div_evidencia_analisis').style.display="block";
+    }
+    else{
+      if(document.getElementById('input_analisis2')){
+      document.getElementById('div_evidencia_analisis').style.display="none";
+    }
+    }
+    break;
+  
+  }
+  
+  }
+  
+  </script>
+
+
+
+<style>
+.wrapper{
+            width: 1100px;
+            height: 850px;
+            background: transparent;
+            border: 8px solid #d49d11;
+            position: relative;
+            margin: -25px 0 0 -25px;
+           
+            backdrop-filter: blur(15px);
+            box-shadow: 20px 20px 20px 0px rgba(0, 0, 0,.9);
+            top:15%;
+            left: 8%;
+           /*display: flex;
+           justify-content: center;
+           align-items: center;*/
+           margin-bottom: 10px;
+  
+           
+        }
+        .wrapper .form-box{
+            width: 100%;
+            padding: 40px;
+        }
+        
+        .form-box h2{
+          font-size: 2em;
+          color: white;
+          text-align: center;
+
+        }
+        #div_evidencia, #div_principios, #div_evidencia_principios, #div_evidencia_analisis{
+          display: none;
+        }
+         
+        .input-box{
+    width: 500px;
+   border-radius: 10px;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid #d49d11;
+    border-top: 2px solid #d49d11;
+    margin-bottom: 10px;
+                
+                
+            }
+    .input-box2{
+    position: absolute;
+    top:10.8%; 
+    left: 50%;
+    
+     margin-left: 10px;
+     width: 500px;
+   border-radius: 10px;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid #d49d11;
+    border-top: 2px solid #d49d11;
+    margin-bottom: 10px;
+    }
+      .res{
+        margin-bottom: 15px;
+      }
+
+        
+        
+       
+         .input-box p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+            }
+  .input-box label{
+    display: line;
+  position: relative;
+  left: 30%;
+  margin-right:10px ;
+  
+  border-bottom: 2px solid #d49d11;
+  margin-bottom: 20px;
+  }
+
+  
+      
+        .btn{
+          width: 30%;
+          height: 45px;
+          background: #162938;
+          border: none;
+          outline:none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 1em;
+          color:#fff;
+          font-weight: 500;
+          margin-top: 10px;
+          position: absolute;
+          bottom: 14%;
+          right:10% ;
+          
+        }
+        .img{
+          position: absolute;
+          top: 140%;
+          right:10% ;
+          width: 150px;
+        }
+        
+    </style>
+    
+
+</style>
+           
+      
+
+ 
+ 
+
+
+{%endblock body%}

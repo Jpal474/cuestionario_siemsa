@@ -1,0 +1,320 @@
+{% extends 'base.html'%}
+{% block title %} Desarrollo del Producto {% endblock title%}
+
+{%block text%}Llene las siguientes preguntas{%endblock text%}
+{% block body%}
+<div class="wrapper">
+  <div class="form-box login">
+    <h2>Desarrollo del Producto</h2>
+    <form action="#">
+      <div  id ="div_pruebas" class="input-box">
+        <p>¿Ha realizado pruebas de validación de efectividad de su invención en laboratorio?</p>
+        <label>
+        <input type="radio" class="res" id="input_pruebas" name="pruebas" required onclick="javascript:activar_desactivar('pruebas');">
+         Sí
+        </label>
+        <label><input type="radio" id="input_pruebas" class="res"  name="pruebas" required onclick="javascript:activar_desactivar('pruebas');">
+        No
+        </label>
+      </div>
+      <div id ="div_evidencia"class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
+      <label>
+      <input type="radio" name="evidencia_pruebas" class="res" required>
+       Sí
+      </label>
+      <label><input type="radio" name="evidencia_pruebas" class="res" required>
+      No
+      </label>
+      </div>
+      <div  id ="div_riesgos" class="input-box">
+        <p>¿Identificó los riesgos tecnológicos de mercado y financieros con un plan de mitigación de los mismos?</p>
+        <label>
+        <input id="input_riesgos" type="radio" class="res" name="riesgos" required onclick="javascript:activar_desactivar('riesgos');">
+         Sí
+        </label>
+        <label><input id="input_riesgos2" type="radio" class="res" name="riesgos" required  onclick="javascript:activar_desactivar('riesgos');">
+        No
+        </label>
+      </div>
+      <div  id="div_evidencia_riesgos" class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
+        <label>
+        <input type="radio" class="res" name="evidencia_riesgos" required>
+         Sí
+        </label>
+        <label><input type="radio" class="res" name="evidencia_riesgos" required>
+        No
+        </label>
+      </div>
+      <div id="div_prototipo" class="input-box">
+        <p>¿Ha probado su prototipo en laboratorio en condiciones de un ambiente real?</p>
+        <label>
+        <input id="input_prototipo" type="radio" class="res" name="prototipo" required onclick="javascript:activar_desactivar('prototipo');">
+         Sí
+        </label>
+        <label><input id="input_prototipo2" type="radio" class="res" name="prototipo" required onclick="javascript:activar_desactivar('prototipo');">
+        No
+        </label>
+      </div>
+      <div  id="div_evidencia_prototipo" class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+    <label>
+    <input type="radio" class="res" name="evidencia_prototipo" required>
+     Sí
+    </label>
+    <label><input type="radio" class="res" name="evidencia_prototipo" required>
+    No
+    </label>
+  </div>
+  <div  id ="div_producto" class="input-box">
+    <p>¿Cuenta con un producto terminado para prueba de primeros clientes?</p>
+    <label>
+    <input id="input_producto" type="radio" class="res" name="producto" required onclick="javascript:activar_desactivar('producto');">
+     Sí
+    </label>
+    <label><input id="input_producto2" type="radio" class="res" name="producto" required  onclick="javascript:activar_desactivar('producto');">
+    No
+    </label>
+  </div>
+  <div  id="div_evidencia_producto" class="input-box">
+    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+<label>
+<input type="radio" class="res" name="evidencia_producto" required>
+ Sí
+</label>
+<label><input type="radio" class="res" name="evidencia_producto" required>
+No
+</label>
+</div>
+<div  id ="div_producto_comercializable" class="input-box2">
+    <p>¿Tiene un producto comercializable?</p>
+    <label>
+    <input id="input_producto" type="radio" class="res" name="producto" required onclick="javascript:activar_desactivar('producto');">
+     Sí
+    </label>
+    <label><input id="input_producto2" type="radio" class="res" name="producto" required  onclick="javascript:activar_desactivar('producto');">
+    No
+    </label>
+  </div>
+  <div  id="div_evidencia_producto" class="input-box2" style="top:23%">
+    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+<label>
+<input type="radio" class="res" name="evidencia_producto" required>
+ Sí
+</label>
+<label><input type="radio" class="res" name="evidencia_producto" required>
+No
+</label>
+</div>
+<div  id ="div_producto_comercializable" class="input-box2" style="top:33.5%">
+    <p>¿Cuenta con producción sostenida?</p>
+    <label>
+    <input id="input_producto" type="radio" class="res" name="producto" required onclick="javascript:activar_desactivar('producto');">
+     Sí
+    </label>
+    <label><input id="input_producto2" type="radio" class="res" name="producto" required  onclick="javascript:activar_desactivar('producto');">
+    No
+    </label>
+  </div>
+  <div  id="div_evidencia_producto" class="input-box2" style="top:44%">
+    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+<label>
+<input type="radio" class="res" name="evidencia_producto" required>
+ Sí
+</label>
+<label><input type="radio" class="res" name="evidencia_producto" required>
+No
+</label>
+</div>
+<div  id ="div_producto_comercializable" class="input-box2" style="top:55%">
+    <p>¿Cuenta con cambios incrementales de producto que le lleven a crear nuevas versiones?</p>
+    <label>
+    <input id="input_producto" type="radio" class="res" name="producto" required onclick="javascript:activar_desactivar('producto');">
+     Sí
+    </label>
+    <label><input id="input_producto2" type="radio" class="res" name="producto" required  onclick="javascript:activar_desactivar('producto');">
+    No
+    </label>
+  </div>
+  <div  id="div_evidencia_producto" class="input-box2" style="top:69%">
+    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+<label>
+<input type="radio" class="res" name="evidencia_producto" required>
+ Sí
+</label>
+<label><input type="radio" class="res" name="evidencia_producto" required>
+No
+</label>
+</div>
+
+  <button type="submit" class="btn">Registrar</button>
+    </form>
+  </div>
+  
+  </div>
+<img src="https://media.discordapp.net/attachments/713043245214597160/1084673488591265792/hourglass.png?width=413&height=413" class="img"> 
+
+<script>
+  function activar_desactivar(dato){
+  switch(dato){
+  case "investigacion":
+  if(document.getElementById('input_investigacion').checked){
+    document.getElementById('div_evidencia').style.display="block";
+    document.getElementById('div_principios').style.display="block";
+  }
+  else{
+    if(document.getElementById('input_investigacion2').checked){
+    document.getElementById('div_evidencia').style.display="none";
+    document.getElementById('div_principios').style.display="none";
+  }
+  }
+  break;
+  case "principios":
+  if(document.getElementById('input_principios').checked){
+    document.getElementById('div_evidencia_principios').style.display="block";
+  }
+  else{
+    if(document.getElementById('input_principios2').checked){
+    document.getElementById('div_evidencia_principios').style.display="none";
+  }
+  }
+  break;
+  case "analisis":
+    if(document.getElementById('input_analisis').checked){
+      document.getElementById('div_evidencia_analisis').style.display="block";
+    }
+    else{
+      if(document.getElementById('input_analisis2')){
+      document.getElementById('div_evidencia_analisis').style.display="none";
+    }
+    }
+    break;
+  
+  }
+  
+  }
+  
+  </script>
+
+
+
+<style>
+.wrapper{
+            width: 1100px;
+            height: 740px;
+            background: transparent;
+            border: 8px solid #d49d11;
+            position: relative;
+            margin: -25px 0 0 -25px;
+           
+            backdrop-filter: blur(15px);
+            box-shadow: 20px 20px 20px 0px rgba(0, 0, 0,.9);
+            top:15%;
+            left: 8%;
+           /*display: flex;
+           justify-content: center;
+           align-items: center;*/
+           margin-bottom: 10px;
+  
+           
+        }
+        .wrapper .form-box{
+            width: 100%;
+            padding: 40px;
+        }
+        
+        .form-box h2{
+          font-size: 2em;
+          color: white;
+          text-align: center;
+
+        }
+        #div_evidencia, #div_principios, #div_evidencia_principios, #div_evidencia_analisis{
+          display: none;
+        }
+         
+        .input-box{
+    width: 500px;
+   border-radius: 10px;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid #d49d11;
+    border-top: 2px solid #d49d11;
+    margin-bottom: 10px;
+                
+                
+            }
+    .input-box2{
+    position: absolute;
+    top:12.8%; 
+    left: 50%;
+     margin-left: 10px;
+     width: 500px;
+   border-radius: 10px;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid #d49d11;
+    border-top: 2px solid #d49d11;
+    margin-bottom: 10px;
+    }
+      .res{
+        margin-bottom: 15px;
+      }
+
+        
+        
+       
+         .input-box p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+            }
+  .input-box label{
+    display: line;
+  position: relative;
+  left: 30%;
+  margin-right:10px ;
+  
+  border-bottom: 2px solid #d49d11;
+  margin-bottom: 20px;
+  }
+
+  
+      
+        .btn{
+          width: 30%;
+          height: 45px;
+          background: #162938;
+          border: none;
+          outline:none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 1em;
+          color:#fff;
+          font-weight: 500;
+          margin-top: 10px;
+          position: absolute;
+          bottom: 14%;
+          right:10% ;
+          
+        }
+        .img{
+          position: absolute;
+          top: 120%;
+          right:10% ;
+          width: 150px;
+        }
+        
+    </style>
+    
+
+</style>
+           
+      
+
+ 
+ 
+
+
+{%endblock body%}
