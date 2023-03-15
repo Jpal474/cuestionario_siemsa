@@ -29,6 +29,7 @@ urlpatterns = [
     path('inicio/', views.inicio, name="inicio"),
     path('guardar_registro/', views.guardar_registro, name="guardar_registro"),
     path('investigacion/', views.investigación, name="investigacion"),
+    path('guardar_investigacion/', views.guardar_investigacion, name="guardar_investigacion"),
     path('desarrollo/', views.desarrollo, name="desarrollo"), 
     path('integracion_tecnologica/', views.integracion, name="integracion"),
     path('propiedad_intelectual/', views.propiedad, name="propiedad"),

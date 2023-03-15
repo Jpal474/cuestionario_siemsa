@@ -27,12 +27,30 @@ def guardar_registro(request):
 def investigación(request):
     return render(request, 'investigacion.html')
 
-#def guardar_investigacion(request):
+def guardar_investigacion(request):
+    investigacion=Respuestas_Investigacion()
+    investigacion.respuesta1_1=request.POST.get('investigacion')
+    investigacion.evidencia1_1=request.POST.get('evidencia_investigacion')
+    investigacion.respuesta1_2=request.POST.get('principios')
+    investigacion.evidencia1_2=request.POST.get('evidencia_principios')
+    investigacion.respuesta2_1=request.POST.get('analisis')
+    investigacion.evidencia2_1=request.POST.get('evidencia_analisis')
+    investigacion.save()
+    return redirect ('desarrollo')
 
 def desarrollo(request):
     return render(request, 'desarrollo.html')
 
-#def guardar_desarrollo(request): 
+def guardar_desarrollo(request): 
+    desarrollo=Respuestas_Desarrollo()
+    desarrollo.respuesta1_1=request.POST.get('desarrollo')
+    desarrollo.evidencia1_1=request.POST.get('evidencia_desarrollo')
+    desarrollo.respuesta1_2=request.POST.get('principios')
+    desarrollo.evidencia1_2=request.POST.get('evidencia_principios')
+    desarrollo.respuesta2_1=request.POST.get('analisis')
+    desarrollo.evidencia2_1=request.POST.get('evidencia_analisis')
+    desarrollo.save()
+    return redirect ('desarrollo')
 
 def integracion(request):
     return render(request, 'integracion.html')
