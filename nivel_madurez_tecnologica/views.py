@@ -74,12 +74,28 @@ def desarrollo(request):
 
 def guardar_desarrollo(request): 
     desarrollo=Respuestas_Desarrollo()
-    desarrollo.respuesta1_1=request.POST.get('desarrollo')
-    desarrollo.evidencia1_1=request.POST.get('evidencia_desarrollo')
-    desarrollo.respuesta1_2=request.POST.get('principios')
-    desarrollo.evidencia1_2=request.POST.get('evidencia_principios')
-    desarrollo.respuesta2_1=request.POST.get('analisis')
-    desarrollo.evidencia2_1=request.POST.get('evidencia_analisis')
+    desarrollo.respuesta4_2=request.POST.get('pruebas')
+    desarrollo.evidencia4_2=request.POST.get('evidencia_pruebas')
+    desarrollo.respuesta4_5=request.POST.get('invencion')
+    desarrollo.evidencia4_5=request.POST.get('evidencia_inv')
+    desarrollo.respuesta4_6=request.POST.get('riesgos')
+    desarrollo.evidencia4_6=request.POST.get('evidencia_riesgos')
+    desarrollo.respuesta5_1=request.POST.get('prototipo')
+    desarrollo.evidencia5_1=request.POST.get('evidencia_prototipo')
+    desarrollo.respuesta6=request.POST.get('prototipo_sistema')
+    desarrollo.evidencia6=request.POST.get('evidencia_producto_sistema')
+    desarrollo.respuesta7_4=request.POST.get('producto')
+    desarrollo.evidencia7_4=request.POST.get('evidencia_producto')
+    desarrollo.respuesta8_2=request.POST.get('producto_comercializable')
+    desarrollo.evidencia8_2=request.POST.get('evidencia_producto_comercializable')
+    desarrollo.respuesta9_1=request.POST.get('produccion')
+    desarrollo.evidencia9_1=request.POST.get('evidencia_produccion')
+    desarrollo.respuesta9_3=request.POST.get('cambios')
+    desarrollo.evidencia9_3=request.POST.get('evidencia_cambios')
+
+
+    
+     
     desarrollo.save()
     return redirect ('desarrollo')
 
