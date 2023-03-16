@@ -13,17 +13,37 @@
         <input type="radio" class="res" id="input_pruebas" name="pruebas"  value="Sí" required onclick="javascript:activar_desactivar('pruebas');">
          Sí
         </label>
-        <label><input type="radio" id="input_pruebas" class="res"  name="pruebas" value="No"  required onclick="javascript:activar_desactivar('pruebas');">
+        <label><input type="radio" id="input_pruebas1" class="res"  name="pruebas" value="No"  required onclick="javascript:activar_desactivar('pruebas');">
         No
         </label>
       </div>
-      <div id ="div_evidencia"class="input-box">
+      <div id ="div_evidencia_pruebas"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
       <input type="radio" name="evidencia_pruebas" class="res" value="Sí" required>
        Sí
       </label>
       <label><input type="radio" name="evidencia_pruebas" class="res" value="No"  required>
+      No
+      </label>
+      </div>
+      <div  id ="div_invencion" class="input-box">
+        <p>¿Su invencion tecnologica funciona a nivel laboratorio?</p>
+        <label>
+        <input type="radio" class="res" id="input_inven1" name="invencion"  value="Sí" required onclick="javascript:activar_desactivar('invencion');">
+         Sí
+        </label>
+        <label><input type="radio"  id="input_inven2" class="res"  name="invencion" value="No"  required onclick="javascript:activar_desactivar('invencion');">
+        No
+        </label>
+      </div>
+      <div id ="div_evidencia_invencion"class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
+      <label>
+      <input type="radio" name="evidencia_inv" class="res" value="Sí" required>
+       Sí
+      </label>
+      <label><input type="radio" name="evidencia_inv" class="res" value="No"  required>
       No
       </label>
       </div>
@@ -158,25 +178,26 @@ No
 <script>
   function activar_desactivar(dato){
   switch(dato){
-  case "investigacion":
-  if(document.getElementById('input_investigacion').checked){
-    document.getElementById('div_evidencia').style.display="block";
-    document.getElementById('div_principios').style.display="block";
+  case "pruebas":
+  if(document.getElementById('input_pruebas').checked){
+    document.getElementById('div_evidencia_pruebas').style.display="block";
+    document.getElementById('div_invencion').style.display="block";
+    
   }
   else{
-    if(document.getElementById('input_investigacion2').checked){
-    document.getElementById('div_evidencia').style.display="none";
-    document.getElementById('div_principios').style.display="none";
+    if(document.getElementById('input_pruebas1').checked){
+    document.getElementById('div_evidencia_pruebas').style.display="none";
+    document.getElementById('div_invencion').style.display="none";
   }
   }
   break;
-  case "principios":
-  if(document.getElementById('input_principios').checked){
-    document.getElementById('div_evidencia_principios').style.display="block";
+  case "invencion":
+  if(document.getElementById('input_inven1').checked){
+    document.getElementById('div_evidencia_invencion').style.display="block";
   }
   else{
-    if(document.getElementById('input_principios2').checked){
-    document.getElementById('div_evidencia_principios').style.display="none";
+    if(document.getElementById('input_inven2').checked){
+    document.getElementById('div_evidencia_invencion').style.display="none";
   }
   }
   break;
@@ -202,7 +223,7 @@ No
 <style>
 .wrapper{
             width: 1100px;
-            height: 740px;
+            height: 1140px;
             background: transparent;
             border: 8px solid #d49d11;
             position: relative;
@@ -301,11 +322,14 @@ No
         }
         .img{
           position: absolute;
-          top: 120%;
+          top: 185%;
           right:10% ;
-          width: 150px;
+          width: 120px;
         }
         
+        #div_evidencia_pruebas, #div_invencion, #div_evidencia_invencion{
+          display: none;
+        }
     </style>
     
 

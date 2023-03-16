@@ -29,6 +29,8 @@ def investigación(request):
 
 def guardar_investigacion(request):
     investigacion=Respuestas_Investigacion()
+    evalu=0
+    evalu1=0
     investigacion.respuesta1_1=request.POST.get('investigacion')
     investigacion.evidencia1_1=request.POST.get('evidencia_investigacion')
     investigacion.respuesta1_2=request.POST.get('principios')
@@ -36,6 +38,35 @@ def guardar_investigacion(request):
     investigacion.respuesta2_1=request.POST.get('analisis')
     investigacion.evidencia2_1=request.POST.get('evidencia_analisis')
     investigacion.save()
+    valor1=request.POST.get('investigacion')
+    valor2=request.POST.get('evidencia_investigacion')
+    valor3=request.POST.get('principios')
+    valor4=request.POST.get('evidencia_principios')
+    valor5=request.POST.get('analisis')
+    valor6=request.POST.get('evidencia_analisis')
+    if(valor1=="Sí"):
+        evalu=25.0
+    if(valor2=="Sí"):
+        evalu=evalu+25.0
+    if(valor3=="Sí"):
+        evalu=evalu+25.0
+    if(valor4=="Sí"):
+        evalu=evalu+25.0
+    if(valor5=="Sí"):
+        evalu1=50.0
+    if(valor6=="Sí"):
+        evalu1=evalu1+50.0
+    
+    prom=(evalu+evalu1)/2
+
+    evaluacion=Evaluacion
+    evaluacion.pregunta1_1=evalu
+    evaluacion.pregunta1_2=evalu1
+    evaluacion.promedio_trl1=prom
+    
+
+ 
+
     return redirect ('desarrollo')
 
 def desarrollo(request):
