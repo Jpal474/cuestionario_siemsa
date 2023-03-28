@@ -6,7 +6,8 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Usuarios del Producto</h2>
-    <form action="#">
+    <form action="/guardar_usuarios_producto/" method="POST">
+      {% csrf_token %}
       <div  id ="div_usuarios" class="input-box">
         <p>¿Ha explorado posibles usuarios y/o clientes de la invención?</p>
         <label>
@@ -17,7 +18,7 @@
         No
         </label>
       </div>
-      <div id ="div_evidencia"class="input-box">
+      <div id ="div_evidencia_usuarios"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
       <input type="radio" name="evidencia_usuarios" class="res" required>

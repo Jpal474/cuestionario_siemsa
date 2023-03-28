@@ -6,7 +6,8 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Aspectos Organizativos</h2>
-    <form action="#">
+    <form action="/guardar_aspectos_organizativos/" method="POST">
+      {% csrf_token %}
       <div  id ="div_organizacion" class="input-box">
         <p>¿Cuenta con una organización operativa acorde a las necesidades de operación de la producción? (mercadotecnia, logística, producción y otros)</p>
         <label>
@@ -17,7 +18,7 @@
         No
         </label>
       </div>
-      <div id ="div_evidencia"class="input-box">
+      <div id ="div_evidencia_organizacion"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
       <input type="radio" name="evidencia_organizacion" class="res" required>

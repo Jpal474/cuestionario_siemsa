@@ -6,7 +6,8 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Manufactura</h2>
-    <form action="#">
+    <form action="{% url 'guardar_manufactura' %}" method="POST">
+      {% csrf_token %}
       <div  id ="div_manufacturabilidad" class="input-box">
         <p>¿Ha explorado principios básicos de manufacturabilidad?</p>
         <label>
@@ -17,7 +18,7 @@
         No
         </label>
       </div>
-      <div id ="div_evidencia"class="input-box">
+      <div id ="div_evidencia_manufacturabilidad"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
       <input type="radio" name="evidencia_manufacturabilidad" value="Sí" class="res" required>

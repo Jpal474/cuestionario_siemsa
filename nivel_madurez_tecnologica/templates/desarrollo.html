@@ -6,7 +6,8 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Desarrollo del Producto</h2>
-    <form action="#">
+    <form action="/guardar_desarrollo/" method="POST">
+      {% csrf_token %}
       <div  id ="div_pruebas" class="input-box">
         <p>¿Ha realizado pruebas de validación de efectividad de su invención en laboratorio?</p>
         <label>

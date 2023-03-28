@@ -55,27 +55,30 @@ class Respuestas_Integracion(models.Model):
     evidencia6_2=models.CharField(max_length=10)
 
 
-'''class Respuestas_Propiedad(models.Model):
+class Respuestas_Propiedad(models.Model):
     nombre_proyecto=models.CharField(max_length=500, default="", null=False)
     categoria_pregunta=models.CharField(max_length=70)
-    respuesta4_2=models.CharField(max_length=10)
-    evidencia4_2=models.CharField(max_length=10)
-    respuesta4_5=models.CharField(max_length=10)
-    evidencia4_5=models.CharField(max_length=10)
-    respuesta4_6=models.CharField(max_length=10)
-    evidencia4_6=models.CharField(max_length=10)
-    respuesta5_1=models.CharField(max_length=10)
-    evidencia5_1=models.CharField(max_length=10)
+    respuesta2_2=models.CharField(max_length=10)
+    evidencia2_2=models.CharField(max_length=10)
+    respuesta3_3=models.CharField(max_length=10)
+    evidencia3_3=models.CharField(max_length=10)
+    respuesta4_7=models.CharField(max_length=10)
+    evidencia4_7=models.CharField(max_length=10)
+    respuesta5_4=models.CharField(max_length=10)
+    evidencia5_4=models.CharField(max_length=10)
+    respuesta3_4=models.CharField(max_length=10)
+    evidencia3_4=models.CharField(max_length=10)
+    respuesta2_6=models.CharField(max_length=10)
+    evidencia2_6=models.CharField(max_length=10)
+    respuesta3_6=models.CharField(max_length=10)
+    evidencia3_6=models.CharField(max_length=10)
+    respuesta4_8=models.CharField(max_length=10)
+    evidencia4_8=models.CharField(max_length=10)
     respuesta6=models.CharField(max_length=10)
     evidencia6=models.CharField(max_length=10)
-    respuesta7_4=models.CharField(max_length=10)
-    evidencia7_4=models.CharField(max_length=10)
-    respuesta8_2=models.CharField(max_length=10)
-    evidencia8_2=models.CharField(max_length=10)
-    respuesta9_1=models.CharField(max_length=10)
-    evidencia9_1=models.CharField(max_length=10)
-    respuesta9_3=models.CharField(max_length=10)
-    evidencia9_3=models.CharField(max_length=10)'''
+    respuesta7=models.CharField(max_length=10)
+    evidencia7=models.CharField(max_length=10)
+    
 
 class Respuestas_Normatividad(models.Model):
     nombre_proyecto=models.CharField(max_length=500, default="", null=False)
