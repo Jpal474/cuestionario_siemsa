@@ -10,122 +10,158 @@
       <div  id ="div_usuarios" class="input-box">
         <p>¿Ha explorado posibles usuarios y/o clientes de la invención?</p>
         <label>
-        <input type="radio" class="res" id="input_usuarios" name="usuarios" required onclick="javascript:activar_desactivar('usuarios');">
+        <input type="radio" class="res" id="input_usuarios" name="usuarios" value="Sí" required onclick="javascript:activar_desactivar('usuarios');">
          Sí
         </label>
-        <label><input type="radio" id="input_usuarios" class="res"  name="usuarios" required onclick="javascript:activar_desactivar('usuarios');">
+        <label><input type="radio" id="input_usuarios2" class="res"  name="usuarios" value="No" required onclick="javascript:activar_desactivar('usuarios');">
         No
         </label>
+        <label><input type="radio" id="input_usuarios3" class="res"  name="usuarios" value="No se" required onclick="javascript:activar_desactivar('usuarios');">
+          No
+          </label>
       </div>
       <div id ="div_evidencia"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
-      <input type="radio" name="evidencia_usuarios" class="res" required>
+      <input type="radio" name="evidencia_usuarios" value="Sí" class="res" required>
        Sí
       </label>
-      <label><input type="radio" name="evidencia_usuarios" class="res" required>
+      <label><input type="radio" name="evidencia_usuarios" value="No" class="res" required>
       No
       </label>
+      <label><input type="radio" name="evidencia_usuarios" value="No se" class="res" required>
+        No se
+        </label>
       </div>
       <div  id ="div_proceso_validacion" class="input-box">
         <p>¿Ha llevado a cabo algún proceso de validación de mercado sobre su invención? (Innovación & Desarrollo en laboratorio y primeras pláticas con posibles usuarios)</p>
         <label>
-        <input id="input_proceso_validacion" type="radio" class="res" name="proceso_validacion" required onclick="javascript:activar_desactivar('proceso');">
+        <input id="input_proceso_validacion" type="radio" class="res" name="proceso_validacion" value="Sí" required onclick="javascript:activar_desactivar('proceso');">
          Sí
         </label>
-        <label><input id="input_proceso_validacion2" type="radio" class="res" name="proceso_validacion" required  onclick="javascript:activar_desactivar('proceso');">
+        <label><input id="input_proceso_validacion2" type="radio" class="res" name="proceso_validacion" value="No" required  onclick="javascript:activar_desactivar('proceso');">
         No
+        </label>
+        <label><input id="input_proceso_validacion3" type="radio" class="res" name="proceso_validacion" value="No se" required  onclick="javascript:activar_desactivar('proceso');">
+          No se
         </label>
       </div>
       <div  id="div_evidencia_proceso_validacion" class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
         <label>
-        <input type="radio" class="res" name="evidencia_proceso_validacion" required>
+        <input type="radio" class="res" value="Sí" name="evidencia_proceso_validacion" required>
          Sí
         </label>
-        <label><input type="radio" class="res" name="evidencia_proceso_validacion" required>
+        <label><input type="radio" class="res" value="No" name="evidencia_proceso_validacion" required>
         No
         </label>
+        <label><input type="radio" class="res" value="No se" name="evidencia_proceso_validacion" required>
+          No se
+          </label>
       </div>
       <div id="div_validacion_mercado" class="input-box">
         <p>¿Ha actualizado la validación de mercado de su invención con más entrevistas con usuarios potenciales y estudios de mercado? ¿Cuántas veces?</p>
         <label>
-        <input id="input_validacion_mercado" type="radio" class="res" name="validacion_mercado" required onclick="javascript:activar_desactivar('validacion');">
+        <input id="input_validacion_mercado" type="radio" value="Sí" class="res" name="validacion_mercado" required onclick="javascript:activar_desactivar('validacion');">
          Sí
         </label>
-        <label><input id="input_validacion_mercado2" type="radio" class="res" name="validacion_mercado" required onclick="javascript:activar_desactivar('validacion');">
+        <label><input id="input_validacion_mercado2" type="radio" value="No" class="res" name="validacion_mercado" required onclick="javascript:activar_desactivar('validacion');">
         No
+        </label>
+        <label><input id="input_validacion_mercado3" type="radio" value="No se" class="res" name="validacion_mercado" required onclick="javascript:activar_desactivar('validacion');">
+          No se
         </label>
       </div>
       <div  id="div_evidencia_validacion_mercado" class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
     <label>
-    <input type="radio" class="res" name="evidencia_validacion_mercado" required>
+    <input type="radio" class="res" value="Sí" name="evidencia_validacion_mercado" required>
      Sí
     </label>
-    <label><input type="radio" class="res" name="evidencia_validacion_mercado" required>
+    <label><input type="radio" class="res" value="No" name="evidencia_validacion_mercado" required>
     No
     </label>
+    <label><input type="radio" class="res" value="No se" name="evidencia_validacion_mercado" required>
+      No se
+      </label>
   </div>
   <div  id ="div_usuarios_potenciales" class="input-box">
     <p>¿Cuenta con usuarios potenciales que prueben la producción a baja escala?</p>
     <label>
-    <input id="input_usuarios_potenciales" type="radio" class="res" name="usuarios_potenciales" required onclick="javascript:activar_desactivar('usuarios_potenciales');">
+    <input id="input_usuarios_potenciales" type="radio" value="Sí" class="res" name="usuarios_potenciales" required onclick="javascript:activar_desactivar('usuarios_potenciales');">
      Sí
     </label>
-    <label><input id="input_usuarios_potenciales2" type="radio" class="res" name="usuarios_potenciales" required  onclick="javascript:activar_desactivar('usuarios_potenciales');">
+    <label><input id="input_usuarios_potenciales2" type="radio" value="No" class="res" name="usuarios_potenciales" required  onclick="javascript:activar_desactivar('usuarios_potenciales');">
     No
+    </label>
+    <label><input id="input_usuarios_potenciales3" type="radio" value="No se" class="res" name="usuarios_potenciales" required  onclick="javascript:activar_desactivar('usuarios_potenciales');">
+      No se
     </label>
   </div>
   <div  id="div_evidencia_usuarios_potenciales" class="input-box">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_usuarios_potenciales" required>
+<input type="radio" class="res" value="Sí" name="evidencia_usuarios_potenciales" required>
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_usuarios_potenciales" required>
+<label><input type="radio" class="res" value="No" name="evidencia_usuarios_potenciales" required>
 No
 </label>
+<label><input type="radio" class="res" value="No se" name="evidencia_usuarios_potenciales" required>
+  No se
+  </label>
 </div>
 <div  id ="div_version_final" class="input-box2">
     <p>¿Cuenta con usuarios potenciales que prueben la versión final del version_final?</p>
     <label>
-    <input id="input_version_final" type="radio" class="res" name="version_final" required onclick="javascript:activar_desactivar('version_final');">
+    <input id="input_version_final" type="radio" value="Sí" class="res" name="version_final" required onclick="javascript:activar_desactivar('version_final');">
      Sí
     </label>
-    <label><input id="input_version_final2" type="radio" class="res" name="version_final" required  onclick="javascript:activar_desactivar('version_final');">
+    <label><input id="input_version_final2" type="radio" value="No" class="res" name="version_final" required  onclick="javascript:activar_desactivar('version_final');">
     No
     </label>
+    <label><input id="input_version_final3" type="radio" value="No se" class="res" name="version_final" required  onclick="javascript:activar_desactivar('version_final');">
+      No se
+      </label>
   </div>
   <div  id="div_evidencia_version_final" class="input-box2" style="top:23%">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_version_final" required>
+<input type="radio" class="res" value="Sí" name="evidencia_version_final" required>
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_version_final" required>
+<label><input type="radio" class="res" value="No" name="evidencia_version_final" required>
 No
 </label>
+<label><input type="radio" class="res" value="No se " name="evidencia_version_final" required>
+  No se
+  </label>
 </div>
 <div  id ="div_documentos" class="input-box2" style="top:31.5%">
     <p>¿Elaboró los documentos para la utilización y mantenimiento del producto (manual del usuario, soporte técnico)?</p>
     <label>
-    <input id="input_documentos" type="radio" class="res" name="documentos" required onclick="javascript:activar_desactivar('documentos');">
+    <input id="input_documentos" type="radio" class="res" name="documentos" value="Sí" required onclick="javascript:activar_desactivar('documentos');">
      Sí
     </label>
-    <label><input id="input_documentos2" type="radio" class="res" name="documentos" required  onclick="javascript:activar_desactivar('documentos');">
+    <label><input id="input_documentos2" type="radio" class="res" name="documentos" value="No" required  onclick="javascript:activar_desactivar('documentos');">
     No
     </label>
+    <label><input id="input_documentos3" type="radio" class="res" name="documentos" value="No se" required  onclick="javascript:activar_desactivar('documentos');">
+      No se
+      </label>
   </div>
   <div  id="div_evidencia_documentos" class="input-box2" style="top:44%">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_documentos" required>
+<input type="radio" class="res" value="Sí" name="evidencia_documentos" required>
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_documentos" required>
+<label><input type="radio" class="res" value="No" name="evidencia_documentos" required>
 No
 </label>
+<label><input type="radio" class="res" value="No se" name="evidencia_documentos" required>
+  No se
+  </label>
 </div>
 
   <button type="submit" class="btn">Registrar</button>
