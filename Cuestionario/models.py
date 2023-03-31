@@ -1,3 +1,4 @@
+from statistics import mode
 from django.db import models
 
 # Create your models here.
@@ -144,6 +145,7 @@ class Respuestas_Aspectos(models.Model):
 class Evaluacion(models.Model):
     nombre=models.CharField(max_length=300)
     nombre_proyecto=models.CharField(max_length=500)
+    institucion=models.CharField(max_length=500, default='')
     pregunta1_1=models.FloatField(max_length=5, default=0)
     pregunta1_2=models.FloatField(max_length=5, default=0)
     promedio_trl1=models.FloatField(max_length=5, default=0)

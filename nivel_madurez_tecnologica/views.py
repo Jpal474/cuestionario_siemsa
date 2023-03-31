@@ -1,5 +1,6 @@
 from asyncio.windows_events import proactor_events
 from datetime import datetime
+from pydoc import describe
 from django.shortcuts import redirect, render
 from Cuestionario.models import *
 
@@ -19,11 +20,12 @@ def inicio(request):
 def guardar_registro(request):
     global fecha
     global nombre_proyecto
+    global institucion
     registro=Registro()
     registro.nombre=request.POST.get('nombre')
     nombre_proyecto=registro.nombre_proyecto=request.POST.get('nombre_proyecto')
     registro.correo_electronico=request.POST.get('correo')
-    registro.institucion=request.POST.get('institucion')
+    institucion=registro.institucion=request.POST.get('institucion')
     registro.categoria=request.POST.get('categoria')
     fecha=registro.fecha=datetime.now()
     registro.save()
@@ -34,25 +36,22 @@ def investigación(request):
 
 def guardar_investigacion(request):
     nombre=Registro.objects.filter(nombre_proyecto=nombre_proyecto, fecha=fecha).values('nombre')
+    inst=Registro.objects.filter(institucion=institucion).values('institucion')
     evaluacion=Evaluacion()
     investigacion=Respuestas_Investigacion()
-<<<<<<< Updated upstream
-=======
     respuestas=[]
     evidencias=[]
     resultados=[0]*3
     investigacion.nombre_proyecto=nombre_proyecto
     investigacion.categoria_pregunta='investigacion'
->>>>>>> Stashed changes
     investigacion.respuesta1_1=request.POST.get('investigacion')
     investigacion.evidencia1_1=request.POST.get('evidencia_investigacion')
     investigacion.respuesta1_2=request.POST.get('principios')
     investigacion.evidencia1_2=request.POST.get('evidencia_principios')
     investigacion.respuesta2_1=request.POST.get('analisis')
     investigacion.evidencia2_1=request.POST.get('evidencia_analisis')
-<<<<<<< Updated upstream
+
     investigacion.save()
-=======
     respuestas=[investigacion.respuesta1_1, investigacion.respuesta1_2, investigacion.respuesta2_1]
     evidencias=[investigacion.evidencia1_1, investigacion.evidencia1_2, investigacion.evidencia2_1]
     promedio_area=0
@@ -84,6 +83,7 @@ def guardar_investigacion(request):
   
     evaluacion.nombre=nombre
     evaluacion.nombre_proyecto=nombre_proyecto
+    evaluacion.institucion=inst
     evaluacion.pregunta1_1=resultados[0]
     evaluacion.pregunta1_2=resultados[1]
     evaluacion.pregunta2_1=resultados[2]
@@ -94,7 +94,6 @@ def guardar_investigacion(request):
 
  
 
->>>>>>> Stashed changes
     return redirect ('desarrollo')
 
 def desarrollo(request):
@@ -102,14 +101,12 @@ def desarrollo(request):
 
 def guardar_desarrollo(request): 
     desarrollo=Respuestas_Desarrollo()
-<<<<<<< Updated upstream
     desarrollo.respuesta1_1=request.POST.get('desarrollo')
     desarrollo.evidencia1_1=request.POST.get('evidencia_desarrollo')
     desarrollo.respuesta1_2=request.POST.get('principios')
     desarrollo.evidencia1_2=request.POST.get('evidencia_principios')
     desarrollo.respuesta2_1=request.POST.get('analisis')
     desarrollo.evidencia2_1=request.POST.get('evidencia_analisis')
-=======
     desarrollo.nombre_proyecto=nombre_proyecto
     desarrollo.respuesta4_2=request.POST.get('pruebas')
     desarrollo.evidencia4_2=request.POST.get('evidencia_pruebas')
@@ -156,7 +153,6 @@ def guardar_desarrollo(request):
         promedio_area+=resultado
 
     promedio_area/=len(resultados) 
->>>>>>> Stashed changes
     desarrollo.save()
     global evaluacion
     evaluacion=Evaluacion.objects.filter(nombre_proyecto=nombre_proyecto).last()
@@ -564,7 +560,7 @@ def resultados(request):
     conclusion=[None]*8
     cont=0
     for promedio in promedios2:
-        if promedio==1:
+        if promedio==100:
             conclusion[cont]='El tópico INVESTIGACIÓN se encuentra cubierto en su TOTALIDAD. Se han realizado satisfactoriamente todas las actividades correspondientes.'
         elif promedio==0:
             conclusion[cont]="No ha iniciado con actividades relacionadas al tópico INVESTIGACIÓN, es necesario identificar una problemática a resolver, investigar principios de investigación básica que pudieran transformarse en principios básicos para aplicarse a nuevas tecnologías."
@@ -588,3 +584,8 @@ def resultados(request):
 
     conclusiones.nombre_proyecto=estatus.nombre_proyecto=nombre_proyecto
     return render(request,'resultados.html', {'evaluacion':evaluacion, 'estatus':estatus})
+
+def prueba(request):
+    eval=Evaluacion.objects.get(id=11)
+    print(eval)
+    return render(request, 'prueba.html', {'eval':eval})
