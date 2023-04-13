@@ -586,6 +586,205 @@ def resultados(request):
     return render(request,'resultados.html', {'evaluacion':evaluacion, 'estatus':estatus})
 
 def prueba(request):
-    eval=Evaluacion.objects.get(id=11)
+    eval=Evaluacion.objects.get(id=2)
+    iconos={
+     
+    }
+    colores={}
     print(eval)
-    return render(request, 'prueba.html', {'eval':eval})
+    cont=0
+    cont2=0
+    icons=[None]*44
+    icons[0]=eval.pregunta1_1
+    icons[1]=eval.pregunta1_2
+    icons[2]=eval.pregunta2_1 
+    icons[3]=eval.pregunta2_2 
+    icons[4]=eval.pregunta2_3 
+    icons[5]=eval.pregunta2_4
+    icons[6]=eval.pregunta2_5
+    icons[7]=eval.pregunta2_6
+    icons[8]=eval.pregunta3_1
+    icons[9]=eval.pregunta3_2
+    icons[10]=eval.pregunta3_3
+    icons[11]=eval.pregunta3_4
+    icons[12]=eval.pregunta3_5 
+    icons[13]=eval.pregunta3_6
+    icons[14]=eval.pregunta4_1
+    icons[15]=eval.pregunta4_2
+    icons[16]=eval.pregunta4_3
+    icons[17]=eval.pregunta4_4 
+    icons[18]=eval.pregunta4_5
+    icons[20]=eval.pregunta4_6
+    icons[19]=eval.pregunta4_7
+    icons[21]=eval.pregunta4_8
+    icons[22]=eval.pregunta5_1  
+    icons[23]=eval.pregunta5_2 
+    icons[24]=eval.pregunta5_3
+    icons[25]=eval.pregunta5_4
+    icons[26]=eval.pregunta6_1 
+    icons[27]=eval.pregunta6_2
+    icons[28]=eval.pregunta6_3 
+    icons[29]=eval.pregunta6_4 
+    icons[30]=eval.pregunta6_5
+    icons[31]=eval.pregunta7_1 
+    icons[32]=eval.pregunta7_2
+    icons[33]=eval.pregunta7_3
+    icons[34]=eval.pregunta7_4
+    icons[35]=eval.pregunta8_1
+    icons[36]=eval.pregunta8_2
+    icons[37]=eval.pregunta8_3
+    icons[38]=eval.pregunta8_4
+    icons[39]=eval.pregunta8_5
+    icons[40]=eval.pregunta9_1
+    icons[41]=eval.pregunta9_2
+    icons[42]=eval.pregunta9_3  
+    icons[43]=eval.pregunta9_4
+
+    for icono in icons:
+        if icono == 0:
+            iconos[cont2]="close-outline"
+            colores[cont2]="red"
+            cont2+=1
+        elif icono==12.5:
+            iconos[cont2]="notifications-outline"
+            colores[cont2]="red"
+            cont2+=1 
+        elif icono==25:
+            iconos[cont2]="alert-outline"
+            colores[cont2]="red"
+            cont2+=1
+        elif icono==50:
+            iconos[cont2]="warning-outline"
+            colores[cont2]="yellow"
+            cont2+=1 
+        else:
+            iconos[cont2]="checkmark-outline"
+            colores[cont2]="green"
+            cont2+=1 
+        print(iconos)
+
+    
+    '''for e in eval:
+        if cont > 2 and cont<5:
+            if e == 0:
+                iconos={cont2:"close-outline",}
+                cont2+=1
+            elif e==12.5:
+                iconos={cont2:"notifications-outline",}
+                cont2+=1 
+            elif e==25:
+                iconos={cont2:"alert-outline",}
+                cont2+=1
+            elif e==50:
+                iconos={cont2:"warning-outline",}
+                cont2+=1 
+            else:
+                iconos={cont2:"checkmark-outline",}
+                cont2+=1 
+           
+        elif cont>5 and cont<12:
+
+            if e == 0:
+                iconos={cont2:"close-outline",}
+                cont2+=1
+            elif e==12.5:
+                iconos={cont2:"notifications-outline",}
+                cont2+=1 
+            elif e==25:
+                iconos={cont2:"alert-outline",}
+                cont2+=1
+            elif e==50:
+                iconos={cont2:"warning-outline",}
+                cont2+=1 
+            else:
+                iconos={cont2:"checkmark-outline",}
+                cont2+=1 
+        
+        elif cont>12 and cont <19:
+            if e == 0:
+                iconos={cont2:"close-outline",}
+                cont2+=1
+            elif e==12.5:
+                iconos={cont2:"notifications-outline",}
+                cont2+=1 
+            elif e==25:
+                iconos={cont2:"alert-outline",}
+                cont2+=1
+            elif e==50:
+                iconos={cont2:"warning-outline",}
+                cont2+=1 
+            else:
+                iconos={cont2:"checkmark-outline",}
+                cont2+=1 
+        elif cont>19  and cont<33:
+            if e == 0:
+                iconos={cont2:"close-outline",}
+                cont2+=1
+            elif e==12.5:
+                iconos={cont2:"notifications-outline",}
+                cont2+=1 
+            elif e==25:
+                iconos={cont2:"alert-outline",}
+                cont2+=1
+            elif e==50:
+                iconos={cont2:"warning-outline",}
+                cont2+=1 
+            else:
+                iconos={cont2:"checkmark-outline",}
+                cont2+=1 
+        elif cont>33 and cont<39:
+            if e == 0:
+                iconos={cont2:"close-outline",}
+                cont2+=1
+            elif e==12.5:
+                iconos={cont2:"notifications-outline",}
+                cont2+=1 
+            elif e==25:
+                iconos={cont2:"alert-outline",}
+                cont2+=1
+            elif e==50:
+                iconos={cont2:"warning-outline",}
+                cont2+=1 
+            else:
+                iconos={cont2:"checkmark-outline",}
+                cont2+=1 
+        elif cont>39 and cont<44:
+            if e == 0:
+                iconos={cont2:"close-outline",}
+                cont2+=1
+            elif e==12.5:
+                iconos={cont2:"notifications-outline",}
+                cont2+=1 
+            elif e==25:
+                iconos={cont2:"alert-outline",}
+                cont2+=1
+            elif e==50:
+                iconos={cont2:"warning-outline",}
+                cont2+=1 
+            else:
+                iconos={cont2:"checkmark-outline",}
+                cont2+=1 
+        
+        elif cont>44 and cont<49:
+            if e == 0:
+                iconos={cont2:"close-outline",}
+                cont2+=1
+            elif e==12.5:
+                iconos={cont2:"notifications-outline",}
+                cont2+=1 
+            elif e==25:
+                iconos={cont2:"alert-outline",}
+                cont2+=1
+            elif e==50:
+                iconos={cont2:"warning-outline",}
+                cont2+=1 
+            else:
+                iconos={cont2:"checkmark-outline",}
+                cont2+=1 
+        
+        cont+=1'''
+
+   
+  
+  
+    return render(request, 'prueba.html', {'eval':eval, 'iconos':iconos, 'colores':colores})
