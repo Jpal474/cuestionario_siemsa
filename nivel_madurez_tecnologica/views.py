@@ -787,4 +787,4 @@ def prueba(request):
    
   
   
-    return render(request, 'prueba.html', {'eval':eval, 'iconos':iconos, 'colores':colores})
+    return render(request, 'prueba.html', {'evaluacion':eval, 'iconos':iconos, 'colores':colores})
