@@ -1,0 +1,76 @@
+{% extends 'base2.html'%}
+{%block title %}Administrador - Preguntas Investigación{% endblock title %}
+{%block text %}Administrador - Editar Investigación{% endblock text%}
+{%block body%}
+
+<div class="wrapper">
+  <div class="form-box login">
+    <p style="color: white; margin-top: 10%;margin-left: 10%;">Seleccione la pregunta a editar</p>
+    <div class="row" style="position:absolute; top:50%; left: 25%; width: 1000px;">
+      <div class="col-sm-3 col-me-3">
+        <div class="card btn btn-outline-dark" style="background-color:var(--sidebar-color);">
+        <a href="{% url 'editar_pregunta' %}" style="text-decoration: none;">
+          <div class="card-body">
+            <p class="card-text" style="color: white" id="texto3">1.1</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-me-3">
+      <div class="card btn btn-outline-dark" style="background-color:var(--sidebar-color);">
+        <a href="{%url 'editar_pregunta'%}" style="text-decoration: none;">
+          <div class="card-body">
+            <p class="card-text" style="color: white" id="texto3">1.2</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="col-sm-3 col-me-3">
+      <div class="card btn btn-outline-dark" style="background-color:var(--sidebar-color);">
+        <a href="{% url 'editar_pregunta' %}" style="text-decoration: none;">
+          <div class="card-body">
+            <p class="card-text" style="color: white" id="texto3">2.1</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%endblock body%}
+
+<style>
+
+.botones{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--sidebar-color);
+}
+
+
+.card{
+margin:0 auto;
+color: white;
+width: 300px;
+padding: 20px;
+box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.377);
+border-radius: 20px;
+}
+.card-body{
+    margin: -20px;
+    padding: 20px;
+    border-radius: 00px 00px 20px 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+</style>
+

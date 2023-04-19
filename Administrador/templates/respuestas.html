@@ -1,0 +1,153 @@
+{% extends 'base2.html'%}
+{%block title %}Administrador - Respuestas{% endblock title %}
+{%block text %}Administrador - Respuestas{% endblock text%}
+{%block body%}
+<div class="wrapper">
+    <div class="form-box login">
+        <h2>Respuestas</h2> <br>
+        
+        <div class="table-responsive">
+            <table class="table" >
+                <thead class="card-body" style="background-color:var(--sidebar-color);">
+                    <tr>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">status</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td><img src="https://www.freeiconspng.com/thumbs/warning-icon-png/sign-warning-icon-png-7.png" class="icon"></td>
+                        <td><button type="submit" class="btn">Ver</button>
+                        <button type="submit" class="btn">eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Fxemoji_u274C.svg/1200px-Fxemoji_u274C.svg.png" class="icon"></td>
+                        <td><button type="submit" class="btn">Ver</button>
+                        <button type="submit" class="btn">eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td><img src="https://static.vecteezy.com/system/resources/previews/012/243/152/original/check-mark-icon-sign-png.png" class="icon"></td>
+                        <td><button type="submit" class="btn">Ver</button>
+                        <button type="submit" class="btn">eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <img src="https://cdn-icons-png.flaticon.com/512/2279/2279034.png" class="img" style="height: 230px; width: 230px;">
+</div>
+
+
+
+<style>
+    .wrapper{
+                width: 1100px;
+                height: 680px;
+                background: transparent;
+                border: 8px solid #d49d11;
+                position: relative;
+                margin: -25px 0 0 -25px;
+               
+                backdrop-filter: blur(15px);
+                box-shadow: 20px 20px 20px 0px rgba(0, 0, 0,.9);
+                top:15%;
+                left: 8%;
+               /*display: flex;
+               justify-content: center;
+               align-items: center;*/
+               margin-bottom: 10px;
+      
+               
+            }
+            .wrapper .form-box{
+                width: 100%;
+                padding: 40px;
+            }
+            
+            td,th   {
+                color: #fff;
+            }
+
+            .form-box h2{
+              font-size: 2em;
+              color: white;
+              text-align: center;
+    
+            }
+            #div_evidencia, #div_principios, #div_evidencia_principios, #div_evidencia_analisis{
+              display: none;
+            }
+             
+            .input-box{
+        width: 500px;
+       border-radius: 10px;
+        background: transparent;
+        color: white;
+        border-bottom: 2px solid #d49d11;
+        border-top: 2px solid #d49d11;
+        margin-bottom: 10px;
+                    
+                    
+                }
+          .res{
+            margin-bottom: 15px;
+          }
+    
+            
+            
+           
+             .input-box p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+                }
+      .input-box label{
+        display: line;
+      position: relative;
+      left: 30%;
+      margin-right:10px ;
+      
+      border-bottom: 2px solid #d49d11;
+      margin-bottom: 20px;
+      }
+    
+      
+          
+            .btn{
+              width: 30%;
+              height: 45px;
+              background: #162938;
+              border: none;
+              outline:none;
+              border-radius: 6px;
+              cursor: pointer;
+              font-size: 1em;
+              color:#fff;
+              font-weight: 500;
+              margin-top: 10px;
+              
+            }
+            .img{
+              position: absolute;
+              top: 75%;
+              left: 85%;
+            }
+
+            .icon{
+                width: 30px;
+                height: 30px;
+            }
+            
+        </style>
+       
+
+{%endblock body%}    

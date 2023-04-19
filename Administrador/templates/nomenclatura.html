@@ -1,0 +1,138 @@
+{% extends 'base2.html'%}
+{%block title %}Administrador - Nomenclatura{% endblock title %}
+{%block text %}Administrador - Nomenclatura{% endblock text%}
+{%block body%}
+<div class="wrapper">
+    <div class="form-box login">
+        <h2>Nomenclatura</h2> <br>
+        <div class="info">
+          <p> 
+            <ion-icon name="checkbox" style="color: #00d26a";></ion-icon><br>
+            ID cubierto y documentado satisfactoriamente <br><br>
+            <ion-icon name="warning" style="color: #ffb02e;"></ion-icon><br>
+            ID cubierto parcialmente, revisar documentación <br><br>
+            <ion-icon name="alert" style="color: red;"></ion-icon><ion-icon name="alert" style="color: red;"></ion-icon><br>
+            ID cubierto parcialmente pero no documentado <br><br>
+            <ion-icon name="megaphone-outline"></ion-icon><br>
+            No existe evidencia suficiente para evaluar correctamente el ID <br><br>
+            <ion-icon name="close" style="color: red;"></ion-icon><br>
+            No se ha realizado ningún tipo de actividad para cumplir con el ID<br><br>
+          </p>
+        </div>
+        
+        
+        
+    </div>
+    
+    <img src="https://cdn-icons-png.flaticon.com/512/1509/1509659.png" class="img" style="height: 300px; width: 300px;">
+</div>
+
+
+
+<style>
+    .wrapper{
+                width: 1100px;
+                height: 680px;
+                background: transparent;
+                border: 8px solid #d49d11;
+                position: relative;
+                margin: -25px 0 0 -25px;
+               
+                backdrop-filter: blur(15px);
+                box-shadow: 20px 20px 20px 0px rgba(0, 0, 0,.9);
+                top:15%;
+                left: 8%;
+               /*display: flex;
+               justify-content: center;
+               align-items: center;*/
+               margin-bottom: 10px;
+      
+               
+            }
+            ion-icon{
+              font-size: 45px;
+            }
+            .wrapper .form-box{
+                width: 100%;
+                padding: 40px;
+            }
+            
+            td,th   {
+                color: #fff;
+            }
+
+            .info{
+              color: #fff;
+              text-align: center;
+              margin-top: 30px;
+            }
+
+            .form-box h2{
+              font-size: 2em;
+              color: white;
+              text-align: center;
+    
+            }
+            #div_evidencia, #div_principios, #div_evidencia_principios, #div_evidencia_analisis{
+              display: none;
+            }
+             
+            .input-box{
+        width: 500px;
+       border-radius: 10px;
+        background: transparent;
+        color: white;
+        border-bottom: 2px solid #d49d11;
+        border-top: 2px solid #d49d11;
+        margin-bottom: 10px;
+                    
+                    
+                }
+          .res{
+            margin-bottom: 15px;
+          }
+    
+            
+            
+           
+             .input-box p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+                }
+      .input-box label{
+        display: line;
+      position: relative;
+      left: 30%;
+      margin-right:10px ;
+      
+      border-bottom: 2px solid #d49d11;
+      margin-bottom: 20px;
+      }
+    
+      
+          
+            .btn{
+              width: 30%;
+              height: 45px;
+              background: #162938;
+              border: none;
+              outline:none;
+              border-radius: 6px;
+              cursor: pointer;
+              font-size: 1em;
+              color:#fff;
+              font-weight: 500;
+              margin-top: 10px;
+              
+            }
+            .img{
+              position: absolute;
+              top: 75%;
+              left: 80%;
+            }
+            
+        </style>
+       
+
+{%endblock body%}    
