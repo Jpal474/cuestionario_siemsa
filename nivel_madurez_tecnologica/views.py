@@ -4,16 +4,6 @@ from pydoc import describe
 from django.shortcuts import redirect, render
 from Cuestionario.models import *
 
-
-
-def login(request):
-    return render(request, 'login.html')
-
-def registrar(request):
-    return render(request, 'registro.html')
-
-
-
 def inicio(request):
     return render (request, 'inicio.html')
 
@@ -586,12 +576,12 @@ def resultados(request):
     return render(request,'resultados.html', {'evaluacion':evaluacion, 'estatus':estatus})
 
 def prueba(request):
-    eval=Evaluacion.objects.get(id=2)
+    eval=Evaluacion.objects.get(id=11)
     iconos={
      
     }
     colores={}
-    print(eval)
+    print(eval.promedio_investigacion)
     cont=0
     cont2=0
     icons=[None]*44
@@ -661,7 +651,7 @@ def prueba(request):
             iconos[cont2]="checkmark-outline"
             colores[cont2]="green"
             cont2+=1 
-        print(iconos)
+   
 
     
     '''for e in eval:

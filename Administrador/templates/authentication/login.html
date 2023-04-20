@@ -1,18 +1,32 @@
-{% extends 'base.html' %}
+{% extends 'base2.html' %}
 {% block title %}Login{% endblock title %}
 {%block body%}
+<div class="container">
+  {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      
+    </div>
+       
+    {% endfor %}
+  {% endif %}
+</div>
 <div class="wrapper">
 <div class="form-box login">
   <h2>Login</h2>
-  <form action="#">
+ 
+  <form action="{%url 'login' %}" method="POST">
+    {% csrf_token %}
     <div class="input-box">
-      <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-      <input type="email" required>
-      <label>Email</label>
+      <span class="icon"><ion-icon name="user-outline"></ion-icon></span>
+      <input type="text" name="username" required>
+      <label>Username</label>
     </div>
     <div class="input-box">
       <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
-      <input type="password" required>
+      <input type="password" name="password" required>
       <label>Password</label>
     </div>
     <div class="remember-forgot">
@@ -32,6 +46,10 @@
 </div>
 
     <style>
+      .container{
+        position: absolute;
+        left: 10%;
+      }
         .wrapper{
             width: 400px;
             height: 400px;

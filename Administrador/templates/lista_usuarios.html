@@ -1,0 +1,31 @@
+{% extends 'base2.html'%}
+{%block title %}Ad - Investigación{% endblock title %}
+{%block text%} Investigación {% endblock text%}
+{%block body%}
+{% for usuario in usuarios %}
+
+    <div class="row">
+      <div class="col-sm-3 col-me-3">
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{usuario.username}}</h5>
+              <p class="card-text">{{usuario.first_name}}</p>
+              <p class="card-text">{{usuario.last_name}}</p>
+              <p class="card-text">{{usuario.email}}</p>
+              <a href="{% url 'editar_usuario' usuario.id %}" class="btn btn-primary">Editar</a>
+              <a href="{% url 'eliminar_usuario' usuario.id %}" class="btn btn-primary">Eliminar</a>
+            </div>
+          </div>
+       </div>
+  </div>
+
+  {%endfor%}
+  <style>
+     .row{
+        position:absolute; 
+       left: 15%;
+      }
+  </style>
+      
+{%endblock body%}    
