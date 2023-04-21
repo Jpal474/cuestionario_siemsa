@@ -5,19 +5,20 @@
 <div class="wrapper">
     <div class="form-box login">
       <h2>Editar Pregunta</h2>
-      <form action="#">
+      <form method="POST" action="/administrador/actualizar_pregunta/{{pregunta.id}}">
+        {% csrf_token %}
         <div class="input-box">
             <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-            <input type="email" placeholder="pregunta anterior">
+            <input type="text" value="{{pregunta.texto}}">
             <label>Pregunta Anterior</label>
           </div>
         <div class="input-box">
           <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
-          <input type="text" required>
+          <input type="text" name="texto">
           <label>Pregunta Nueva</label>
         </div>
-        <button type="submit" class="btn" style="margin-right: 10px;">Registrar</button>
-        <button type="submit" class="btn" style="background-color: red;">Cancelar</button>
+        <button type="submit" class="btn" style="margin-right: 10px;" name="action">Registrar</button>
+        <a class="btn" style="background-color: red;" href="{%url 'cuestionario_administrador'%}">Cancelar</a>
       </form>
     </div>
     

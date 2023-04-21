@@ -4,7 +4,7 @@
 <div class="row" style="position:absolute; top:40%; left: 15%; width: 1000px;">
 <div class="col-sm-3 col-me-3">
   <div class="card btn btn-outline-dark" style="background-color:var(--sidebar-color);">
-    <a href="#" style="text-decoration: none;">
+    <a href="{% url 'cuestionario_administrador' %}" style="text-decoration: none;">
       <img src="https://media.discordapp.net/attachments/713043245214597160/1083115183741866107/signo-de-interrogacion1.png" width="90px">
     <div class="card-body">
       <p class="card-text" style="color: white" id="texto3">Preguntas</p>
@@ -14,7 +14,7 @@
 </div>
 <div class="col-sm-3 col-me-3">
   <div class="card btn btn-outline-dark" style="background-color:var(--sidebar-color);">
-    <a href="#" style="text-decoration: none;">
+    <a href="{%url 'ver_usuarios'%}" style="text-decoration: none;">
       <img src="https://media.discordapp.net/attachments/713043245214597160/1083115184245178418/programador1.png" width="90px">
     <div class="card-body">
       <p class="card-text" style="color: white" id="texto3">Usuarios</p>
@@ -24,7 +24,7 @@
 </div>
 <div class="col-sm-3 col-me-3">
   <div class="card btn btn-outline-dark" style="background-color:var(--sidebar-color);">
-    <a href="#" style="text-decoration: none;">
+    <a href="{% url 'respuestas' %}" style="text-decoration: none;">
       <img src="https://media.discordapp.net/attachments/713043245214597160/1083115183540535296/respuestas.png" width="90px">
     <div class="card-body">
       <p class="card-text" style="color: white" id="texto3">Cuestionarios</p>
@@ -34,7 +34,7 @@
 </div>
 <div class="col-sm-3 col-me-3">
   <div class="card btn btn-outline-dark" style="background-color:var(--sidebar-color);">
-    <a href="#" style="text-decoration: none;">
+    <a href="{% url 'nomenclatura' %}" style="text-decoration: none;">
       <img src="https://media.discordapp.net/attachments/713043245214597160/1083115183221772298/informacion.png" width="90px">
     <div class="card-body">
       <p class="card-text" style="color: white" id="texto3">Nomenclatura</p>
