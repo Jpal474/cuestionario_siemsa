@@ -36,23 +36,18 @@ def guardar_investigacion(request):
     nombre=Registro.objects.filter(nombre_proyecto=nombre_proyecto, fecha=fecha).values('nombre')
     evaluacion=Evaluacion()
     investigacion=Respuestas_Investigacion()
-<<<<<<< Updated upstream
-=======
     respuestas=[]
     evidencias=[]
     resultados=[0]*3
     investigacion.nombre_proyecto=nombre_proyecto
     investigacion.categoria_pregunta='investigacion'
->>>>>>> Stashed changes
     investigacion.respuesta1_1=request.POST.get('investigacion')
     investigacion.evidencia1_1=request.POST.get('evidencia_investigacion')
     investigacion.respuesta1_2=request.POST.get('principios')
     investigacion.evidencia1_2=request.POST.get('evidencia_principios')
     investigacion.respuesta2_1=request.POST.get('analisis')
     investigacion.evidencia2_1=request.POST.get('evidencia_analisis')
-<<<<<<< Updated upstream
     investigacion.save()
-=======
     respuestas=[investigacion.respuesta1_1, investigacion.respuesta1_2, investigacion.respuesta2_1]
     evidencias=[investigacion.evidencia1_1, investigacion.evidencia1_2, investigacion.evidencia2_1]
     promedio_area=0
@@ -94,7 +89,6 @@ def guardar_investigacion(request):
 
  
 
->>>>>>> Stashed changes
     return redirect ('desarrollo')
 
 def desarrollo(request):
@@ -102,14 +96,12 @@ def desarrollo(request):
 
 def guardar_desarrollo(request): 
     desarrollo=Respuestas_Desarrollo()
-<<<<<<< Updated upstream
     desarrollo.respuesta1_1=request.POST.get('desarrollo')
     desarrollo.evidencia1_1=request.POST.get('evidencia_desarrollo')
     desarrollo.respuesta1_2=request.POST.get('principios')
     desarrollo.evidencia1_2=request.POST.get('evidencia_principios')
     desarrollo.respuesta2_1=request.POST.get('analisis')
     desarrollo.evidencia2_1=request.POST.get('evidencia_analisis')
-=======
     desarrollo.nombre_proyecto=nombre_proyecto
     desarrollo.respuesta4_2=request.POST.get('pruebas')
     desarrollo.evidencia4_2=request.POST.get('evidencia_pruebas')
@@ -156,7 +148,6 @@ def guardar_desarrollo(request):
         promedio_area+=resultado
 
     promedio_area/=len(resultados) 
->>>>>>> Stashed changes
     desarrollo.save()
     global evaluacion
     evaluacion=Evaluacion.objects.filter(nombre_proyecto=nombre_proyecto).last()
