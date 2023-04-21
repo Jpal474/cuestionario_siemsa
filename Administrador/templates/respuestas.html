@@ -10,14 +10,28 @@
             <table class="table" >
                 <thead class="card-body" style="background-color:var(--sidebar-color);">
                     <tr>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">status</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Nombre Proyecto</th>
+                        <th scope="col">Promedio Global</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
-                <tbody>
+
+                {% for res in respuesta%}
+                    <tbody>
                     <tr>
+                        <td>{{res.nombre}}</td>
+                        <td>{{res.nombre_proyecto}}</td>
+                        <td>{{res.promedio_trl_global}}</td>
+                        <td><a class="btn">Ver</a>
+                            <a href="{% url 'eliminar_respuesta' res.id %}" class="btn">eliminar</a></td>
+                    </tr>
+                    
+                    </tbody>
+                {% endfor %}
+
+
+                    <!--<tr>
                         <td>Mark</td>
                         <td>Otto</td>
                         <td><img src="https://www.freeiconspng.com/thumbs/warning-icon-png/sign-warning-icon-png-7.png" class="icon"></td>
@@ -37,8 +51,7 @@
                         <td><img src="https://static.vecteezy.com/system/resources/previews/012/243/152/original/check-mark-icon-sign-png.png" class="icon"></td>
                         <td><button type="submit" class="btn">Ver</button>
                         <button type="submit" class="btn">eliminar</button></td>
-                    </tr>
-                </tbody>
+                    </tr> -->
             </table>
         </div>
     </div>

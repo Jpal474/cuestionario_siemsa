@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-
+from Administrador.models import Pregunta
+from Cuestionario.models import Evaluacion
 
 def inicio(request):
     return render(request, 'inicio_admin.html')
@@ -10,14 +11,29 @@ def cuestionario(request):
 def investigacion(request):
     return render (request, 'ver_investigacion.html')
 
-def editar_investigacion(request):
-    return render (request, 'editar_investigacion.html')
+def editar_investigacion(request, id):
+    pregunta = Pregunta.objects.all()
+    post = next(post for post in pregunta if post.id == id)
+    return render(request, "editar_investigacion.html", {"pregunta": post})
+
+def actualizar_pregunta(request, id):
+    pregunta = Pregunta.objects.all()
+    post = next(post for post in pregunta if post.pk == id)
+    post.texto = request.POST.get('texto')
+    post.save()
+    return redirect('cuestionario_administrador')
 
 def ver_usuarios(request):
     return render (request, 'usuarios.html')
 
 def respuestas(request):
-    return render (request, 'respuestas.html')
+    respuesta = Evaluacion.objects.all()
+    return render (request, 'respuestas.html',{"respuesta": respuesta})
+
+def eliminar_respuesta(request, id):
+    post = Evaluacion.objects.filter(id=id)  # toma el id del curso seleccionado en el modal
+    post.delete()
+    return redirect('respuestas')
 
 def nomenclatura(request):
     return render (request, 'nomenclatura.html')
