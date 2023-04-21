@@ -6,7 +6,8 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Integracion Tecnologica</h2>
-    <form action="#">
+    <form action="/guardar_integracion/" method="POST">
+      {% csrf_token %}
       <div  id ="div_investigacion" class="input-box">
         <p>¿Cuenta con un grupo de investigación que pueda facilitar la evaluación inicial de factibilidad de la tecnología?</p>
         <label>
@@ -95,7 +96,7 @@ No
   </div>
   
   </div>
-<img src="https://media.discordapp.net/attachments/713043245214597160/1082373330776105060/Mi_proyecto.png?width=619&height=413" class="img"> 
+  <img src="https://media.discordapp.net/attachments/713043245214597160/1081247167894781982/integracion-tecnologica.png" class="img">
 
 <script>
   function activar_desactivar(dato){
@@ -226,9 +227,10 @@ No
           
         }
         .img{
+          width:300px;
           position: absolute;
-          top: 30%;
-          left: 40%;
+          top: 55%;
+          left: 45%;
         }
         
     </style>

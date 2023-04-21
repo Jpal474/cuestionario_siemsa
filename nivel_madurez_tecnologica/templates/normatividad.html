@@ -6,7 +6,8 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Normatividad y Lesgilación Aplicable</h2>
-    <form action="#">
+    <form action="{%url 'guardar_normatividad' %}" method="POST">
+      {% csrf_token %}
       <div  id ="div_estudio" class="input-box">
         <p>¿Ha realizado un estudio sobre los aspectos regulatorios (comités de ética, normas, ISO´s, y certificaciones) que son requeridos para su invención tecnológica?</p>
         <label>
@@ -17,7 +18,7 @@
         No
         </label>
       </div>
-      <div id ="div_evidencia"class="input-box">
+      <div id ="div_evidencia_estudio"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
       <input type="radio" name="evidencia_estudio" class="res" value="Sí" required>
@@ -93,7 +94,7 @@ No
   </div>
   
   </div>
-<img src="https://media.discordapp.net/attachments/713043245214597160/1082373330776105060/Mi_proyecto.png?width=619&height=413" class="img"> 
+  <img src="https://media.discordapp.net/attachments/713043245214597160/1081249840186531932/normativo.png" class="img">
 
 <script>
   function activar_desactivar(dato){
@@ -228,8 +229,9 @@ No
         }
         .img{
           position: absolute;
-          top: 80%;
-          left: 60%;
+          width:200px;
+          top: 65%;
+          right: 34%;
         }
         
     </style>

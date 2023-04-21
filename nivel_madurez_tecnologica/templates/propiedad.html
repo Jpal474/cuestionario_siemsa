@@ -6,144 +6,151 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Propiedad Intelectual</h2>
-    <form action="#">
-      <div  id ="div_pruebas" class="input-box">
+    <form action="{%url 'guardar_propiedad' %}" method="POST">
+      {% csrf_token %}
+      <div  id ="div_busqueda" class="input-box">
         <p>¿Realizó estudios de búsqueda y análisis de protección intelectual a nivel nacional e internacional, y los resultados indicaron que no existe un desarrollo igual a su idea? (benchmark tecnológico)</p>
         <label>
-        <input type="radio" class="res" id="input_pruebas" name="pruebas" value="Sí" required onclick="javascript:activar_desactivar('pruebas');">
+        <input type="radio" class="res" id="input_busqueda" name="busqueda" value="Sí" required onclick="javascript:activar_desactivar('busqueda');">
          Sí
         </label>
-        <label><input type="radio" id="input_pruebas" class="res"  name="pruebas" value="No" required onclick="javascript:activar_desactivar('pruebas');">
+        <label><input type="radio" id="input_busqueda" class="res"  name="busqueda" value="No" required onclick="javascript:activar_desactivar('busqueda');">
         No
         </label>
       </div>
-      <div id ="div_evidencia"class="input-box">
+      <div id ="div_evidencia_busqueda"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
-      <input type="radio" name="evidencia_pruebas" class="res" value="Sí" required>
+      <input type="radio" name="evidencia_busqueda" class="res" value="Sí" required>
        Sí
       </label>
-      <label><input type="radio" name="evidencia_pruebas" class="res" value="No" required>
+      <label><input type="radio" name="evidencia_busqueda" class="res" value="No" required>
       No
       </label>
       </div>
-      <div  id ="div_riesgos" class="input-box">
+      <div  id ="div_estudios" class="input-box">
         <p>¿Ha actualizado los estudios de búsqueda y análisis de protección intelectual a nivel nacional e internacional y los resultados indicaron que no existe un desarrollo igual a su idea? (benchmark tecnológico)  ¿Cuántas veces? </p>
         <label>
-        <input id="input_riesgos" type="radio" class="res" name="riesgos" value="Sí" required onclick="javascript:activar_desactivar('riesgos');">
-         Sí
+        <input id="input_estudios" type="radio" class="res" name="estudios" value="1" required onclick="javascript:activar_desactivar('estudios');">
+         1
         </label>
-        <label><input id="input_riesgos2" type="radio" class="res" name="riesgos" value="No" required  onclick="javascript:activar_desactivar('riesgos');">
-        No
+        <label><input id="input_estudios2" type="radio" class="res" name="estudios" value="2" required  onclick="javascript:activar_desactivar('estudios');">
+        2
         </label>
+        <label><input id="input_estudios2" type="radio" class="res" name="estudios" value="3" required  onclick="javascript:activar_desactivar('estudios');">
+          3
+          </label>
       </div>
-      <div  id="div_evidencia_riesgos" class="input-box">
-        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
+      <div  id="div_evidencia_estudios" class="input-box">
+        <p>¿Cuenta con evidencia documentada que avale el 1er estudio y sus posibles actualizaciones?</p>
         <label>
-        <input type="radio" class="res" name="evidencia_riesgos" value="Sí" required>
+        <input type="radio" class="res" name="evidencia_estudios" value="Sí" required>
          Sí
         </label>
-        <label><input type="radio" class="res" name="evidencia_riesgos" value="No" required>
+        <label><input type="radio" class="res" name="evidencia_estudios" value="No" required>
         No
         </label>
       </div>
-      <div id="div_prototipo" class="input-box">
+      <div id="div_proteccion" class="input-box">
         <p>¿Los resultados de la búsqueda y análisis de protección intelectual indicaron que la invención puede ser protegida mediante algún mecanismo? </p>
         <label>
-        <input id="input_prototipo" type="radio" class="res" name="prototipo"  value="Sí" required onclick="javascript:activar_desactivar('prototipo');">
+        <input id="input_proteccion" type="radio" class="res" name="proteccion"  value="Sí" required onclick="javascript:activar_desactivar('proteccion');">
          Sí
         </label>
-        <label><input id="input_prototipo2" type="radio" class="res" name="prototipo" value="No" required onclick="javascript:activar_desactivar('prototipo');">
+        <label><input id="input_proteccion2" type="radio" class="res" name="proteccion" value="No" required onclick="javascript:activar_desactivar('proteccion');">
         No
         </label>
       </div>
-      <div  id="div_evidencia_prototipo" class="input-box">
+      <div  id="div_evidencia_proteccion" class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
     <label>
-    <input type="radio" class="res" name="evidencia_prototipo" value="Sí" required>
+    <input type="radio" class="res" name="evidencia_proteccion" value="Sí" required>
      Sí
     </label>
-    <label><input type="radio" class="res" name="evidencia_prototipo" value="No" required>
+    <label><input type="radio" class="res" name="evidencia_proteccion" value="No" required>
     No
     </label>
   </div>
-  <div  id ="div_producto" class="input-box">
+  <div  id ="div_licenciamiento" class="input-box">
     <p>¿Tiene contemplado un plan de licenciamiento de tecnología a terceros?</p>
     <label>
-    <input id="input_producto" type="radio" class="res" name="producto" value="Sí" required onclick="javascript:activar_desactivar('producto');">
+    <input id="input_licenciamiento" type="radio" class="res" name="licenciamiento" value="Sí" required onclick="javascript:activar_desactivar('licenciamiento');">
      Sí
     </label>
-    <label><input id="input_producto2" type="radio" class="res" name="producto" value="No" required  onclick="javascript:activar_desactivar('producto');">
+    <label><input id="input_licenciamiento2" type="radio" class="res" name="licenciamiento" value="No" required  onclick="javascript:activar_desactivar('licenciamiento');">
     No
     </label>
   </div>
-  <div  id="div_evidencia_producto" class="input-box">
+  <div  id="div_evidencia_licenciamiento" class="input-box">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_producto"  value="Sí" required>
+<input type="radio" class="res" name="evidencia_licenciamiento"  value="Sí" required>
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_producto" value="No" required>
+<label><input type="radio" class="res" name="evidencia_licenciamiento" value="No" required>
 No
 </label>
 </div>
-<div  id ="div_producto_comercializable" class="input-box2">
+<div  id ="div_actualizacion" class="input-box2">
     <p>¿Ha actualizado su plan de licenciamiento de tecnología a terceros? ¿Cuántas veces?</p>
     <label>
-    <input id="input_producto" type="radio" class="res" name="producto" value="Sí" required onclick="javascript:activar_desactivar('producto');">
+    <input id="input_actualizacion" type="radio" class="res" name="actualizacion" value="Sí" required onclick="javascript:activar_desactivar('actualizacion');">
      Sí
     </label>
-    <label><input id="input_producto2" type="radio" class="res" name="producto" value="No" required  onclick="javascript:activar_desactivar('producto');">
+    <label><input id="input_actualizacion2" type="radio" class="res" name="actualizacion" value="No" required  onclick="javascript:activar_desactivar('actualizacion');">
     No
     </label>
   </div>
-  <div  id="div_evidencia_producto" class="input-box2" style="top:23%">
-    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+  <div  id="div_evidencia_actualizacion" class="input-box2" style="top:23%">
+    <p>¿Cuenta con evidencia documentada que avale el 1er plan de licenciamiento y sus posibles actualizaciones?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_producto" value="Sí" required>
- Sí
+<input type="radio" class="res" name="evidencia_actualizacion" value="1" required>
+ 1
 </label>
-<label><input type="radio" class="res" name="evidencia_producto" value="No" required>
-No
+<label><input type="radio" class="res" name="evidencia_actualizacion" value="2" required>
+2
 </label>
+<label><input type="radio" class="res" name="evidencia_actualizacion" value="3" required>
+  3
+  </label>
 </div>
-<div  id ="div_producto_comercializable" class="input-box2"  style="top:32%">
+<div  id ="div_estrategia" class="input-box2"  style="top:32%">
     <p>¿Ha identificado y definido una estrategia de protección intelectual? (tiempos, redacción, componentes a proteger, mecanismo de protección: patente, modelo de utilidad, diseño industrial, derechos de autor, etc)</p>
     <label>
-    <input id="input_producto" type="radio" class="res" name="producto" value="Sí" required onclick="javascript:activar_desactivar('producto');">
+    <input id="input_estrategia" type="radio" class="res" name="estrategia" value="Sí" required onclick="javascript:activar_desactivar('estrategia');">
      Sí
     </label>
-    <label><input id="input_producto2" type="radio" class="res" name="producto" value="No" required  onclick="javascript:activar_desactivar('producto');">
+    <label><input id="input_estrategia2" type="radio" class="res" name="estrategia" value="No" required  onclick="javascript:activar_desactivar('estrategia');">
     No
     </label>
   </div>
-  <div  id="div_evidencia_producto" class="input-box2" style="top:50%">
+  <div  id="div_evidencia_estrategia" class="input-box2" style="top:50%">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_producto" value="Sí" required>
+<input type="radio" class="res" name="evidencia_estrategia" value="Sí" required>
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_producto" value="No" required>
+<label><input type="radio" class="res" name="evidencia_estrategia" value="No" required>
 No
 </label>
 </div>
-<div  id ="div_producto_comercializable" class="input-box2" style="top:59%">
+<div  id ="div_estrategia_porteccion" class="input-box2" style="top:59%">
     <p>¿Ha ejecutado la estrategia de protección intelectual?</p>
     <label>
-    <input id="input_producto" type="radio" class="res" name="producto" value="Sí" required onclick="javascript:activar_desactivar('producto');">
+    <input id="input_estrategia_proteccion" type="radio" class="res" name="estrategia_proteccion" value="Sí" required onclick="javascript:activar_desactivar('estrategia_proteccion');">
      Sí
     </label>
-    <label><input id="input_producto2" type="radio" class="res" name="producto" value="No" required  onclick="javascript:activar_desactivar('producto');">
+    <label><input id="input_estrategia_proteccion2" type="radio" class="res" name="estrategia_proteccion" value="No" required  onclick="javascript:activar_desactivar('estrategia_proteccion');">
     No
     </label>
   </div>
-  <div  id="div_evidencia_producto" class="input-box2" style="top:69%">
+  <div  id="div_evidencia_estrategia_proteccion" class="input-box2" style="top:69%">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_producto" value="Sí" required>
+<input type="radio" class="res" name="evidencia_estrategia_proteccion" value="Sí" required>
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_producto" value="No" required>
+<label><input type="radio" class="res" name="evidencia_estrategia_proteccion" value="No" required>
 No
 </label>
 </div>
@@ -153,7 +160,7 @@ No
   </div>
   
   </div>
-<img src="https://media.discordapp.net/attachments/713043245214597160/1084673488591265792/hourglass.png?width=413&height=413" class="img"> 
+  <img src="https://media.discordapp.net/attachments/713043245214597160/1081248760702697644/propiedad-intelectual.png"  class="img">
 
 <script>
   function activar_desactivar(dato){
@@ -201,8 +208,8 @@ No
 
 <style>
 .wrapper{
-            width: 1100px;
-            height: 850px;
+            width: 1300px;
+            height: 1200px;
             background: transparent;
             border: 8px solid #d49d11;
             position: relative;
@@ -301,9 +308,10 @@ No
           
         }
         .img{
+          width:1000px;
           position: absolute;
-          top: 140%;
-          right:10% ;
+          top: 122%;
+          right:25% ;
           width: 150px;
         }
         

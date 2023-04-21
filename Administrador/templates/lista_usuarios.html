@@ -1,0 +1,41 @@
+{% extends 'base2.html'%}
+{%block title %}Administrador - Usuarios{% endblock title %}
+{%block text%} Lista de Usuarios {% endblock text%}
+{%block body%}
+<div class="row">
+  {% for usuario in usuarios %}
+    <div class="col-sm-4">
+      <div class="card" style="width: 18rem;">
+        <img src="https://media.discordapp.net/attachments/713043245214597160/1095772584806723784/Mi_proyecto.png?width=782&height=413" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{usuario.username}}</h5>
+          <p class="card-text">{{usuario.first_name}}</p>
+          <p class="card-text">{{usuario.last_name}}</p>
+          <p class="card-text">{{usuario.email}}</p>
+          <a href="{% url 'editar_usuario' usuario.id %}" class="btn btn-primary">Editar</a>
+          <a href="{% url 'eliminar_usuario' usuario.id %}" class="btn btn-primary">Eliminar</a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+  <style>
+     .row{
+        position:absolute; 
+        top:10%;
+        left: 10%;
+        
+      }
+      .card{
+        background-color:#d49d11;
+        margin-top: 10px;
+        color: white;
+
+      }
+      .btn{
+        background-color: #162938;
+      }
+  </style>
+      
+{%endblock body%}    

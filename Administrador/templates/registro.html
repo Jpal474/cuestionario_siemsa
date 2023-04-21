@@ -1,10 +1,22 @@
 {% extends 'base.html' %}
 {%block title %} Registro {% endblock title %}
 {% block body%}
+<div class="container">
+  {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      {{message}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      
+    </div>
+       
+    {% endfor %}
+  {% endif %}
+</div>
 <div class="wrapper">
   <div class="form-box login">
     <h2>Registro</h2>
-    <form action="#" method="POST">
+    <form action="{% url 'registrar'%}" method="POST">
       {% csrf_token %}
       <div class="input-box">
         <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
@@ -15,6 +27,11 @@
         <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
         <input type="text" name="apellido" required>
         <label>Apellido(s)</label>
+      </div>
+      <div class="input-box">
+        <span class="icon"><ion-icon name="person-circle-outline"></ion-icon></span>
+        <input type="text" required name="nombreu">
+        <label>Nombre de Usuario</label>
       </div>
       <div class="input-box">
         <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
@@ -40,10 +57,10 @@
       <style>
           .wrapper{
               width: 600px;
-              height: 600px;
+              height: 700px;
               background: transparent;
               border: 2px solid rgba(255, 255, 255, .5);
-              position: fixed;
+              position: relative;
               margin: -25px 0 0 -25px;
               border-radius: 20px;
               backdrop-filter: blur(20px);

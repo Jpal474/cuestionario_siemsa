@@ -6,7 +6,8 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Aspectos Organizativos</h2>
-    <form action="#">
+    <form action="/guardar_aspectos_organizativos/" method="POST">
+      {% csrf_token %}
       <div  id ="div_organizacion" class="input-box">
         <p>¿Cuenta con una organización operativa acorde a las necesidades de operación de la producción? (mercadotecnia, logística, producción y otros)</p>
         <label>
@@ -17,7 +18,7 @@
         No
         </label>
       </div>
-      <div id ="div_evidencia"class="input-box">
+      <div id ="div_evidencia_organizacion"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
       <input type="radio" name="evidencia_organizacion" class="res" required>
@@ -96,7 +97,8 @@ No
   </div>
   
   </div>
-<img src="https://media.discordapp.net/attachments/713043245214597160/1084673488591265792/hourglass.png?width=413&height=413" class="img"> 
+  <img src="https://media.discordapp.net/attachments/713043245214597160/1081253308523618375/relacion-de-aspecto.png"  class="img">
+  
 
 <script>
   function activar_desactivar(dato){
@@ -245,8 +247,8 @@ No
         }
         .img{
           position: absolute;
-          top: 105%;
-          right:10% ;
+          top: 68%;
+          right:34% ;
           width: 150px;
         }
         

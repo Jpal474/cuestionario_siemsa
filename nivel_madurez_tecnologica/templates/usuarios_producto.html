@@ -6,7 +6,8 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Usuarios del Producto</h2>
-    <form action="#">
+    <form action="/guardar_usuarios_producto/" method="POST">
+      {% csrf_token %}
       <div  id ="div_usuarios" class="input-box">
         <p>¿Ha explorado posibles usuarios y/o clientes de la invención?</p>
         <label>
@@ -17,7 +18,7 @@
         No
         </label>
       </div>
-      <div id ="div_evidencia"class="input-box">
+      <div id ="div_evidencia_usuarios"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
       <input type="radio" name="evidencia_usuarios" class="res" required>
@@ -133,7 +134,7 @@ No
   </div>
   
   </div>
-<img src="https://media.discordapp.net/attachments/713043245214597160/1084673488591265792/hourglass.png?width=413&height=413" class="img"> 
+<img src="https://media.discordapp.net/attachments/713043245214597160/1095772584806723784/Mi_proyecto.png?width=1224&height=646" class="img"> 
 
 <script>
   function activar_desactivar(dato){
@@ -282,9 +283,9 @@ No
         }
         .img{
           position: absolute;
-          top: 140%;
-          right:10% ;
-          width: 150px;
+          top: 78%;
+          right:25% ;
+          width: 600px;
         }
         
     </style>
