@@ -14,38 +14,50 @@
         <input type="radio" class="res" id="input_pruebas" name="pruebas"  value="Sí" required onclick="javascript:activar_desactivar('pruebas');">
          Sí
         </label>
-        <label><input type="radio" id="input_pruebas2" class="res"  name="pruebas" value="No"  required onclick="javascript:activar_desactivar('pruebas');">
+        <label><input type="radio" id="input_pruebas1" class="res"  name="pruebas" value="No"  required onclick="javascript:activar_desactivar('pruebas');">
         No
         </label>
+        <label><input type="radio" id="input_pruebas2" class="res"  name="pruebas" value="No se"  required onclick="javascript:activar_desactivar('pruebas');">
+          No se
+        </label>
       </div>
-      <div id ="div_evidencia"class="input-box">
+      <div id ="div_evidencia_pruebas"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
-      <input type="radio" name="evidencia_pruebas" class="res" value="Sí" required>
+      <input type="radio" name="evidencia_pruebas" class="res" value="Sí">
        Sí
       </label>
-      <label><input type="radio" name="evidencia_pruebas2" class="res" value="No"  required>
+      <label><input type="radio" name="evidencia_pruebas" class="res" value="No">
       No
       </label>
+      <label><input type="radio" name="evidencia_pruebas" class="res" value="No se">
+        No se
+        </label>
       </div>
       <div  id ="div_invencion" class="input-box">
         <p>¿Su invencion tecnologica funciona a nivel laboratorio?</p>
         <label>
-        <input type="radio" class="res" id="input_inven1" name="invencion"  value="Sí" required onclick="javascript:activar_desactivar('invencion');">
+        <input type="radio" class="res" id="input_inven1" name="invencion"  value="Sí" onclick="javascript:activar_desactivar('invencion');">
          Sí
         </label>
-        <label><input type="radio"  id="input_inven2" class="res"  name="invencion" value="No"  required onclick="javascript:activar_desactivar('invencion');">
+        <label><input type="radio"  id="input_inven2" class="res"  name="invencion" value="No" onclick="javascript:activar_desactivar('invencion');">
         No
         </label>
+        <label><input type="radio"  id="input_inven3" class="res"  name="invencion" value="No se" onclick="javascript:activar_desactivar('invencion');">
+          No se
+          </label>
       </div>
       <div id ="div_evidencia_invencion"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
-      <input type="radio" name="evidencia_inv" class="res" value="Sí" required>
+      <input type="radio" name="evidencia_inv" class="res" value="Sí" >
        Sí
       </label>
-      <label><input type="radio" name="evidencia_inv" class="res" value="No"  required>
+      <label><input type="radio" name="evidencia_inv" class="res" value="No" >
       No
+      </label>
+      <label><input type="radio" name="evidencia_inv" class="res" value="No se" >
+        No se
       </label>
       </div>
       <div  id ="div_riesgos" class="input-box">
@@ -56,16 +68,22 @@
         </label>
         <label><input id="input_riesgos2" type="radio" class="res" name="riesgos" value="No"  required  onclick="javascript:activar_desactivar('riesgos');">
         No
+        </label>       
+        <label><input id="input_riesgos3" type="radio" class="res" name="riesgos" value="No se"  required  onclick="javascript:activar_desactivar('riesgos');">
+          No se
         </label>
       </div>
       <div  id="div_evidencia_riesgos" class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
         <label>
-        <input type="radio" class="res" name="evidencia_riesgos" value="Sí"  required>
+        <input type="radio" class="res" name="evidencia_riesgos" value="Sí"  >
          Sí
         </label>
-        <label><input type="radio" class="res" name="evidencia_riesgos" value="No"  required>
+        <label><input type="radio" class="res" name="evidencia_riesgos" value="No"  >
         No
+        </label>
+        <label><input type="radio" class="res" name="evidencia_riesgos" value="No se"  >
+          No se
         </label>
       </div>
       <div id="div_prototipo" class="input-box">
@@ -77,15 +95,21 @@
         <label><input id="input_prototipo2" type="radio" class="res" name="prototipo" value="No"  required onclick="javascript:activar_desactivar('prototipo');">
         No
         </label>
+        <label><input id="input_prototipo3" type="radio" class="res" name="prototipo" value="No se"  required onclick="javascript:activar_desactivar('prototipo');">
+          No se
+        </label>
       </div>
       <div  id="div_evidencia_prototipo" class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
     <label>
-    <input type="radio" class="res" name="evidencia_prototipo" value="Sí"  required>
+    <input type="radio" class="res" name="evidencia_prototipo" value="Sí"  >
      Sí
     </label>
-    <label><input type="radio" class="res" name="evidencia_prototipo" value="No"  required>
+    <label><input type="radio" class="res" name="evidencia_prototipo" value="No"  >
     No
+    </label>
+    <label><input type="radio" class="res" name="evidencia_prototipo" value="No se"  >
+      No se
     </label>
   </div>
   <div id="div_prototipo_sistema" class="input-box">
@@ -97,96 +121,126 @@
     <label><input id="input_prototipo_sistema2" type="radio" class="res" name="prototipo_sistema" value="No"  required onclick="javascript:activar_desactivar('prototipo_sistema');">
     No
     </label>
+    <label><input id="input_prototipo_sistema3" type="radio" class="res" name="prototipo_sistema" value="No se"  required onclick="javascript:activar_desactivar('prototipo_sistema');">
+      No se
+    </label>
   </div>
   <div  id="div_evidencia_prototipo_sistema" class="input-box">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_prototipo_sistema" value="Sí"  required>
+<input type="radio" class="res" name="evidencia_prototipo_sistema" value="Sí"  >
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_prototipo_sistema" value="No"  required>
+<label><input type="radio" class="res" name="evidencia_prototipo_sistema" value="No"  >
 No
+</label>
+<label><input type="radio" class="res" name="evidencia_prototipo_sistema" value="No se"  >
+  No se
 </label>
 </div>
   <div  id ="div_producto" class="input-box">
     <p>¿Cuenta con un producto terminado para prueba de primeros clientes?</p>
     <label>
-    <input id="input_producto" type="radio" class="res" name="producto"  value="Sí" required onclick="javascript:activar_desactivar('producto');">
+    <input id="input_producto" type="radio" class="res" name="producto"  value="Sí"  onclick="javascript:activar_desactivar('producto');">
      Sí
     </label>
-    <label><input id="input_producto2" type="radio" class="res" name="producto" value="No"  required  onclick="javascript:activar_desactivar('producto');">
+    <label><input id="input_producto2" type="radio" class="res" name="producto" value="No"   onclick="javascript:activar_desactivar('producto');">
     No
+    </label>
+    <label><input id="input_producto3" type="radio" class="res" name="producto" value="No se" onclick="javascript:activar_desactivar('producto');">
+      No se
     </label>
   </div>
   <div  id="div_evidencia_producto" class="input-box">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_producto" value="Sí" required>
+<input type="radio" class="res" name="evidencia_producto" value="Sí" >
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_producto" value="No"  required>
+<label><input type="radio" class="res" name="evidencia_producto" value="No"  >
 No
+</label>
+<label><input type="radio" class="res" name="evidencia_producto" value="No se"  >
+  No se
 </label>
 </div>
 <div  id ="div_producto_comercializable" class="input-box2">
     <p>¿Tiene un producto comercializable?</p>
     <label>
-    <input id="input_producto_comercializable" type="radio" class="res" name="producto_comercializable" value="Sí"  required onclick="javascript:activar_desactivar('producto_comercializable');">
+    <input id="input_producto_comercializable" type="radio" class="res" name="producto_comercializable" value="Sí"  onclick="javascript:activar_desactivar('producto_comercializable');">
      Sí
     </label>
-    <label><input id="input_producto_comercializable2" type="radio" class="res" name="producto_comercializable" value="Np"  required  onclick="javascript:activar_desactivar('producto_comercializable');">
+    <label><input id="input_producto_comercializable2" type="radio" class="res" name="producto_comercializable" value="No"    onclick="javascript:activar_desactivar('producto_comercializable');">
     No
+    </label>
+    <label><input id="input_producto_comercializable3" type="radio" class="res" name="producto_comercializable" value="No se"    onclick="javascript:activar_desactivar('producto_comercializable');">
+      No se
     </label>
   </div>
   <div  id="div_evidencia_producto_comercializable" class="input-box2" style="top:23%">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_producto_comercializable" value="Sí"  required>
+<input type="radio" class="res" name="evidencia_producto_comercializable" value="Sí" >
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_producto_comercializable" value="No"  required>
+<label><input type="radio" class="res" name="evidencia_producto_comercializable" value="No">
 No
+</label>
+<label><input type="radio" class="res" name="evidencia_producto_comercializable" value="No se" >
+  No se
 </label>
 </div>
-<div  id ="div_produccion_sostenida" class="input-box2" style="top:33.5%">
+<div  id ="div_produccion" class="input-box2" style="top:33.5%">
     <p>¿Cuenta con producción sostenida?</p>
     <label>
-    <input id="input_produccion_sostenida" type="radio" class="res" name="produccion" value="Sí"  required onclick="javascript:activar_desactivar('produccion');">
+    <input id="input_produccion" type="radio" class="res" name="produccion" value="Sí"  onclick="javascript:activar_desactivar('produccion');">
      Sí
     </label>
-    <label><input id="input_produccion_sotenida2" type="radio" class="res" name="producion" value="No" required  onclick="javascript:activar_desactivar('produccion');">
+    <label><input id="input_produccion2" type="radio" class="res" name="produccion" value="No"  onclick="javascript:activar_desactivar('produccion');">
     No
     </label>
+    <label><input id="input_produccion3" type="radio" class="res" name="produccion" value="No se"  onclick="javascript:activar_desactivar('produccion');">
+      No se
+    </label>
   </div>
-  <div  id="div_evidencia_producion" class="input-box2" style="top:44%">
+  <div  id="div_evidencia_produccion" class="input-box2" style="top:44%">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_produccion" value="Sí" required>
+<input type="radio" class="res" name="evidencia_produccion" value="Sí">
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_produccion" value="No" required>
+<label><input type="radio" class="res" name="evidencia_produccion" value="No">
 No
+</label>
+<label><input type="radio" class="res" name="evidencia_produccion" value="No se">
+  No se
 </label>
 </div>
 <div  id ="div_cambios" class="input-box2" style="top:55%">
     <p>¿Cuenta con cambios incrementales de producto que le lleven a crear nuevas versiones?</p>
     <label>
-    <input id="input_cambios" type="radio" class="res" name="cambios" value="Sí" required onclick="javascript:activar_desactivar('cambios');">
+    <input id="input_cambios" type="radio" class="res" name="cambios" value="Sí"  onclick="javascript:activar_desactivar('cambios');">
      Sí
     </label>
-    <label><input id="input_cambios2" type="radio" class="res" name="cambios" value="Sí" required  onclick="javascript:activar_desactivar('cambios');">
+    <label><input id="input_cambios2" type="radio" class="res" name="cambios" value="No"  onclick="javascript:activar_desactivar('cambios');">
     No
+    </label>
+    <label><input id="input_cambios3" type="radio" class="res" name="cambios" value="No se"  onclick="javascript:activar_desactivar('cambios');">
+      No se
     </label>
   </div>
   <div  id="div_evidencia_cambios" class="input-box2" style="top:69%">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_cambios" value="Sí" required>
+<input type="radio" class="res" name="evidencia_cambios" value="Sí" >
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_cambios" value="Sí" required>
+<label><input type="radio" class="res" name="evidencia_cambios" value="No" >
 No
 </label>
+<label><input type="radio" class="res" name="evidencia_cambios" value="No se" >
+  No se
+  </label>
 </div>
 
   <button type="submit" class="btn">Registrar</button>
@@ -197,17 +251,18 @@ No
 <img src="https://media.discordapp.net/attachments/713043245214597160/1084673488591265792/hourglass.png?width=413&height=413" class="img"> 
 
 <script>
-  /*function activar_desactivar(dato){
+  function activar_desactivar(dato){
   switch(dato){
   case "pruebas":
   if(document.getElementById('input_pruebas').checked){
     document.getElementById('div_evidencia_pruebas').style.display="block";
-    document.getElementById('div_evidencias_pruebas2').style.display="block";
+    document.getElementById('div_invencion').style.display="block";
+    
   }
   else{
-    if(document.getElementById('input_pruebas2').checked){
-    document.getElementById('div_evidencia').style.display="none";
-    document.getElementById('div_principios').style.display="none";
+    if(document.getElementById('input_pruebas1').checked || document.getElementById('input_pruebas2').checked){
+    document.getElementById('div_evidencia_pruebas').style.display="none";
+    document.getElementById('div_invencion').style.display="none";
   }
   }
   break;
@@ -216,25 +271,115 @@ No
     document.getElementById('div_evidencia_invencion').style.display="block";
   }
   else{
-    if(document.getElementById('input_inven2').checked){
+    if(document.getElementById('input_inven2').checked || document.getElementById('input_inven3').checked){
     document.getElementById('div_evidencia_invencion').style.display="none";
   }
   }
   break;
-  case "analisis":
-    if(document.getElementById('input_analisis').checked){
-      document.getElementById('div_evidencia_analisis').style.display="block";
+  case "riesgos":
+    if(document.getElementById('input_riesgos').checked){
+      document.getElementById('div_evidencia_riesgos').style.display="block";
     }
     else{
-      if(document.getElementById('input_analisis2')){
-      document.getElementById('div_evidencia_analisis').style.display="none";
+      if(document.getElementById('input_riesgos2').checked || document.getElementById('input_riesgos3').checked){
+      document.getElementById('div_evidencia_riesgos').style.display="none";
     }
     }
     break;
-  
+    
+    case "prototipo":
+    if(document.getElementById('input_prototipo').checked){
+      document.getElementById('div_evidencia_prototipo').style.display="block";
+    }
+    else{
+      if(document.getElementById('input_prototipo2').checked || document.getElementById('input_prototipo3').checked){
+      document.getElementById('div_evidencia_prototipo').style.display="none";
+    }
+    }
+
+    break;
+
+    case "prototipo_sistema":
+    if(document.getElementById('input_prototipo_sistema').checked){
+      document.getElementById('div_evidencia_prototipo_sistema').style.display="block";
+      document.getElementById('div_producto').style.display="block";
+    }
+    else{
+      if(document.getElementById('input_prototipo_sistema2').checked || document.getElementById('input_prototipo_sistema3').checked){
+      document.getElementById('div_evidencia_prototipo_sistema').style.display="none";
+      document.getElementById('div_producto').style.display="none";
+    }
+    }
+
+    break;
+
+
+
+    case "producto":
+    if(document.getElementById('input_producto').checked){
+      document.getElementById('div_evidencia_producto').style.display="block";
+      document.getElementById('div_producto_comercializable').style.display="block";
+
+    }
+    else{
+      if(document.getElementById('input_producto2').checked || document.getElementById('input_producto3').checked){
+      document.getElementById('div_evidencia_producto').style.display="none";
+      document.getElementById('div_producto_comercializable').style.display="none";
+    }
+    }
+
+    break;
+
+
+    case "producto_comercializable":
+    if(document.getElementById('input_producto_comercializable').checked){
+      document.getElementById('div_evidencia_producto_comercializable').style.display="block";
+      document.getElementById('div_produccion').style.display="block";
+      document.getElementById('div_cambios').style.display="block";
+
+    }
+    else{
+      if(document.getElementById('input_producto_comercializable2').checked || document.getElementById('input_producto_comercializable3').checked){
+      document.getElementById('div_evidencia_producto_comercializable').style.display="none";
+      document.getElementById('div_produccion').style.display="none";
+      document.getElementById('div_cambios').style.display="none";
+    }
+    }
+
+    break;
+
+    case "produccion":
+    if(document.getElementById('input_produccion').checked){
+      document.getElementById('div_evidencia_produccion').style.display="block";
+ 
+
+    }
+    else{
+      if(document.getElementById('input_produccion2').checked || document.getElementById('input_produccion3').checked){
+      document.getElementById('div_evidencia_produccion').style.display="none";
+    }
+    }
+
+    break;
+
+    case "cambios":
+    if(document.getElementById('input_cambios').checked){
+      document.getElementById('div_evidencia_cambios').style.display="block";
+
+
+    }
+    else{
+      if(document.getElementById('input_cambios2').checked || document.getElementById('input_cambios3').checked){
+      document.getElementById('div_evidencia_cambios').style.display="none";
+
+    }
+    }
+
+    break;
+
   }
   
-  }*/
+  }
   
   </script>
 
@@ -271,7 +416,7 @@ No
           text-align: center;
 
         }
-        #div_evidencia, #div_principios, #div_evidencia_principios, #div_evidencia_analisis{
+        #div_evidencia_producto_comercializable, #div_cambios, #div_produccion, #div_evidencia_produccion, #div_evidencia_cambios, #div_producto_comercializable{
           display: none;
         }
          
@@ -342,12 +487,12 @@ No
         }
         .img{
           position: absolute;
-          top: 185%;
+          top: 172%;
           right:10% ;
           width: 120px;
         }
         
-        #div_evidencia_pruebas, #div_invencion, #div_evidencia_invencion{
+        #div_evidencia_pruebas, #div_invencion, #div_evidencia_invencion, #div_evidencia_riesgos, #div_evidencia_prototipo, #div_producto, #div_evidencia_prototipo_sistema, #div_evidencia_producto{
           display: none;
         }
     </style>

@@ -15,38 +15,51 @@
          Sí
         </label>
         <label><input type="radio" id="input_investigacion2" class="res"  name="investigacion" value="No" required onclick="javascript:activar_desactivar('investigacion');">
-        No
+          No
+        </label>
+        <label><input type="radio" id="input_investigacion3" class="res"  name="investigacion" value="No se" required onclick="javascript:activar_desactivar('investigacion');">
+          No se
         </label>
       </div>
       <div id ="div_evidencia"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
-      <input type="radio" name="evidencia_investigacion" id="evidencia_investigacion1" value="Sí" class="res" required>
+      <input type="radio" name="evidencia_investigacion" value="Sí" class="res">
        Sí
       </label>
-      <label><input type="radio" name="evidencia_investigacion" id="evidencia_investigacion2" value="No" class="res" required>
+      <label><input type="radio" name="evidencia_investigacion" value="No" class="res">
       No
+      </label>
+      <label><input type="radio" name="evidencia_investigacion" id="evidencia_investigacion2" value="No se" class="res">
+        No se
       </label>
       </div>
       <div  id ="div_principios" class="input-box">
         <p>¿Identificó principios básicos de investigación que pudieran ser utilizados en nuevas tecnologías?</p>
         <label>
-        <input id="input_principios" type="radio" class="res" name="principios" value="Sí" required onclick="javascript:activar_desactivar('principios');">
+        <input id="input_principios" type="radio" class="res" name="principios" value="Sí" onclick="javascript:activar_desactivar('principios');">
          Sí
         </label>
-        <label><input id="input_principios2" type="radio" class="res" name="principios" value="No" required  onclick="javascript:activar_desactivar('principios');">
+        <label><input id="input_principios2" type="radio" class="res" name="principios" value="No"  onclick="javascript:activar_desactivar('principios');">
         No
         </label>
+        <label><input id="input_principios3" type="radio" class="res" name="principios" value="No se"  onclick="javascript:activar_desactivar('principios');">
+          No se
+          </label>
       </div>
       <div  id="div_evidencia_principios" class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
         <label>
-        <input type="radio" class="res" name="evidencia_principios" id="evidencia_principios1" value="Sí" required>
+
+        <input type="radio" class="res" name="evidencia_principios" id="evidencia_principios1" value="Sí">
          Sí
         </label>
-        <label><input type="radio" class="res" name="evidencia_principios" id="evidencia_principios2" value="No" required>
+        <label><input type="radio" class="res" name="evidencia_principios" id="evidencia_principios2" value="No">
         No
         </label>
+        <label><input type="radio" class="res" name="evidencia_principios" id="evidencia_principios2" value="No se">
+          No se
+          </label>
       </div>
       <div id="div_analisis" class="input-box">
         <p>¿Realizó un análisis de los artículos científicos, modelos o teorías científicas que respaldan la aplicación de la idea en algún área tecnológica?</p>
@@ -57,15 +70,22 @@
         <label><input id="input_analisis2" type="radio" class="res" name="analisis" value="No" required onclick="javascript:activar_desactivar('analisis');">
         No
         </label>
+        <label><input id="input_analisis3" type="radio" class="res" name="analisis" value="No se" required onclick="javascript:activar_desactivar('analisis');">
+          No se
+          </label>
       </div>
       <div  id="div_evidencia_analisis" class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
     <label>
-    <input type="radio" class="res" name="evidencia_analisis" id="evidencia_a1" value="Sí" required>
+
+    <input type="radio" class="res" name="evidencia_analisis" id="evidencia_a1" value="Sí">
      Sí
     </label>
-    <label><input type="radio" class="res" name="evidencia_analisis" id="evidencia_a2" value="No" required>
+    <label><input type="radio" class="res" name="evidencia_analisis" id="evidencia_a2" value="No">
     No
+    </label>
+    <label><input type="radio" class="res" name="evidencia_analisis" id="evidencia_a3" value="No se">
+      No se
     </label>
   </div>
 
@@ -85,7 +105,7 @@
     document.getElementById('div_principios').style.display="block";
   }
   else{
-    if(document.getElementById('input_investigacion2').checked){
+    if(document.getElementById('input_investigacion2').checked || document.getElementById('input_investigacion3').checked){
     document.getElementById('div_evidencia').style.display="none";
     document.getElementById('div_principios').style.display="none";
   }
@@ -96,7 +116,7 @@
     document.getElementById('div_evidencia_principios').style.display="block";
   }
   else{
-    if(document.getElementById('input_principios2').checked){
+    if(document.getElementById('input_principios2').checked || document.getElementById('input_principios3').checked){
     document.getElementById('div_evidencia_principios').style.display="none";
   }
   }
@@ -106,7 +126,7 @@
       document.getElementById('div_evidencia_analisis').style.display="block";
     }
     else{
-      if(document.getElementById('input_analisis2')){
+      if(document.getElementById('input_analisis2').checked || document.getElementById('input_analisis3').checked){
       document.getElementById('div_evidencia_analisis').style.display="none";
     }
     }
