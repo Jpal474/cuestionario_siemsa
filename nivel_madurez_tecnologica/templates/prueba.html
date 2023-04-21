@@ -2,7 +2,8 @@
 {%block title%} Resultados {%endblock title%}
 {% block text %} Resultados {%endblock text%}
 {%block body %}
-<table class="table table-hover">
+<button type="submit" class="btn btn-sm btn-outline-secondary" href="#">Exportar a PDF</button>
+<table class="table">
     <thead>
         <tr>
           <th scope="col" style="background-color: var(--sidebar-color); color: white;">Datos</th>
@@ -36,7 +37,7 @@
   <div class="container text-center">
     <div class="row align-items-center">
       <div class="col">
-        <table class="table table-hover">
+        <table class="table">
             <thead>
                 <tr>
                   <th scope="col" style="background-color: var(--sidebar-color);">Nivel NMT</th>
@@ -126,7 +127,7 @@
           </table>
       </div>
       <div class="col">
-        <table class="table table-hover">
+        <table class="table">
             <thead>
                 <tr>
                   <th scope="col" style="background-color: var(--sidebar-color);">Nivel NMT</th>
@@ -238,7 +239,7 @@
           </table>
       </div>
       <div class="col">
-        <table class="table table-hover">
+        <table class="table">
             <thead>
                 <tr>
                   <th scope="col" style="background-color: var(--sidebar-color);">Nivel NMT</th>
@@ -329,29 +330,56 @@
  
   
   
-  <table class="table table-hover">
+  <table class="table" style="width:70%">
     <thead>
         <tr>
           <th scope="col" style="width: 200px; height: 70px;" >Nivel General NMT</th>
-          <th scope="col" style="width: 200px; height: 70px;">{{evaluacion.promedio_global_trl}}</th>
-          <th scope="col"  rowspan="4" style="background-color: var(--sidebar-color); width: 200px; height: 70px;">Resultado</th>
+          <th scope="col" style="width: 200px; height: 70px;">{{evaluacion.promedio_trl_global}}</th>
+          <th scope="col"  rowspan="4" style="background-color: var(--sidebar-color); width: 200px; height: 70px;">estatus</th>
         </tr>
       </thead>
   </table><br>
-  <table class="table table-hover">
+  <table class="table">
     <thead>
         <tr>
-          <th scope="col" style="background-color: var(--sidebar-color);" >Investigacion</th>
+          <th scope="col" colspan="2" style="background-color: var(--sidebar-color);" >Investigacion</th>
           <th scope="col">58%</th>
           
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="row">No. Diagnostico</th>
+          <th scope="rows" colspan="2">conclusion investigacion</th>
 
         </tr>
+        <tr>
+            <th scope="rows" colspan="2">1.1</th>
+            <th scope="rows" colspan="2">100%</th>
+            <th scope="rows" colspan="2">conclusion pregunta</th>
+  
+          </tr>
   </table><br>
+  <table class="table">
+    <thead>
+        <tr>
+          <th scope="col" colspan="2" style="background-color: var(--sidebar-color);" >Investigacion</th>
+          <th scope="col">58%</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="rows" colspan="2">conclusion investigacion</th>
+
+        </tr>
+        <tr>
+            <th scope="rows" colspan="2">1.1</th>
+            <th scope="rows" colspan="2">100%</th>
+            <th scope="rows" colspan="2">conclusion pregunta</th>
+  
+          </tr>
+  </table><br>
+
 
 <figure class="highcharts-figure"> <div id="first"></div></figure>
 
@@ -371,7 +399,8 @@
     plotBorderWidth: 0,
     plotShadow: false,
     height: '80%',
-    backgroundColor: 'transparent'
+    
+    //backgroundColor: 'transparent'
   },
   
   title: {
@@ -421,7 +450,7 @@
   },
   
   series: [{
-    name: 'Speed',
+    name: 'Nivel NMT',
     data: [{{evaluacion.promedio_trl_global}}],
     tooltip: {
       valueSuffix: ''
@@ -460,7 +489,8 @@
   chart: {
       type: 'solidgauge',
       height: '150%',
-      backgroundColor:'transparent',
+      
+    
       
       //backgroundColor: 'transparent',
       events: {
@@ -469,7 +499,7 @@
   },
   
   title: {
-      text: 'Activity',
+      text: 'Promedios Por Áreas',
       style: {
           fontSize: '24px'
       }
@@ -669,9 +699,8 @@
           text: 'Promedios por Nivel de NMT'
       },
       subtitle: {
-          text: 'Source: ' +
-              '<a href="https://www.fhi.no/en/id/infectious-diseases/coronavirus/daily-reports/daily-reports-COVID19/"' +
-              'target="_blank">FHI</a>'
+          text: ''
+              
       },
       xAxis: {
           categories: ['NMT 1', 'NMT 2', 'NMT 3', 'NMT 4', 'NMT 5', 'NMT 6', 'NMT 7', 'NMT 8', 'NMT 9'],

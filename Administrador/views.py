@@ -11,11 +11,9 @@ def login_user(request):
         password=request.POST.get("password")
         user=authenticate(request, username=username, password=password)
         if user is not None:
-            print("sí")
             login(request, user)
             return redirect ('inicio_administrador')
         else:
-            print("no")
             messages.error(request, ("Hubo un error al iniciar sesión, intente de nuevo"))
             return render(request, "authentication/login.html")
     else:
@@ -41,8 +39,7 @@ def registrar(request):
             user.save()
             return redirect ('inicio_administrador')
         else:
-            print("error")
-            messages.error(request, ("Hubo un error al iniciar sesión, intente de nuevo"))    
+            messages.error(request, ("Hubo un error al hacer el registro, intente de nuevo"))    
             return redirect ('registrar')
 
     else:
@@ -81,12 +78,15 @@ def editar_usuario(request, id):
     else:  
         usuario=User.objects.all()
         user=next(post for post in usuario if post.pk==id)
-        return render(request, "editar_usuario.html", {"usuario":usuarios})
+        return render(request, "editar_usuario.html", {"usuario":user})
 
 def eliminar_usuario(request, id):
     user=User.objects.filter(id=id)
     user.delete()
     return redirect ('ver_usuarios')
+
+
+
 
 
 

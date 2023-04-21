@@ -3,6 +3,9 @@ from datetime import datetime
 from pydoc import describe
 from django.shortcuts import redirect, render
 from Cuestionario.models import *
+from weasyprint.css.computed_values import content
+from django.template.loader import get_template
+from weasyprint import HTML
 
 def inicio(request):
     return render (request, 'inicio.html')
@@ -26,7 +29,7 @@ def investigación(request):
 
 def guardar_investigacion(request):
     nombre=Registro.objects.filter(nombre_proyecto=nombre_proyecto, fecha=fecha).values('nombre')
-    inst=Registro.objects.filter(institucion=institucion).values('institucion')
+   # inst=Registro.objects.filter(institucion=institucion, fecha=fecha).values('institucion')
     evaluacion=Evaluacion()
     investigacion=Respuestas_Investigacion()
     respuestas=[]
@@ -73,7 +76,7 @@ def guardar_investigacion(request):
   
     evaluacion.nombre=nombre
     evaluacion.nombre_proyecto=nombre_proyecto
-    evaluacion.institucion=inst
+    evaluacion.institucion=institucion
     evaluacion.pregunta1_1=resultados[0]
     evaluacion.pregunta1_2=resultados[1]
     evaluacion.pregunta2_1=resultados[2]
@@ -526,7 +529,7 @@ def resultados(request):
     promedios2=[evaluacion.promedio_investigacion,evaluacion.promedio_desarrollo,evaluacion.promedio_integracion,evaluacion.promedio_propiedad,evaluacion.promedio_normatividad,evaluacion.promedio_manufactura,evaluacion.promedio_usuarios,evaluacion.promedio_aspectos]
     promedios/=9
     global_trl=(promedios/9)*0.09
-    evaluacion.promedio_trl_global=global_trl
+    evaluacion.promedio_trl_global=round(global_trl,2)
     evaluacion.save()
     if global_trl >= 9:
         estatus.estatus="Tu invención es un Producto terminado.Pruebas con éxito en entorno real. Despliegue.Tecnología disponible en el mercado. Aplicación comercial."
@@ -573,7 +576,82 @@ def resultados(request):
     conclusiones.conclusion_aspectos=conclusion[7]
 
     conclusiones.nombre_proyecto=estatus.nombre_proyecto=nombre_proyecto
-    return render(request,'resultados.html', {'evaluacion':evaluacion, 'estatus':estatus})
+    iconos={
+     
+    }
+    colores={}
+    print(eval.promedio_investigacion)
+    cont=0
+    cont2=0
+    icons=[None]*44
+    icons[0]=eval.pregunta1_1
+    icons[1]=eval.pregunta1_2
+    icons[2]=eval.pregunta2_1 
+    icons[3]=eval.pregunta2_2 
+    icons[4]=eval.pregunta2_3 
+    icons[5]=eval.pregunta2_4
+    icons[6]=eval.pregunta2_5
+    icons[7]=eval.pregunta2_6
+    icons[8]=eval.pregunta3_1
+    icons[9]=eval.pregunta3_2
+    icons[10]=eval.pregunta3_3
+    icons[11]=eval.pregunta3_4
+    icons[12]=eval.pregunta3_5 
+    icons[13]=eval.pregunta3_6
+    icons[14]=eval.pregunta4_1
+    icons[15]=eval.pregunta4_2
+    icons[16]=eval.pregunta4_3
+    icons[17]=eval.pregunta4_4 
+    icons[18]=eval.pregunta4_5
+    icons[20]=eval.pregunta4_6
+    icons[19]=eval.pregunta4_7
+    icons[21]=eval.pregunta4_8
+    icons[22]=eval.pregunta5_1  
+    icons[23]=eval.pregunta5_2 
+    icons[24]=eval.pregunta5_3
+    icons[25]=eval.pregunta5_4
+    icons[26]=eval.pregunta6_1 
+    icons[27]=eval.pregunta6_2
+    icons[28]=eval.pregunta6_3 
+    icons[29]=eval.pregunta6_4 
+    icons[30]=eval.pregunta6_5
+    icons[31]=eval.pregunta7_1 
+    icons[32]=eval.pregunta7_2
+    icons[33]=eval.pregunta7_3
+    icons[34]=eval.pregunta7_4
+    icons[35]=eval.pregunta8_1
+    icons[36]=eval.pregunta8_2
+    icons[37]=eval.pregunta8_3
+    icons[38]=eval.pregunta8_4
+    icons[39]=eval.pregunta8_5
+    icons[40]=eval.pregunta9_1
+    icons[41]=eval.pregunta9_2
+    icons[42]=eval.pregunta9_3  
+    icons[43]=eval.pregunta9_4
+
+    for icono in icons:
+        if icono == 0:
+            iconos[cont2]="close-outline"
+            colores[cont2]="red"
+            cont2+=1
+        elif icono==12.5:
+            iconos[cont2]="notifications-outline"
+            colores[cont2]="red"
+            cont2+=1 
+        elif icono==25:
+            iconos[cont2]="alert-outline"
+            colores[cont2]="red"
+            cont2+=1
+        elif icono==50:
+            iconos[cont2]="warning-outline"
+            colores[cont2]="yellow"
+            cont2+=1 
+        else:
+            iconos[cont2]="checkmark-outline"
+            colores[cont2]="green"
+            cont2+=1 
+   
+    return render(request,'resultados.html', {'evaluacion':evaluacion, 'estatus':estatus, 'iconos':iconos, 'colores':colores})
 
 def prueba(request):
     eval=Evaluacion.objects.get(id=11)
@@ -778,3 +856,10 @@ def prueba(request):
   
   
     return render(request, 'prueba.html', {'evaluacion':eval, 'iconos':iconos, 'colores':colores})
+
+
+'''def export(request):
+    template=get_template('pdf.html')
+    html_template = template.render({"reservaciones":reserv, "ot":ot})
+    pdf= HTML (string=html_template, base_url=request.build_absolute_uri()).write_pdf()
+    return HttpResponse(pdf, content_type='application/pdf')'''
