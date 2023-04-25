@@ -6,8 +6,7 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Manufactura</h2>
-    <form action="{% url 'guardar_manufactura' %}" method="POST">
-      {% csrf_token %}
+    <form action="#">
       <div  id ="div_manufacturabilidad" class="input-box">
         <p>¿Ha explorado principios básicos de manufacturabilidad?</p>
         <label>
@@ -21,7 +20,7 @@
           No se
           </label>
       </div>
-      <div id ="div_evidencia_manufacturabilidad"class="input-box">
+      <div id ="div_evidencia"class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
       <label>
       <input type="radio" name="evidencia_manufacturabilidad" value="Sí" class="res">
@@ -196,7 +195,7 @@ No
   </div>
   
   </div>
-<img src="https://media.discordapp.net/attachments/713043245214597160/1095762691597029527/fabrica1.png" class="img"> 
+<img src="https://media.discordapp.net/attachments/713043245214597160/1084673488591265792/hourglass.png?width=413&height=413" class="img"> 
 
 <script>
   function activar_desactivar(dato){
@@ -402,8 +401,8 @@ No
         }
         .img{
           position: absolute;
-          top: 90%;
-          right:30% ;
+          top: 140%;
+          right:10% ;
           width: 150px;
         }
         
