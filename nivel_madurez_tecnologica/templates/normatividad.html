@@ -121,6 +121,7 @@ No
   }
   }
   break;
+<<<<<<< Updated upstream
   case "analisis":
     if(document.getElementById('input_analisis').checked){
       document.getElementById('div_evidencia_analisis').style.display="block";
@@ -128,6 +129,28 @@ No
     else{
       if(document.getElementById('input_analisis2')){
       document.getElementById('div_evidencia_analisis').style.display="none";
+=======
+
+  case "proceso":
+    if(document.getElementById('input_prototipo').checked){
+      document.getElementById('div_estandares_prototipo').style.display="block";
+      document.getElementById('div_evidencia_proceso_registro').style.display="block";
+    }
+    else{
+      if(document.getElementById('input_prototipo2').checked || document.getElementById('input_prototipo3').checked){
+      document.getElementById('div_evidencia_proceso_registros').style.display="none";
+      document.getElementById('div_estandares_prototipo').style.display="none";
+    }
+    }
+    break;
+    case "estandares":
+    if(document.getElementById('input_estandares_prototipo').checked){
+      document.getElementById('div_evidencia_estandares_prototipo').style.display="block";
+    }
+    else{
+      if(document.getElementById('input_estandares_prototipo2').checked || document.getElementById('input_estandares_prototipo3').checked){
+      document.getElementById('div_evidencia_estandares_prototipo').style.display="none";
+>>>>>>> Stashed changes
     }
     }
     break;

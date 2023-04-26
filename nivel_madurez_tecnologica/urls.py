@@ -34,7 +34,7 @@ urlpatterns = [
     path('integracion_tecnologica/', views.integracion, name="integracion"),
     path('guardar_integracion/', views.guardar_integracion, name="guardar_integracion"),
     path('propiedad_intelectual/', views.propiedad, name="propiedad"),
-    path('guardar_propiedad/', views.guardar_normatividad, name="guardar_propiedad"),
+    path('guardar_propiedad/', views.guardar_propiedad, name="guardar_propiedad"),
     path('normatividad/', views.normatividad, name="normatividad"),
     path('guardar_normatividad/', views.guardar_normatividad, name="guardar_normatividad"),
     path('manufactura/', views.manufactura, name="manufactura"),
@@ -44,6 +44,6 @@ urlpatterns = [
     path('aspectos_organizativos/', views.aspectos, name="aspectos"),
     path('guardar_aspectos_organizativos/', views.guardar_aspectos, name="guardar_aspectos"),
     path('resultados/', views.resultados, name="resultados"),
-    path('prueba/',views.prueba, name="prueba"),
+    #path('prueba/',views.prueba, name="prueba"),
     
 ]+ static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

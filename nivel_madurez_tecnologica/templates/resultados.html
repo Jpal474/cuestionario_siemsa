@@ -27,7 +27,7 @@
         </tr>
         <tr>
           <th scope="row">Institucion/Empresa</th>
-          <td>SIEMSA</td>
+          <td>{{evaluacion.institucion}}</td>
           
         </tr>
     
@@ -338,43 +338,168 @@
         </tr>
       </thead>
   </table><br>
-  <table class="table">
+  <p>conclusiones</p>
+  <table class="table" style="position: relative;
+  left: 2.5%;">
     <thead>
         <tr>
-          <th scope="col" colspan="2" style="background-color: var(--sidebar-color);" >Investigacion</th>
-          <th scope="col">58%</th>
+          <th scope="col"  style="background-color: var(--sidebar-color);" >Área</th>
+          <th scope="col">Promedio</th>
+          <th scope="col">Conclusion</th>
           
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="rows" colspan="2">conclusion investigacion</th>
+            <th scope="row"  style="background-color: var(--sidebar-color);" >Investigación</th>
+            <td >{{evaluacion.promedio_investigacion}}</td>
+            <td >{{conclusiones.conclusion_investigacion}}</td>
 
         </tr>
         <tr>
-            <th scope="rows" colspan="2">1.1</th>
-            <th scope="rows" colspan="2">100%</th>
-            <th scope="rows" colspan="2">conclusion pregunta</th>
+            <th scope="row"  style="background-color: var(--sidebar-color);" >Desarrollo</th>
+            <td >{{evaluacion.promedio_desarrollo}}</td>
+            <td >{{conclusiones.conclusion_desarrollo}}</td>
+  
+          </tr>
+          <tr>
+            <th scope="row"  style="background-color: var(--sidebar-color);" >Integración Tecnológica</th>
+            <td >{{evaluacion.promedio_integracion}}</td>
+            <td >{{conclusiones.conclusion_integracion}}</td>
+  
+          </tr>
+          <tr>
+            <th scope="row"  style="background-color: var(--sidebar-color);" >Propiedad Intelectual</th>
+            <td >{{evaluacion.promedio_propiedad}}</td>
+            <td >{{conclusiones.conclusion_propiedad}}</td>
+  
+          </tr>
+          <tr>
+            <th scope="row"  style="background-color: var(--sidebar-color);" >Normatividad y Legislación Aplicable</th>
+            <td >{{evaluacion.promedio_normatividad}}</td>
+            <td >{{conclusiones.conclusion_normatividad}}</td>
+          </tr>
+          <tr>
+            <th scope="row"  style="background-color: var(--sidebar-color);" >Manufactura</th>
+            <td >{{evaluacion.promedio_manufactura}}</td>
+            <td >{{conclusiones.conclusion_manufactura}}</td>
+  
+          </tr>
+          <tr>
+         <th scope="row"  style="background-color: var(--sidebar-color);" >Usuarios del Producto</th>
+         <td >{{evaluacion.promedio_usuarios}}</td>
+         <td >{{conclusiones.conclusion_usuarios}}</td>
+          </tr>
+          <tr>
+            <th scope="row"  style="background-color: var(--sidebar-color);" >Aspectos Organizativos</th>
+            <td >{{evaluacion.promedio_aspectos}}</td>
+            <td >{{conclusiones.conclusion_aspectos}}</td>
+             </tr>
+  </table><br>
+  <table class="table">
+    <thead>
+        <tr>
+          <th scope="col" colspan="3" style="background-color: var(--sidebar-color);" >Investigacion</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="rows" style="background-color:#183554" >ID</th>
+          <td style="background-color:#183554; color:white">Cumplimiento</td>
+          <td style="background-color:#183554; color:white">Recomendación</td>
+
+        </tr>
+        <tr>
+            <th scope="rows">1.1</th>
+            <td>{{evaluacion.pregunta1_1}}</td>
+          <td>{{recomendaciones.0}}</td>
+            
+  
+          </tr>
+          <tr>
+            <th scope="rows">1.2</th>
+            <td>{{evaluacion.pregunta1_2}}</td>
+          <td>{{recomendaciones.1}}</td>
+            
+  
+          </tr>
+          <tr>
+            <th scope="rows">2.1</th>
+            <td>{{evaluacion.pregunta2_1}}</td>
+          <td>{{recomendaciones.2}}</td>
+            
   
           </tr>
   </table><br>
   <table class="table">
     <thead>
         <tr>
-          <th scope="col" colspan="2" style="background-color: var(--sidebar-color);" >Investigacion</th>
-          <th scope="col">58%</th>
+          <th scope="col" colspan="3" style="background-color: var(--sidebar-color);" >Desarrollo</th>
           
         </tr>
       </thead>
       <tbody>
         <tr>
-          <th scope="rows" colspan="2">conclusion investigacion</th>
+          <th scope="rows" style="background-color:#183554" >ID</th>
+          <td style="background-color:#183554; color:white">Cumplimiento</td>
+          <td style="background-color:#183554; color:white">Recomendación</td>
 
         </tr>
         <tr>
-            <th scope="rows" colspan="2">1.1</th>
-            <th scope="rows" colspan="2">100%</th>
-            <th scope="rows" colspan="2">conclusion pregunta</th>
+            <th scope="rows">4.2</th>
+            <td>{{evaluacion.pregunta4_2}}</td>
+          <td>{{recomendaciones.3}}</td>
+            
+  
+          </tr>
+          <tr>
+            <th scope="rows">4.5</th>
+            <td>{{evaluacion.pregunta4_5}}</td>
+          <td>{{recomendaciones.4}}</td>
+            
+  
+          </tr>
+          <tr>
+            <th scope="rows">5.1</th>
+            <td>{{evaluacion.pregunta2_1}}</td>
+          <td>{{recomendaciones.5}}</td>
+            
+  
+          </tr>
+          <tr>
+            <th scope="rows">6.0</th>
+            <td>{{evaluacion.pregunta6}}</td>
+          <td>{{recomendaciones.6}}</td>
+            
+  
+          </tr>
+          <tr>
+            <th scope="rows">7.4</th>
+            <td>{{evaluacion.pregunta7_4}}</td>
+          <td>{{recomendaciones.7}}</td>
+            
+  
+          </tr>
+          <tr>
+            <th scope="rows">8.2</th>
+            <td>{{evaluacion.pregunta6}}</td>
+          <td>{{recomendaciones.8}}</td>
+            
+  
+          </tr>
+          <tr>
+            <th scope="rows">9.1</th>
+            <td>{{evaluacion.pregunta6}}</td>
+          <td>{{recomendaciones.9}}</td>
+            
+  
+          </tr>
+          <tr>
+            <th scope="rows">9.3</th>
+            <td>{{evaluacion.pregunta6}}</td>
+          <td>{{recomendaciones.10}}</td>
+            
   
           </tr>
   </table><br>

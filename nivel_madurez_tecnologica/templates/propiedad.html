@@ -1,5 +1,5 @@
 {% extends 'base.html'%}
-{% block title %} Desarrollo del Producto {% endblock title%}
+{% block title %} Propiedad Intelectual {% endblock title%}
 
 {%block text%}Llene las siguientes preguntas{%endblock text%}
 {% block body%}
@@ -40,6 +40,9 @@
         <label><input id="input_estudios2" type="radio" class="res" name="estudios" value="3" required  onclick="javascript:activar_desactivar('estudios');">
           3
           </label>
+          <label><input id="input_estudios2" type="radio" class="res" name="estudios" value="No" required  onclick="javascript:activar_desactivar('estudios');">
+            No
+            </label>
       </div>
       <div  id="div_evidencia_estudios" class="input-box">
         <p>¿Cuenta con evidencia documentada que avale el 1er estudio y sus posibles actualizaciones?</p>
@@ -94,9 +97,13 @@ No
 <div  id ="div_actualizacion" class="input-box2">
     <p>¿Ha actualizado su plan de licenciamiento de tecnología a terceros? ¿Cuántas veces?</p>
     <label>
-    <input id="input_actualizacion" type="radio" class="res" name="actualizacion" value="Sí" required onclick="javascript:activar_desactivar('actualizacion');">
-     Sí
+    <input id="input_actualizacion" type="radio" class="res" name="actualizacion" value="1" required onclick="javascript:activar_desactivar('actualizacion');">
+     1
     </label>
+    <label>
+      <input id="input_actualizacion" type="radio" class="res" name="actualizacion" value="2" required onclick="javascript:activar_desactivar('actualizacion');">
+       2
+      </label>
     <label><input id="input_actualizacion2" type="radio" class="res" name="actualizacion" value="No" required  onclick="javascript:activar_desactivar('actualizacion');">
     No
     </label>
@@ -104,14 +111,11 @@ No
   <div  id="div_evidencia_actualizacion" class="input-box2" style="top:23%">
     <p>¿Cuenta con evidencia documentada que avale el 1er plan de licenciamiento y sus posibles actualizaciones?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_actualizacion" value="1" required>
- 1
+<input type="radio" class="res" name="evidencia_actualizacion" value="Sí" required>
+ Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_actualizacion" value="2" required>
-2
-</label>
-<label><input type="radio" class="res" name="evidencia_actualizacion" value="3" required>
-  3
+<label><input type="radio" class="res" name="evidencia_actualizacion" value="No" required>
+  No
   </label>
 </div>
 <div  id ="div_estrategia" class="input-box2"  style="top:32%">
