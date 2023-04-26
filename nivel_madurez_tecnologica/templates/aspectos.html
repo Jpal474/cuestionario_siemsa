@@ -5,7 +5,7 @@
 {% block body%}
 <div class="wrapper">
   <div class="form-box login">
-    <h2>Aspectos Organizativos</h2>
+    <h2>Aspectos Organizativos</h2> <br>
     <form action="/guardar_aspectos_organizativos/" method="POST">
       {% csrf_token %}
       <div  id ="div_organizacion" class="input-box">
@@ -180,7 +180,7 @@ No
 <style>
 .wrapper{
             width: 1100px;
-            height: 650px;
+            height: 850px;
             background: transparent;
             border: 8px solid #d49d11;
             position: relative;
@@ -274,14 +274,14 @@ No
           font-weight: 500;
           margin-top: 10px;
           position: absolute;
-          bottom: 40%;
+          bottom: 10%;
           right:10% ;
           
         }
         .img{
           position: absolute;
-          top: 68%;
-          right:34% ;
+          top: 100%;
+          right:25% ;
           width: 150px;
         }
         

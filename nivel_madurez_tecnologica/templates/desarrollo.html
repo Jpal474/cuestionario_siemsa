@@ -5,7 +5,7 @@
 {% block body%}
 <div class="wrapper">
   <div class="form-box login">
-    <h2>Desarrollo del Producto</h2>
+    <h2>Desarrollo del Producto</h2> <br>
     <form action="/guardar_desarrollo/" method="POST">
       {% csrf_token %}
       <div  id ="div_pruebas" class="input-box">
@@ -388,7 +388,7 @@ No
 <style>
 .wrapper{
             width: 1100px;
-            height: 1140px;
+            height: 1600px;
             background: transparent;
             border: 8px solid #d49d11;
             position: relative;
@@ -467,6 +467,17 @@ No
   }
 
   
+  .input-box2 label{
+    display: line;
+  position: relative;
+  left: 30%;
+  margin-right:10px ;
+  
+  border-bottom: 2px solid #d49d11;
+  margin-bottom: 20px;
+  }
+
+  
       
         .btn{
           width: 30%;
@@ -481,14 +492,14 @@ No
           font-weight: 500;
           margin-top: 10px;
           position: absolute;
-          bottom: 14%;
+          bottom: 3%;
           right:10% ;
           
         }
         .img{
           position: absolute;
-          top: 172%;
-          right:10% ;
+          top: 225%;
+          right:25% ;
           width: 120px;
         }
         
