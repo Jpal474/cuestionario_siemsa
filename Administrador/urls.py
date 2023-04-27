@@ -11,7 +11,7 @@ urlpatterns = [
     path('usuarios/', Administrador.views.usuarios, name="ver_usuarios"),
     path('editar_usuario/<int:id>', Administrador.views.editar_usuario, name="editar_usuario"),
     path('eliminar_usuario/<int:id>', Administrador.views.eliminar_usuario, name="eliminar_usuario"),
-    path('editar_pregunta/<int:id>', Administrador.views.editar_investigacion, name="editar_pregunta"),
+    path('editar_investigacion/<int:id>', Administrador.views.editar_investigacion, name="editar_investigacion"),
     path('actualizar_pregunta/<int:id>', Administrador.views.actualizar_pregunta , name="actualizar_pregunta"),
     path('eliminar_respuesta/<int:id>', Administrador.views.eliminar_respuesta , name="eliminar_respuesta"),
     path("respuestas/", Administrador.views.respuestas, name="respuestas"),
@@ -23,5 +23,6 @@ urlpatterns = [
     path('preguntas_normatividad/', Administrador.views.preguntas_normatividad, name="preguntas_normatividad"),   
     path('preguntas_manufactura/', Administrador.views.preguntas_manufactura, name="preguntas_manufactura"),   
     path('preguntas_usuarios/', Administrador.views.preguntas_usuarios, name="preguntas_usuarios"),   
-    path('preguntas_aspectos/', Administrador.views.preguntas_aspectos, name="preguntas_aspectos"),        
+    path('preguntas_aspectos/', Administrador.views.preguntas_aspectos, name="preguntas_aspectos"), 
+    path('resultado/<int:id>', Administrador.views.resultado, name="resultado"),       
 ]

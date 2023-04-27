@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 from django.contrib.auth.models import User
 from Administrador.models import Pregunta
-from Cuestionario.models import Evaluacion
+from Cuestionario.models import *
 
 def login_user(request):
     if request.method=="POST":
@@ -56,9 +56,9 @@ def investigacion(request):
     return render (request, 'ver_investigacion.html')
 
 def editar_investigacion(request, id):
-    pregunta = Pregunta.objects.all()
-    post = next(post for post in pregunta if post.id == id)
-    return render(request, "editar_investigacion.html", {"pregunta": post})
+    res = Pregunta.objects.all()
+    sen = next(sen for sen in res if sen.id == id)
+    return render(request, "editar_investigacion.html", {"pregunta": sen})
 
 def usuarios(request):
     usuarios=User.objects.all()
@@ -136,3 +136,8 @@ def preguntas_usuarios(request):
 
 def preguntas_aspectos(request):
     return render (request, 'preguntas_aspectos.html')
+
+def resultado(request,id):
+    res = Evaluacion.objects.all()
+    post = next(post for post in res if post.id == id)
+    return render(request, "resultado.html", {"res": post})
