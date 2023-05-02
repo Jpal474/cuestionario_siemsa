@@ -4,6 +4,9 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from Administrador.models import Pregunta
 from Cuestionario.models import *
+from weasyprint import HTML
+from django.template.loader import render_to_string
+from django.http import HttpResponse
 
 def login_user(request):
     if request.method=="POST":
@@ -141,3 +144,12 @@ def resultado(request,id):
     res = Evaluacion.objects.all()
     post = next(post for post in res if post.id == id)
     return render(request, "resultado.html", {"res": post})
+
+def exportar_pdf(request,id):
+    res = Evaluacion.objects.all()
+    context = next(context for context in res if context.id == id)
+    html = render_to_string("resultado_pdf.html", {"res": context})
+    response = HttpResponse(content_type="application/pdf")
+    response["Content-Disposition"] = "inline; report.pdf"
+    HTML(string=html).write_pdf(response)
+    return response

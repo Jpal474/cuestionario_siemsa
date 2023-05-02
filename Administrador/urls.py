@@ -25,4 +25,5 @@ urlpatterns = [
     path('preguntas_usuarios/', Administrador.views.preguntas_usuarios, name="preguntas_usuarios"),   
     path('preguntas_aspectos/', Administrador.views.preguntas_aspectos, name="preguntas_aspectos"), 
     path('resultado/<int:id>', Administrador.views.resultado, name="resultado"),       
+    path('exportar_pdf/<int:id>', Administrador.views.exportar_pdf, name="exportar_pdf" ),
 ]
