@@ -1,5 +1,5 @@
 {% extends 'base.html'%}
-{% block title %} Desarrollo del Producto {% endblock title%}
+{% block title %} Propiedad Intelectual {% endblock title%}
 
 {%block text%}Llene las siguientes preguntas{%endblock text%}
 {% block body%}
@@ -45,6 +45,9 @@
         <label><input id="input_estudios3" type="radio" class="res" name="estudios" value="No se"  onclick="javascript:activar_desactivar('estudios');">
           No se
           </label>
+          <label><input id="input_estudios2" type="radio" class="res" name="estudios" value="No" required  onclick="javascript:activar_desactivar('estudios');">
+            No
+            </label>
       </div>
       <div  id="div_evidencia_estudios" class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
@@ -114,10 +117,14 @@ No
 <div  id ="div_producto_actuailizacion" class="input-box2">
     <p>¿Ha actualizado su plan de licenciamiento de tecnología a terceros? ¿Cuántas veces?</p>
     <label>
-    <input id="input_actualizacion" type="radio" class="res" name="actualizacion" value="Sí"  onclick="javascript:activar_desactivar('actualizacion');">
-     Sí
+    <input id="input_actualizacion" type="radio" class="res" name="actualizacion" value="1" required onclick="javascript:activar_desactivar('actualizacion');">
+     1
     </label>
-    <label><input id="input_actualizacion2" type="radio" class="res" name="actualizacion" value="No"  onclick="javascript:activar_desactivar('actualizacion');">
+    <label>
+      <input id="input_actualizacion" type="radio" class="res" name="actualizacion" value="2" required onclick="javascript:activar_desactivar('actualizacion');">
+       2
+      </label>
+    <label><input id="input_actualizacion2" type="radio" class="res" name="actualizacion" value="No" required  onclick="javascript:activar_desactivar('actualizacion');">
     No
     </label>
     <label><input id="input_actualizacion3" type="radio" class="res" name="actualizacion" value="No se"   onclick="javascript:activar_desactivar('actualizacion');">
