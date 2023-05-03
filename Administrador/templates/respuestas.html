@@ -11,19 +11,21 @@
                 <thead class="card-body" style="background-color:var(--sidebar-color);">
                     <tr>
                         <th scope="col">Nombre</th>
+                        <th scope="col">Nombre Institución</th>
                         <th scope="col">Nombre Proyecto</th>
                         <th scope="col">Promedio Global</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
 
-                {% for res in respuesta%}
+                {% for res in respuesta %}
                     <tbody>
                     <tr>
                         <td>{{res.nombre}}</td>
+                        <td>{{res.institucion}}</td>
                         <td>{{res.nombre_proyecto}}</td>
                         <td>{{res.promedio_trl_global}}</td>
-                        <td><a class="btn">Ver</a>
+                        <td><a href="{% url 'resultado' res.id %}" class="btn">Ver</a>
                             <a href="{% url 'eliminar_respuesta' res.id %}" class="btn">eliminar</a></td>
                     </tr>
                     

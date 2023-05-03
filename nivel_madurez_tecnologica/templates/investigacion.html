@@ -5,7 +5,7 @@
 {% block body%}
 <div class="wrapper">
   <div class="form-box login">
-    <h2>Investigación</h2>
+    <h2>Investigación</h2> <br>
     <form action="/guardar_investigacion/" method="POST">
       {% csrf_token %}
       <div  id ="div_investigacion" class="input-box">
@@ -149,7 +149,7 @@
 <style>
 .wrapper{
             width: 1100px;
-            height: 680px;
+            height: 880px;
             background: transparent;
             border: 8px solid #d49d11;
             position: relative;
@@ -227,13 +227,15 @@
           font-size: 1em;
           color:#fff;
           font-weight: 500;
-          margin-top: 10px;
+          position: absolute;
+          top: 60%;
+          left: 60%;
           
         }
         .img{
           position: absolute;
-          top: 30%;
-          left: 40%;
+          top: 50%;
+          left: 45%;
         }
         
     </style>

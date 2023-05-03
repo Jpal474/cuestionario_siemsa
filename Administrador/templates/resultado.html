@@ -1,0 +1,807 @@
+{%extends 'base2.html' %}
+{%block title%} Administrador - Resultados {%endblock title%}
+{% block text %} Administrador - Resultados {%endblock text%}
+{%block body %}
+<br><br>
+<table class="table">
+    <thead>
+        <tr>
+          <th scope="col" style="background-color: var(--sidebar-color); color: white;">Datos</th>
+          <th scope="col" style="background-color: #006594; color: white;">Respuesta</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">No. Diagnostico</th>
+          <td style="background-color: white;">{{evaluacion.id}}</td>
+
+        </tr>
+        <tr>
+          <th scope="row">Nombre del Desarrollador</th>
+          <td>{{evaluacion.nombre}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Nombre del Proyecto</th>
+          <td>{{evaluacion.nombre_proyecto}}</td>
+          
+        </tr>
+        <tr>
+          <th scope="row">Institucion/Empresa</th>
+          <td>SIEMSA</td>
+          
+        </tr>
+    
+  </table>
+  <br>
+  <div class="container text-center">
+    <div class="row align-items-center">
+      <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col" style="background-color: var(--sidebar-color);">Nivel NMT</th>
+                  <th scope="col">ID</th>
+                  <th scope="col" colspan="2">Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" rowspan="2">1</th>
+                  <td>1</td>
+                  <td>{{evaluacion.pregunta1_1}}</td>
+                  <td><ion-icon name={{iconos.0}} style="background-color:{{colores.0}}; color: white;"></ion-icon></td>
+                   
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{evaluacion.pregunta1_2}}</td>
+                    <td><ion-icon name={{iconos.1}} style="background-color:{{colores.1}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="6">2</th>
+                    <td>1</td>
+                    <td>{{evaluacion.pregunta2_1}}</td>
+                    <td><ion-icon name={{iconos.2}} style="background-color:{{colores.2}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{evaluacion.pregunta2_2}}</td>
+                    <td><ion-icon name={{iconos.3}} style="background-color:{{colores.3}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{evaluacion.pregunta2_3}}</td>
+                    <td><ion-icon name={{iconos.4}} style="background-color:{{colores.4}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{evaluacion.pregunta2_4}}</td>
+                    <td><ion-icon name={{iconos.5}} style="background-color:{{colores.5}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>{{evaluacion.pregunta2_5}}</td>
+                    <td><ion-icon name={{iconos.6}} style="background-color:{{colores.6}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>{{evaluacion.pregunta2_6}}</td>
+                    <td><ion-icon name={{iconos.7}} style="background-color:{{colores.7}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="6">3</th>
+                    <td>1</td>
+                    <td>{{evaluacion.pregunta3_1}}</td>
+                    <td><ion-icon name={{iconos.8}} style="background-color:{{colores.8}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{evaluacion.pregunta3_2}}</td>
+                    <td><ion-icon name={{iconos.9}} style="background-color:{{colores.9}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{evaluacion.pregunta3_3}}</td>
+                    <td><ion-icon name={{iconos.10}} style="background-color:{{colores.10}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{evaluacion.pregunta3_4}}</td>
+                    <td><ion-icon name={{iconos.11}} style="background-color:{{colores.11}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>{{evaluacion.pregunta3_5}}</td>
+                    <td><ion-icon name={{iconos.12}} style="background-color:{{colores.12}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>{{evaluacion.pregunta3_6}}</td>
+                    <td><ion-icon name={{iconos.13}} style="background-color:{{colores.13}}; color: white;"></ion-icon></td>
+                </tr>
+            
+          </table>
+      </div>
+      <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col" style="background-color: var(--sidebar-color);">Nivel NMT</th>
+                  <th scope="col">ID</th>
+                  <th scope="col" colspan="2">Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" rowspan="8">4</th>
+                  <td>1</td>
+                  <td>{{evaluacion.pregunta4_1}}</td>
+                  <td><ion-icon name={{iconos.14}} style="background-color:{{colores.14}}; color: white;"></ion-icon></td>
+        
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{evaluacion.pregunta4_2}}</td>
+                    <td><ion-icon name={{iconos.15}} style="background-color:{{colores.15}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{evaluacion.pregunta4_3}}</td>
+                    <td><ion-icon name={{iconos.16}} style="background-color:{{colores.16}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{evaluacion.pregunta4_4}}</td>
+                    <td><ion-icon name={{iconos.17}} style="background-color:{{colores.17}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>{{evaluacion.pregunta4_5}}</td>
+                    <td><ion-icon name={{iconos.18}} style="background-color:{{colores.18}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>{{evaluacion.pregunta4_6}}</td>
+                    <td><ion-icon name={{iconos.19}} style="background-color:{{colores.19}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>{{evaluacion.pregunta4_7}}</td>
+                    <td><ion-icon name={{iconos.20}} style="background-color:{{colores.20}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>{{evaluacion.pregunta4_8}}</td>
+                    <td><ion-icon name={{iconos.21}} style="background-color:{{colores.21}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="4">5</th>
+                    <td>1</td>
+                    <td>{{evaluacion.pregunta5_1}}</td>
+                    <td><ion-icon name={{iconos.22}} style="background-color:{{colores.22}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{evaluacion.pregunta5_2}}</td>
+                    <td><ion-icon name={{iconos.23}} style="background-color:{{colores.23}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{evaluacion.pregunta5_3}}</td>
+                    <td><ion-icon name={{iconos.24}} style="background-color:{{colores.24}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{evaluacion.pregunta5_4}}</td>
+                    <td><ion-icon name={{iconos.25}} style="background-color:{{colores.25}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="5">6</th>
+                    <td>1</td>
+                    <td>{{evaluacion.pregunta6_1}}</td>
+                    <td><ion-icon name={{iconos.26}} style="background-color:{{colores.26}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{evaluacion.pregunta6_2}}</td>
+                    <td><ion-icon name={{iconos.27}} style="background-color:{{colores.27}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{evaluacion.pregunta6_3}}</td>
+                    <td><ion-icon name={{iconos.28}} style="background-color:{{colores.28}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{evaluacion.pregunta6_4}}</td>
+                    <td><ion-icon name={{iconos.29}} style="background-color:{{colores.29}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>{{evaluacion.pregunta6_5}}</td>
+                    <td><ion-icon name={{iconos.30}} style="background-color:{{colores.30}}; color: white;"></ion-icon></td>
+                </tr>
+              
+            
+          </table>
+      </div>
+      <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th scope="col" style="background-color: var(--sidebar-color);">Nivel NMT</th>
+                  <th scope="col">ID</th>
+                  <th scope="col" colspan="2">Resultado</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" rowspan="4">7</th>
+                  <td>1</td>
+                  <td>{{evaluacion.pregunta7_1}}</td>
+                  <td><ion-icon name={{iconos.31}} style="background-color:{{colores.31}}; color: white;"></ion-icon></td>
+        
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{evaluacion.pregunta7_2}}</td>
+                    <td><ion-icon name={{iconos.32}} style="background-color:{{colores.32}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{evaluacion.pregunta7_3}}</td>
+                    <td><ion-icon name={{iconos.33}} style="background-color:{{colores.33}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{evaluacion.pregunta7_4}}</td>
+                    <td><ion-icon name={{iconos.34}} style="background-color:{{colores.34}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                
+                <tr>
+                    <th scope="row" rowspan="5">8</th>
+                    <td>1</td>
+                    <td>{{evaluacion.pregunta8_1}}</td>
+                    <td><ion-icon name={{iconos.35}} style="background-color:{{colores.35}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{evaluacion.pregunta8_2}}</td>
+                    <td><ion-icon name={{iconos.36}} style="background-color:{{colores.36}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{evaluacion.pregunta8_3}}</td>
+                    <td><ion-icon name={{iconos.37}} style="background-color:{{colores.37}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{evaluacion.pregunta8_4}}</td>
+                    <td><ion-icon name={{iconos.38}} style="background-color:{{colores.38}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>{{evaluacion.pregunta8_5}}</td>
+                    <td><ion-icon name={{iconos.39}} style="background-color:{{colores.39}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <th scope="row" rowspan="4">9</th>
+                    <td>1</td>
+                    <td>{{evaluacion.pregunta9_1}}</td>
+                    <td><ion-icon name={{iconos.40}} style="background-color:{{colores.40}}; color: white;"></ion-icon></td>
+                  
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>{{evaluacion.pregunta9_2}}</td>
+                    <td><ion-icon name={{iconos.41}} style="background-color:{{colores.41}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>{{evaluacion.pregunta9_3}}</td>
+                    <td><ion-icon name={{iconos.42}} style="background-color:{{colores.42}}; color: white;"></ion-icon></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>{{evaluacion.pregunta9_4}}</td>
+                    <td><ion-icon name={{iconos.43}} style="background-color:{{colores.43}}; color: white;"></ion-icon></td>
+                </tr>
+          </table>
+      </div>
+    </div>
+  </div>
+ 
+  
+  
+  <table class="table" style="width:70%">
+    <thead>
+        <tr>
+          <th scope="col" style="width: 200px; height: 70px;" >Nivel General NMT</th>
+          <th scope="col" style="width: 200px; height: 70px;">{{evaluacion.promedio_trl_global}}</th>
+          <th scope="col"  rowspan="4" style="background-color: var(--sidebar-color); width: 200px; height: 70px;">estatus</th>
+        </tr>
+      </thead>
+  </table><br>
+  <table class="table">
+    <thead>
+        <tr>
+          <th scope="col" colspan="2" style="background-color: var(--sidebar-color);" >Investigacion</th>
+          <th scope="col">58%</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="rows" colspan="2">conclusion investigacion</th>
+
+        </tr>
+        <tr>
+            <th scope="rows" colspan="2">1.1</th>
+            <th scope="rows" colspan="2">100%</th>
+            <th scope="rows" colspan="2">conclusion pregunta</th>
+  
+          </tr>
+  </table><br>
+  <table class="table">
+    <thead>
+        <tr>
+          <th scope="col" colspan="2" style="background-color: var(--sidebar-color);" >Investigacion</th>
+          <th scope="col">58%</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="rows" colspan="2">conclusion investigacion</th>
+
+        </tr>
+        <tr>
+            <th scope="rows" colspan="2">1.1</th>
+            <th scope="rows" colspan="2">100%</th>
+            <th scope="rows" colspan="2">conclusion pregunta</th>
+  
+          </tr>
+  </table><br>
+
+
+<figure class="highcharts-figure"> <div id="first"></div></figure>
+
+  <div id="second"></div>
+
+  <div id="third"></div>
+
+
+
+<script>
+  Highcharts.chart('first', {
+  
+  chart: {
+    type: 'gauge',
+    plotBackgroundColor: null,
+    plotBackgroundImage: null,
+    plotBorderWidth: 0,
+    plotShadow: false,
+    height: '80%',
+    //backgroundColor: 'transparent'
+  },
+  
+  title: {
+    text: 'Nivel de Madurez Tecnológica'
+  },
+  
+  pane: {
+    startAngle: -90,
+    endAngle: 89.9,
+    background: null,
+    center: ['50%', '75%'],
+    size: '110%'
+  },
+  
+  // the value axis
+  yAxis: {
+    min: 0,
+    max: 9,
+    tickPixelInterval: 72,
+    tickPosition: 'inside',
+    tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
+    tickLength: 20,
+    tickWidth: 2,
+    minorTickInterval: null,
+    labels: {
+      distance: 20,
+      style: {
+        fontSize: '14px'
+      }
+    },
+    plotBands: [{
+      from: 0,
+      to: 3.5,
+      color: '#55BF3B', // green
+      thickness: 20
+    }, {
+      from: 3.5,
+      to: 7.5,
+      color: '#DDDF0D', // yellow
+      thickness: 20
+    }, {
+      from: 7.5,
+      to: 9,
+      color: '#DF5353', // red
+      thickness: 20
+    }]
+  },
+  
+  series: [{
+    name: 'Nivel NMT',
+    data: [{{evaluacion.promedio_trl_global}}],
+    tooltip: {
+      valueSuffix: ''
+    },
+    dataLabels: {
+      format: '{y}',
+      borderWidth: 0,
+      color: (
+        Highcharts.defaultOptions.title &&
+        Highcharts.defaultOptions.title.style &&
+        Highcharts.defaultOptions.title.style.color
+      ) || '#333333',
+      style: {
+        fontSize: '16px'
+      }
+    },
+    dial: {
+      radius: '80%',
+      backgroundColor: 'gray',
+      baseWidth: 12,
+      baseLength: '0%',
+      rearLength: '0%'
+    },
+    pivot: {
+      backgroundColor: 'gray',
+      radius: 6
+    }
+  
+  }]
+  
+  });//Termina container 1
+  
+  //Empieza container 2
+  Highcharts.chart('second', {
+  
+  chart: {
+      type: 'solidgauge',
+      height: '150%',
+    
+      
+      //backgroundColor: 'transparent',
+      events: {
+          
+      }
+  },
+  
+  title: {
+      text: 'Promedios Por Áreas',
+      style: {
+          fontSize: '24px'
+      }
+  },
+  
+  tooltip: {
+      borderWidth: 0,
+      backgroundColor: 'none',
+      shadow: false,
+      style: {
+          fontSize: '16px'
+      },
+      valueSuffix: '%',
+      pointFormat: '{series.name}<br><span style="font-size:2em; color: {point.color}; font-weight: bold">{point.y}</span>',
+      positioner: function (labelWidth) {
+          return {
+              x: (this.chart.chartWidth - labelWidth) / 2,
+              y: (this.chart.plotHeight / 2) + 15
+          };
+      }
+  },
+  
+  pane: {
+      startAngle: 0,
+      endAngle: 360,
+      background: [{ // Track for Investigacion
+          outerRadius: '120%',
+          innerRadius: '100%',
+          backgroundColor: Highcharts.color(Highcharts.getOptions().colors[0])
+              .setOpacity(0.3)
+              .get(),
+          borderWidth: 0
+      }, { // Track for Desarrollo
+          outerRadius: '110%',
+          innerRadius: '90%',
+          backgroundColor: Highcharts.color(Highcharts.getOptions().colors[1])
+              .setOpacity(0.3)
+              .get(),
+          borderWidth: 0
+      }, { // Track for Integracion
+          outerRadius: '100%',
+          innerRadius: '80%',
+          backgroundColor: Highcharts.color(Highcharts.getOptions().colors[2])
+              .setOpacity(0.3)
+              .get(),
+          borderWidth: 0
+      }, 
+      { // Track for Integracion
+          outerRadius: '90%',
+          innerRadius: '70%',
+          backgroundColor: Highcharts.color(Highcharts.getOptions().colors[3])
+              .setOpacity(0.3)
+              .get(),
+          borderWidth: 0
+      },
+      { // Track for Propiedad
+          outerRadius: '80%',
+          innerRadius: '60%',
+          backgroundColor: Highcharts.color(Highcharts.getOptions().colors[4])
+              .setOpacity(0.3)
+              .get(),
+          borderWidth: 0
+      },
+      { // Track for Normatividad
+          outerRadius: '70%',
+          innerRadius: '50%',
+          backgroundColor: Highcharts.color(Highcharts.getOptions().colors[5])
+              .setOpacity(0.3)
+              .get(),
+          borderWidth: 0
+      },
+      { // Track for Manufactura
+          outerRadius: '60%',
+          innerRadius: '40%',
+          backgroundColor: Highcharts.color(Highcharts.getOptions().colors[6])
+              .setOpacity(0.3)
+              .get(),
+          borderWidth: 0
+      },
+      { // Track for Manufactura
+          outerRadius: '60%',
+          innerRadius: '40%',
+          backgroundColor: Highcharts.color(Highcharts.getOptions().colors[7])
+              .setOpacity(0.3)
+              .get(),
+          borderWidth: 0
+      },
+      ]
+  },
+  
+  yAxis: {
+      min: 0,
+      max: 100,
+      lineWidth: 0,
+      tickPositions: []
+  },
+  
+  plotOptions: {
+      solidgauge: {
+          dataLabels: {
+              enabled: false
+          },
+          linecap: 'round',
+          stickyTracking: false,
+          rounded: true
+      }
+  },
+  
+  series: [{
+      name: 'Investigacion',
+      data: [{
+          color: Highcharts.getOptions().colors[0],
+          radius: '120%',
+          innerRadius: '110%',
+          y: {{evaluacion.promedio_investigacion}}
+      }]
+  }, {
+      name: 'Desarrollo',
+      data: [{
+          color: Highcharts.getOptions().colors[1],
+          radius: '110%',
+          innerRadius: '100%',
+          y: {{evaluacion.promedio_desarrollo}}
+      }]
+  }, {
+      name: 'Integracion',
+      data: [{
+          color: Highcharts.getOptions().colors[2],
+          radius: '100%',
+          innerRadius: '90%',
+          y: {{evaluacion.promedio_integracion}}
+      }]
+  },
+  {
+      name: 'Propiedad Intelectual',
+      data: [{
+          color: Highcharts.getOptions().colors[3],
+          radius: '90%',
+          innerRadius: '80%',
+          y:  60//{{evaluacion.promedio_propiedad}}
+      }]
+  },
+  {
+      name: 'Normatividad',
+      data: [{
+          color: Highcharts.getOptions().colors[4],
+          radius: '80%',
+          innerRadius: '70%',
+          y: {{evaluacion.promedio_normatividad}}
+      }]
+  },
+   {
+      name: 'Manufactura',
+      data: [{
+          color: Highcharts.getOptions().colors[5],
+          radius: '70%',
+          innerRadius: '60%',
+          y: {{evaluacion.promedio_manufactura}}
+      }]
+  },
+  {
+      name: 'Usuarios del Producto',
+      data: [{
+          color: Highcharts.getOptions().colors[6],
+          radius: '60%',
+          innerRadius: '50%',
+          y: {{evaluacion.promedio_usuarios}}
+      }]
+  },
+  {
+      name: 'Aspectos Organizativos',
+      data: [{
+          color: Highcharts.getOptions().colors[7],
+          radius: '50%',
+          innerRadius: '40%',
+          y: {{evaluacion.promedio_aspectos}}
+      }]
+  },
+  
+  
+  ]
+  });
+  //Empieza Tercer Chart
+  
+  Highcharts.chart('third', {
+      chart: {
+          type: 'cylinder',
+          options3d: {
+              enabled: true,
+              alpha: 5,
+              beta: 5,
+              depth: 50,
+              viewDistance: 25
+          }
+      },
+      title: {
+          text: 'Promedios por Nivel de NMT'
+      },
+      subtitle: {
+          text: ''
+              
+      },
+      xAxis: {
+          categories: ['NMT 1', 'NMT 2', 'NMT 3', 'NMT 4', 'NMT 5', 'NMT 6', 'NMT 7', 'NMT 8', 'NMT 9'],
+          title: {
+              text:''
+          }
+      },
+      yAxis: {
+          title: {
+              margin: 20,
+              text: ''
+          }
+      },
+      tooltip: {
+          headerFormat: ''
+      },
+      plotOptions: {
+          series: {
+              depth: 25,
+              colorByPoint: true
+          }
+      },
+      series: [{
+          data: [{{evaluacion.promedio_trl1}},{{evaluacion.promedio_trl2}},{{evaluacion.promedio_trl3}},{{evaluacion.promedio_trl4}},{{evaluacion.promedio_trl5}}
+          ,{{evaluacion.promedio_trl6}},{{evaluacion.promedio_trl7}},{{evaluacion.promedio_trl8}},{{evaluacion.promedio_trl9}}],
+          name: 'Nivel NMT',
+          showInLegend: false
+      }]
+  });
+  
+  
+  </script>
+  <style>
+      .table{
+          position: relative;
+          left: 5%;
+      }
+      .table th{
+          background-color: #006594;
+          color: white;
+      }
+      .table td{
+          background-color: white;
+      }
+      .third{
+          height: 400px;
+          width: 50px;
+      }
+  .third .highcharts-data-table table {
+      min-width: 310px;
+      max-width: 800px;
+      margin: 1em auto;
+  }  
+  .second{
+      max-width: 400px;
+      margin: 0 auto;
+  } 
+  .first .highcharts-data-table table {
+      min-width: 310px;
+      max-width: 500px;
+      margin: 1em auto;
+  }
+  
+  .highcharts-figure,.highcharts-data-table table {
+      min-width: 780px;
+      max-width: 5000px;
+      margin: 0 auto;
+  }
+  
+  .highcharts-data-table table {
+      font-family: Verdana, sans-serif;
+      border-collapse: collapse;
+      border: 1px solid #ebebeb;
+      margin: 10px auto;
+      text-align: center;
+      width: 100%;
+      max-width: 500px;
+  }
+  
+  .highcharts-data-table caption {
+      padding: 1em 0;
+      font-size: 1.2em;
+      color: #555;
+  }
+  
+  .highcharts-data-table th {
+      font-weight: 600;
+      padding: 0.5em;
+  }
+  
+  .highcharts-data-table td,
+  .highcharts-data-table th,
+  .highcharts-data-table caption {
+      padding: 0.5em;
+  }
+  
+  .highcharts-data-table thead tr,
+  .highcharts-data-table tr:nth-child(even) {
+      background: #f8f8f8;
+  }
+  
+  .highcharts-data-table tr:hover {
+      background: #f1f7ff;
+  }
+  </style>
+{%endblock body%}
