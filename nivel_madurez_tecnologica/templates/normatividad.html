@@ -136,7 +136,7 @@ No
   }
   break;
   case "prototipo":
-  if(document.getElementById('input_protottipo').checked){
+  if(document.getElementById('input_prototipo').checked){
     document.getElementById('div_evidencia_prototipo').style.display="block";
     document.getElementById('div_proceso_registro').style.display="block";
   }
@@ -147,8 +147,7 @@ No
   }
   }
   break;
-
-  case "proceso_registro":
+    case "proceso":
     if(document.getElementById('input_prototipo').checked){
       document.getElementById('div_estandares_prototipo').style.display="block";
       document.getElementById('div_evidencia_proceso_registro').style.display="block";
@@ -160,13 +159,15 @@ No
     }
     }
     break;
-    case "estandares_porototipo":
+
+    case "estandares":
     if(document.getElementById('input_estandares_prototipo').checked){
       document.getElementById('div_evidencia_estandares_prototipo').style.display="block";
     }
     else{
       if(document.getElementById('input_estandares_prototipo2').checked || document.getElementById('input_estandares_prototipo3').checked){
       document.getElementById('div_evidencia_estandares_prototipo').style.display="none";
+
     }
     }
     break;
@@ -182,7 +183,7 @@ No
 <style>
 .wrapper{
             width: 1100px;
-            height: 680px;
+            height: 950px;
             background: transparent;
             border: 8px solid #d49d11;
             position: relative;
@@ -262,14 +263,14 @@ No
           font-weight: 500;
           margin-top: 10px;
           position: absolute;
-          bottom: 48%;
-          right:10% ;
+          bottom: 10%;
+          right:8% ;
           
         }
         .img{
           position: absolute;
           width:200px;
-          top: 80%;
+          top: 100%;
           right: 20%;
         }
         
@@ -277,12 +278,5 @@ No
     
 
 </style>
-           
-      
-
- 
- 
-
 
 {%endblock body%}
-
