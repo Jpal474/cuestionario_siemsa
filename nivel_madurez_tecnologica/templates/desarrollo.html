@@ -6,7 +6,7 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Desarrollo del Producto</h2> <br>
-    <form action="/guardar_desarrollo/" method="POST">
+    <form action="{% url 'guardar_desarrollo'%}" method="POST">
       {% csrf_token %}
       <div  id ="div_pruebas" class="input-box">
         <p>¿Ha realizado pruebas de validación de efectividad de su invención en laboratorio?</p>
@@ -138,7 +138,7 @@ No
   No se
 </label>
 </div>
-  <div  id ="div_producto" class="input-box">
+  <div  id ="div_producto" class="input-box" style="position:absolute; top:7%; right:2%;">
     <p>¿Cuenta con un producto terminado para prueba de primeros clientes?</p>
     <label>
     <input id="input_producto" type="radio" class="res" name="producto"  value="Sí"  onclick="javascript:activar_desactivar('producto');">
@@ -151,7 +151,7 @@ No
       No se
     </label>
   </div>
-  <div  id="div_evidencia_producto" class="input-box">
+  <div  id="div_evidencia_producto" class="input-box" style="position:absolute; top:17%; right:2%;">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
 <input type="radio" class="res" name="evidencia_producto" value="Sí" >
@@ -164,7 +164,7 @@ No
   No se
 </label>
 </div>
-<div  id ="div_producto_comercializable" class="input-box2">
+<div  id ="div_producto_comercializable" class="input-box" style="position:absolute; top:25%; right:2%;">
     <p>¿Tiene un producto comercializable?</p>
     <label>
     <input id="input_producto_comercializable" type="radio" class="res" name="producto_comercializable" value="Sí"  onclick="javascript:activar_desactivar('producto_comercializable');">
@@ -177,7 +177,7 @@ No
       No se
     </label>
   </div>
-  <div  id="div_evidencia_producto_comercializable" class="input-box2" style="top:23%">
+  <div  id="div_evidencia_producto_comercializable" class="input-box" style="position:absolute; top:33%; right:2%;">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
 <input type="radio" class="res" name="evidencia_producto_comercializable" value="Sí" >
@@ -190,7 +190,7 @@ No
   No se
 </label>
 </div>
-<div  id ="div_produccion" class="input-box2" style="top:33.5%">
+<div  id ="div_produccion" class="input-box" style="position:absolute; top:41%; right:2%;">
     <p>¿Cuenta con producción sostenida?</p>
     <label>
     <input id="input_produccion" type="radio" class="res" name="produccion" value="Sí"  onclick="javascript:activar_desactivar('produccion');">
@@ -203,7 +203,7 @@ No
       No se
     </label>
   </div>
-  <div  id="div_evidencia_produccion" class="input-box2" style="top:44%">
+  <div  id="div_evidencia_produccion" class="input-box" style="position:absolute; top:49%; right:2%;">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
 <input type="radio" class="res" name="evidencia_produccion" value="Sí">
@@ -216,7 +216,7 @@ No
   No se
 </label>
 </div>
-<div  id ="div_cambios" class="input-box2" style="top:55%">
+<div  id ="div_cambios" class="input-box2" style="position:absolute; top:57%; right:2%;">
     <p>¿Cuenta con cambios incrementales de producto que le lleven a crear nuevas versiones?</p>
     <label>
     <input id="input_cambios" type="radio" class="res" name="cambios" value="Sí"  onclick="javascript:activar_desactivar('cambios');">
@@ -229,7 +229,7 @@ No
       No se
     </label>
   </div>
-  <div  id="div_evidencia_cambios" class="input-box2" style="top:69%">
+  <div  id="div_evidencia_cambios" class="input-box" style="position:absolute; top:67%; right:2%;">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
 <input type="radio" class="res" name="evidencia_cambios" value="Sí" >
@@ -388,7 +388,7 @@ No
 <style>
 .wrapper{
             width: 1100px;
-            height: 1600px;
+            height: 1350px;
             background: transparent;
             border: 8px solid #d49d11;
             position: relative;
@@ -492,15 +492,16 @@ No
           font-weight: 500;
           margin-top: 10px;
           position: absolute;
-          bottom: 3%;
-          right:10% ;
+          bottom: 0%;
+          right:30% ;
+          display:block;
           
         }
         .img{
           position: absolute;
-          top: 225%;
-          right:25% ;
-          width: 120px;
+          top: 175%;
+          right:20% ;
+          width: 220px;
         }
         
         #div_evidencia_pruebas, #div_invencion, #div_evidencia_invencion, #div_evidencia_riesgos, #div_evidencia_prototipo, #div_producto, #div_evidencia_prototipo_sistema, #div_evidencia_producto{

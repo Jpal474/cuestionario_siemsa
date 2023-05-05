@@ -67,70 +67,70 @@
          Sí
         </label>
         <label><input id="input_proceso_registro2" type="radio" class="res" name="proceso_registro" value="No"  onclick="javascript:activar_desactivar('proceso');">
-        No
-        </label>
-        <label><input id="input_proceso_registro3" type="radio" class="res" name="proceso_registro" value="No se" onclick="javascript:activar_desactivar('proceso');">
-          No se
+          No
           </label>
-      </div>
-      <div  id="div_evidencia_proceso_registro" class="input-box">
-        <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
-    <label>
-    <input type="radio" class="res" name="evidencia_proceso_registro" value="Sí" >
-     Sí
-    </label>
-    <label><input type="radio" class="res" name="evidencia_proceso_registro" value="No" >
-    No
-    </label>
-    <label><input type="radio" class="res" name="evidencia_proceso_registro" value="No se" >
-      No se
+          <label><input id="input_proceso_registro3" type="radio" class="res" name="proceso_registro" value="No se" onclick="javascript:activar_desactivar('proceso');">
+            No se
+            </label>
+        </div>
+        <div  id="div_evidencia_proceso_registro" class="input-box">
+          <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+      <label>
+      <input type="radio" class="res" name="evidencia_proceso_registro" value="Sí" >
+       Sí
       </label>
-  </div>
-  <div id="div_estandares_prototipo" class="input-box" style="position: absolute; top:13.5%; left: 52%;">
-    <p>¿Su prototipo cumple con estándares de la industria en cuestión?</p>
-    <label>
-    <input id="input_estandares_prototipo" type="radio" class="res" name="estandares_prototipo" value="Sí"  onclick="javascript:activar_desactivar('estandares');">
-     Sí
-    </label>
-    <label><input id="input_estandares_prototipo2" type="radio" class="res" name="estandares_prototipo" value="No"  onclick="javascript:activar_desactivar('estandares');">
-    No
-    </label>
-    <label><input id="input_estandares_prototipo3" type="radio" class="res" name="estandares_prototipo" value="No se" onclick="javascript:activar_desactivar('estandares');">
-      No se
+      <label><input type="radio" class="res" name="evidencia_proceso_registro" value="No" >
+      No
       </label>
-  </div>
-  <div  id="div_evidencia_estandares_prototipo" class="input-box" style="position: absolute; top:30%; left: 52%;">
-    <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
-<label>
-<input type="radio" class="res" name="evidencia_estandares_prototipo" value="Sí" >
- Sí
-</label>
-<label><input type="radio" class="res" name="evidencia_estandares_prototipo" value="No" >
-No
-</label>
-<label><input type="radio" class="res" name="evidencia_estandares_prototipo" value="No se" >
-  No se
+      <label><input type="radio" class="res" name="evidencia_proceso_registro" value="No se" >
+        No se
+        </label>
+    </div>
+    <div id="div_estandares_prototipo" class="input-box" style="position: absolute; top:12%; left: 52%;">
+      <p>¿Su prototipo cumple con estándares de la industria en cuestión?</p>
+      <label>
+      <input id="input_estandares_prototipo" type="radio" class="res" name="estandares_prototipo" value="Sí"  onclick="javascript:activar_desactivar('estandares');">
+       Sí
+      </label>
+      <label><input id="input_estandares_prototipo2" type="radio" class="res" name="estandares_prototipo" value="No"  onclick="javascript:activar_desactivar('estandares');">
+      No
+      </label>
+      <label><input id="input_estandares_prototipo3" type="radio" class="res" name="estandares_prototipo" value="No se" onclick="javascript:activar_desactivar('estandares');">
+        No se
+        </label>
+    </div>
+    <div  id="div_evidencia_estandares_prototipo" class="input-box" style="position: absolute; top:26%; left: 52%;">
+      <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
+  <label>
+  <input type="radio" class="res" name="evidencia_estandares_prototipo" value="Sí" >
+   Sí
   </label>
-</div>
-
-  <button type="submit" class="btn">Registrar</button>
-    </form>
-  </div>
-  
-  </div>
-  <img src="https://media.discordapp.net/attachments/713043245214597160/1081249840186531932/normativo.png" class="img">
-
-<script>
-  function activar_desactivar(dato){
-  switch(dato){
-  case "estudio":
-  if(document.getElementById('input_estudio').checked){
-    document.getElementById('div_evidencia').style.display="block";
+  <label><input type="radio" class="res" name="evidencia_estandares_prototipo" value="No" >
+    No
+    </label>
+    <label><input type="radio" class="res" name="evidencia_estandares_prototipo" value="No se" >
+      No se
+      </label>
+    </div>
     
-  }
-  else{
+      <button type="submit" class="btn">Registrar</button>
+        </form>
+      </div>
+      
+      </div>
+      <img src="https://media.discordapp.net/attachments/713043245214597160/1081249840186531932/normativo.png" class="img">
+    
+    <script>
+      function activar_desactivar(dato){
+      switch(dato){
+      case "estudio":
+      if(document.getElementById('input_estudio').checked){
+        document.getElementById('div_evidencia_estudio').style.display="block";
+        
+      }
+      else{
     if(document.getElementById('input_estudio2').checked || document.getElementById('input_estudio3').checked){
-    document.getElementById('div_evidencia').style.display="none";
+    document.getElementById('div_evidencia_estudio').style.display="none";
   
   }
   }
@@ -147,7 +147,7 @@ No
   }
   }
   break;
-    case "proceso":
+  case "proceso":
     if(document.getElementById('input_prototipo').checked){
       document.getElementById('div_estandares_prototipo').style.display="block";
       document.getElementById('div_evidencia_proceso_registro').style.display="block";
@@ -173,45 +173,40 @@ No
     break;
   
   }
+}
   
-  }
-  
-  </script>
-
-
-
+</script>
 <style>
-.wrapper{
-            width: 1100px;
-            height: 680px;
-            background: transparent;
-            border: 8px solid #d49d11;
-            position: relative;
-            margin: -25px 0 0 -25px;
-           
-            backdrop-filter: blur(15px);
-            box-shadow: 20px 20px 20px 0px rgba(0, 0, 0,.9);
-            top:15%;
-            left: 8%;
-           /*display: flex;
-           justify-content: center;
-           align-items: center;*/
-           margin-bottom: 10px;
-  
-           
-        }
-        .wrapper .form-box{
-            width: 100%;
-            padding: 40px;
-        }
-        
-        .form-box h2{
+  .wrapper{
+              width: 1100px;
+              height: 950px;
+              background: transparent;
+              border: 8px solid #d49d11;
+              position: relative;
+              margin: -25px 0 0 -25px;
+             
+              backdrop-filter: blur(15px);
+              box-shadow: 20px 20px 20px 0px rgba(0, 0, 0,.9);
+              top:15%;
+              left: 8%;
+             /*display: flex;
+             justify-content: center;
+             align-items: center;*/
+             margin-bottom: 10px;
+    
+             
+          }
+          .wrapper .form-box{
+              width: 100%;
+              padding: 40px;
+          }
+          .form-box h2{
           font-size: 2em;
           color: white;
           text-align: center;
 
         }
-        #div_evidencia, #div_proceso_registro, #div_evidencia_proceso_registro, #div_estandares_protipo, #div_evidencia_estandares_prototipo{
+        #div_evidencia_estudio, #div_evidencia_prototipo, #div_proceso_registro, #div_evidencia_proceso_registro, #div_estandares_protipo, #div_evidencia_estandares_prototipo{
           display: none;
         }
          
@@ -229,11 +224,7 @@ No
       .res{
         margin-bottom: 15px;
       }
-
-        
-        
-       
-         .input-box p{
+      .input-box p{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -247,10 +238,7 @@ No
   border-bottom: 2px solid #d49d11;
   margin-bottom: 20px;
   }
-
-  
-      
-        .btn{
+  .btn{
           width: 30%;
           height: 45px;
           background: #162938;
@@ -263,27 +251,16 @@ No
           font-weight: 500;
           margin-top: 10px;
           position: absolute;
-          bottom: 48%;
-          right:10% ;
+          top: 40%;
+          right:8% ;
           
         }
         .img{
           position: absolute;
           width:200px;
-          top: 80%;
-          right: 20%;
+          top: 135%;
+          right: 10%;
         }
         
     </style>
-    
-
-</style>
-           
-      
-
- 
- 
-
-
-{%endblock body%}
-
+{% endblock body %}        

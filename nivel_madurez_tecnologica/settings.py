@@ -81,9 +81,9 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': BASE_DIR / 'db.sqlite3',
       'ENGINE':'django.db.backends.postgresql',
-      'NAME':'nivel_madurez_dos',
+      'NAME':'nivel_madurez',
       'USER':'postgres',
-      'PASSWORD':'12345',
+      'PASSWORD':'2244245',
       'HOST':'localhost',
       'PORT':'5432',
     }

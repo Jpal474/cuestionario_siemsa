@@ -6,7 +6,7 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Usuarios del Producto</h2> <br>
-    <form action="/guardar_usuarios_producto/" method="POST">
+    <form action="{% url 'guardar_usuarios'%}" method="POST">
       {% csrf_token %}
       <div  id ="div_usuarios" class="input-box">
         <p>¿Ha explorado posibles usuarios y/o clientes de la invención?</p>

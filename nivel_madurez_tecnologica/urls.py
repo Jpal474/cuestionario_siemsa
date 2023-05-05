@@ -44,5 +44,6 @@ urlpatterns = [
     path('aspectos_organizativos/', views.aspectos, name="aspectos"),
     path('guardar_aspectos_organizativos/', views.guardar_aspectos, name="guardar_aspectos"),
     path('resultados/', views.resultados, name="resultados"),
+    path('exportar/', views.exportar_pdf, name="exportar"),
     
 ]+ static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

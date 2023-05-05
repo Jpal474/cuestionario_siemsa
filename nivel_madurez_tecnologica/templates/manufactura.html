@@ -6,7 +6,8 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Manufactura</h2> <br>
-    <form action="#">
+    <form action="{%url 'guardar_manufactura'%}" method="POST">
+      {% csrf_token %}
       <div  id ="div_manufacturabilidad" class="input-box">
         <p>¿Ha explorado principios básicos de manufacturabilidad?</p>
         <label>
@@ -248,7 +249,7 @@ No
     }
     break;
   
-    case "prodcuto":
+    case "producto":
     if(document.getElementById('input_producto').checked){
       document.getElementById('div_evidencia_producto').style.display="block";
       document.getElementById('div_version').style.display="block";

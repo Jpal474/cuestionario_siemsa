@@ -2,6 +2,9 @@ from asyncio.windows_events import proactor_events
 from datetime import datetime
 from django.shortcuts import redirect, render
 from Cuestionario.models import *
+from weasyprint import HTML
+from django.template.loader import render_to_string
+from django.http import HttpResponse
 
 
 def registrar(request):
@@ -18,6 +21,7 @@ def guardar_registro(request):
     registro=Registro()
     registro.nombre=request.POST.get('nombre')
     nombre_proyecto=registro.nombre_proyecto=request.POST.get('nombre_proyecto')
+    institucion=request.POST.get('institucion')
     registro.correo_electronico=request.POST.get('correo')
     registro.institucion=request.POST.get('institucion')
     registro.categoria=request.POST.get('categoria')
@@ -535,6 +539,8 @@ def resultados(request):
     estatus=Estatus()
     conclusiones=Conclusiones()
     #evaluacion=Evaluacion.objects.get(pk=23)
+    #nombre_proyecto="FrutiPlastic"
+    global recomendaciones
     recomendaciones={}
     
     evaluacion.promedio_trl1=(evaluacion.pregunta1_1 + evaluacion.pregunta1_2)/2
@@ -597,7 +603,7 @@ def resultados(request):
     conclusiones.conclusion_usuarios=conclusion[6]
     conclusiones.conclusion_aspectos=conclusion[7]
 
-    #conclusiones.nombre_proyecto=estatus.nombre_proyecto=nombre_proyecto
+    conclusiones.nombre_proyecto=estatus.nombre_proyecto=nombre_proyecto
 
     if evaluacion.pregunta1_1==100:
         recomendaciones[0]="Cuenta con un GRUPO DE INVESTIGACIÓN Y DESARROLLO adecuado y acorde a las características técnicas, administrativas y operativas que demanda el proyecto, además ha documentado satisfactoriamente toda la información necesaria y anexos que validan el perfil y experiencia de cada miembro del GRUPO DE INVESTIGACIÓN Y DESARROLLO."
@@ -1213,7 +1219,8 @@ def resultados(request):
         recomendaciones[46]="Ya cuenta con un producto con CRECIMIENTO DE MERCADO, es muy probable que realice ventas sostenidas y producción a gran volumen, además de contar con reportes de venta y proyecciones de mercado, sin embargo, es necesario revisar cuidadosamente la información disponible y la documentación realizada durante el proceso."
 
 
-
+    global iconos
+    global colores
     iconos={
      
     }
@@ -1294,3 +1301,16 @@ def resultados(request):
    
     return render(request,'resultados.html', {'evaluacion':evaluacion, 'estatus':estatus, 'iconos':iconos, 'colores':colores, 'conclusiones': conclusiones, 'recomendaciones':recomendaciones})
 
+
+def exportar_pdf(request):
+    nombre_proyecto="FrutiPlastic"
+    evaluacion=Evaluacion.objects.get(pk=23)
+    conclusiones=Conclusiones.objects.filter(nombre_proyecto=nombre_proyecto).last()
+    estatus=Estatus.objects.filter(nombre_proyecto=nombre_proyecto).last()
+    
+    html = render_to_string("resultados_pdf.html", {'evaluacion': evaluacion, 'iconos':iconos, 'colores':colores, 'estatus':estatus, 'conclusiones':conclusiones})
+    response = HttpResponse(content_type="application/pdf")
+    response["Content-Disposition"] = "inline; report.pdf"
+    HTML(string=html).write_pdf(response)
+    return response
+   # return render(request,'resultados.html', {'evaluacion':evaluacion, 'estatus':estatus, 'iconos':iconos, 'colores':colores, 'conclusiones': conclusiones, 'recomendaciones':recomendaciones})

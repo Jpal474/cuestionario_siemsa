@@ -6,7 +6,7 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Aspectos Organizativos</h2> <br>
-    <form action="/guardar_aspectos_organizativos/" method="POST">
+    <form action="{% url 'guardar_aspectos' %}" method="POST">
       {% csrf_token %}
       <div  id ="div_organizacion" class="input-box">
         <p>¿Cuenta con una organización operativa acorde a las necesidades de operación de la producción? (mercadotecnia, logística, producción y otros)</p>

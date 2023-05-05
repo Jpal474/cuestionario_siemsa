@@ -6,7 +6,7 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Integracion Tecnologica</h2> <br>
-    <form action="/guardar_integracion/" method="POST">
+    <form action="{% url 'guardar_integracion' %}" method="POST">
       {% csrf_token %}
       <div  id ="div_investigacion" class="input-box">
         <p>¿Cuenta con un grupo de investigación que pueda facilitar la evaluación inicial de factibilidad de la tecnología?</p>

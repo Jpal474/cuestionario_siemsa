@@ -13,7 +13,7 @@
                         <th scope="col">Nombre</th>
                         <th scope="col">Nombre Institución</th>
                         <th scope="col">Nombre Proyecto</th>
-                        <th scope="col">Promedio Global</th>
+                        <th scope="col" >Promedio Global</th>
                         <th scope="col">Acciones</th>
                     </tr>
                 </thead>
@@ -24,9 +24,24 @@
                         <td>{{res.nombre}}</td>
                         <td>{{res.institucion}}</td>
                         <td>{{res.nombre_proyecto}}</td>
-                        <td>{{res.promedio_trl_global}}</td>
-                        <td><a href="{% url 'resultado' res.id %}" class="btn">Ver</a>
-                            <a href="{% url 'eliminar_respuesta' res.id %}" class="btn">eliminar</a></td>
+                        <td>{{res.promedio_trl_global}}
+                            {% if res.promedio_trl_global == 0 %}
+                            <ion-icon name="close-outline" style="color: red;"></ion-icon>
+                            {% elif res.promedio_trl_global > 0 and res.promedio_trl_global < 3  %}
+                            <ion-icon name="megaphone-outline" style="color: red;"></ion-icon>
+                            {% elif res.promedio_trl_global >= 3 and res.promedio_trl_global < 6%}
+                            <ion-icon name="alert-outline" style="color: red;"></ion-icon>
+                            {% elif res.promedio_trl_global >= 6 and res.promedio_trl_global < 9%}
+                            <ion-icon name="warning-outline"  style="color: yellow ;"></ion-icon>
+                            {% elif res.promedio_trl_global == 9%}
+                            <ion-icon name="checkmark-outline" style="color:green;"></ion-icon>
+                            {% endif %}
+
+                        </td>
+                        <td>
+                            <a href="{% url 'resultado' res.id %}" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Editar" style="background-color:blue"><ion-icon name="create-outline"></ion-icon></a>
+                            <a href="{% url 'eliminar_respuesta' res.id %}" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-title="Eliminar" style="background-color:red"><ion-icon name="trash-outline"></ion-icon></a>
+                           </td>
                     </tr>
                     
                     </tbody>
@@ -58,9 +73,9 @@
         </div>
     </div>
     
-    <img src="https://cdn-icons-png.flaticon.com/512/2279/2279034.png" class="img" style="height: 230px; width: 230px;">
+    
 </div>
-
+<img src="https://cdn-icons-png.flaticon.com/512/2279/2279034.png" class="img" style="height: 230px; width: 230px;">
 
 
 <style>
@@ -80,6 +95,7 @@
                justify-content: center;
                align-items: center;*/
                margin-bottom: 10px;
+               overflow-y:scroll
       
                
             }

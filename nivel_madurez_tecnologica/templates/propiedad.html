@@ -6,17 +6,18 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Propiedad Intelectual</h2> <br>
-    <form action="#">
+    <form action="{% url 'guardar_propiedad' %}" method="POST">
+      {% csrf_token %}
       <div  id ="div_busqueda" class="input-box">
         <p>¿Realizó estudios de búsqueda y análisis de protección intelectual a nivel nacional e internacional, y los resultados indicaron que no existe un desarrollo igual a su idea? (benchmark tecnológico)</p>
         <label>
-        <input type="radio" class="res" id="input_busqueda" name="pruebas" value="Sí" required onclick="javascript:activar_desactivar('busqueda');">
+        <input type="radio" class="res" id="input_busqueda" name="busqueda" value="Sí" required onclick="javascript:activar_desactivar('busqueda');">
          Sí
         </label>
-        <label><input type="radio" id="input_busqueda2" class="res"  name="pruebas" value="No" required onclick="javascript:activar_desactivar('busqueda');">
+        <label><input type="radio" id="input_busqueda2" class="res"  name="busqueda" value="No" required onclick="javascript:activar_desactivar('busqueda');">
         No
         </label>
-        <label><input type="radio" id="input_busqueda3" class="res"  name="pruebas" value="No se" required onclick="javascript:activar_desactivar('busqueda');">
+        <label><input type="radio" id="input_busqueda3" class="res"  name="busqueda" value="No se" required onclick="javascript:activar_desactivar('busqueda');">
           No se
           </label>
       </div>
@@ -29,25 +30,28 @@
       <label><input type="radio" name="evidencia_busqueda" class="res" value="No" >
       No
       </label>
-      <label><input type="radio" name="evidencia_pruebas" class="res" value="No se" >
+      <label><input type="radio" name="evidencia_busqueda" class="res" value="No se" >
         No se
         </label>
       </div>
       <div  id ="div_estudios" class="input-box">
         <p>¿Ha actualizado los estudios de búsqueda y análisis de protección intelectual a nivel nacional e internacional y los resultados indicaron que no existe un desarrollo igual a su idea? (benchmark tecnológico)  ¿Cuántas veces? </p>
         <label>
-        <input id="input_estudios" type="radio" class="res" name="estudios" value="Sí" onclick="javascript:activar_desactivar('estudios');">
-         Sí
+        <input id="input_estudios" type="radio" class="res" name="estudios" value="1" onclick="javascript:activar_desactivar('estudios');">
+         1
         </label>
-        <label><input id="input_estudios2" type="radio" class="res" name="estudios" value="No" onclick="javascript:activar_desactivar('estudios');">
-        No
+        <label><input id="input_estudios2" type="radio" class="res" name="estudios" value="2" onclick="javascript:activar_desactivar('estudios');">
+        2
         </label>
-        <label><input id="input_estudios3" type="radio" class="res" name="estudios" value="No se"  onclick="javascript:activar_desactivar('estudios');">
-          No se
+        <label><input id="input_estudios3" type="radio" class="res" name="estudios" value="3"  onclick="javascript:activar_desactivar('estudios');">
+          3
           </label>
-          <label><input id="input_estudios2" type="radio" class="res" name="estudios" value="No" required  onclick="javascript:activar_desactivar('estudios');">
+          <label><input id="input_estudios4" type="radio" class="res" name="estudios" value="No" required  onclick="javascript:activar_desactivar('estudios');">
             No
             </label>
+            <label><input id="input_estudios5" type="radio" class="res" name="estudios" value="No se" required  onclick="javascript:activar_desactivar('estudios');">
+              No sé
+              </label>
       </div>
       <div  id="div_evidencia_estudios" class="input-box">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>
@@ -91,13 +95,13 @@
   <div  id ="div_licenciamiento" class="input-box">
     <p>¿Tiene contemplado un plan de licenciamiento de tecnología a terceros?</p>
     <label>
-    <input id="input_licenciamiento" type="radio" class="res" name="producto" value="Sí" required onclick="javascript:activar_desactivar('licenciamiento');">
+    <input id="input_licenciamiento" type="radio" class="res" name="licenciamiento" value="Sí" required onclick="javascript:activar_desactivar('licenciamiento');">
      Sí
     </label>
-    <label><input id="input_licenciamiento2" type="radio" class="res" name="producto" value="No" required  onclick="javascript:activar_desactivar('licenciamiento');">
+    <label><input id="input_licenciamiento2" type="radio" class="res" name="licenciamiento" value="No" required  onclick="javascript:activar_desactivar('licenciamiento');">
     No
     </label>
-    <label><input id="input_licenciamiento3" type="radio" class="res" name="producto" value="No se" required  onclick="javascript:activar_desactivar('licenciamiento');">
+    <label><input id="input_licenciamiento3" type="radio" class="res" name="licenciamiento" value="No se" required  onclick="javascript:activar_desactivar('licenciamiento');">
       No se
       </label>
   </div>
@@ -121,13 +125,13 @@ No
      1
     </label>
     <label>
-      <input id="input_actualizacion" type="radio" class="res" name="actualizacion" value="2" required onclick="javascript:activar_desactivar('actualizacion');">
+      <input id="input_actualizacion2" type="radio" class="res" name="actualizacion" value="2" required onclick="javascript:activar_desactivar('actualizacion');">
        2
       </label>
-    <label><input id="input_actualizacion2" type="radio" class="res" name="actualizacion" value="No" required  onclick="javascript:activar_desactivar('actualizacion');">
+    <label><input id="input_actualizacion3" type="radio" class="res" name="actualizacion" value="No" required  onclick="javascript:activar_desactivar('actualizacion');">
     No
     </label>
-    <label><input id="input_actualizacion3" type="radio" class="res" name="actualizacion" value="No se"   onclick="javascript:activar_desactivar('actualizacion');">
+    <label><input id="input_actualizacion4" type="radio" class="res" name="actualizacion" value="No se"   onclick="javascript:activar_desactivar('actualizacion');">
       No se
       </label>
   </div>
@@ -173,26 +177,26 @@ No
 <div  id ="div_producto_proteccion" class="input-box2" style="top:59%">
     <p>¿Ha ejecutado la estrategia de protección intelectual?</p>
     <label>
-    <input id="input_proteccion" type="radio" class="res" name="proteccion" value="Sí"  onclick="javascript:activar_desactivar('proteccion');">
+    <input id="input_proteccion" type="radio" class="res" name="estrategia_proteccion" value="Sí"  onclick="javascript:activar_desactivar('proteccion');">
      Sí
     </label>
-    <label><input id="input_proteccion2" type="radio" class="res" name="proteccion" value="No"   onclick="javascript:activar_desactivar('proteccion');">
+    <label><input id="input_proteccion2" type="radio" class="res" name="estrategia_proteccion" value="No"   onclick="javascript:activar_desactivar('proteccion');">
     No
     </label>
-    <label><input id="input_proteccion3" type="radio" class="res" name="proteccion" value="No se"  onclick="javascript:activar_desactivar('proteccion');">
+    <label><input id="input_proteccion3" type="radio" class="res" name="estrategia_proteccion" value="No se"  onclick="javascript:activar_desactivar('proteccion');">
       No se
       </label>
   </div>
   <div  id="div_evidencia_proteccion" class="input-box2" style="top:69%">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
-<input type="radio" class="res" name="evidencia_proteccion" value="Sí">
+<input type="radio" class="res" name="evidencia_estrategia_proteccion" value="Sí">
  Sí
 </label>
-<label><input type="radio" class="res" name="evidencia_proteccion" value="No">
+<label><input type="radio" class="res" name="evidencia_estrategia_proteccion" value="No">
 No
 </label>
-<label><input type="radio" class="res"  name="evidencia_proteccion" value="No se">
+<label><input type="radio" class="res"  name="evidencia_estrategia_proteccion" value="No se">
   No se
   </label>
 </div>
@@ -222,11 +226,11 @@ No
   }
   break;
   case "estudios":
-  if(document.getElementById('input_estudios').checked){
+  if(document.getElementById('input_estudios').checked || document.getElementById('input_estudios2').checked  || document.getElementById('input_estudios3').checked ){
     document.getElementById('div_evidencia_estudios').style.display="block";
   }
   else{
-    if(document.getElementById('input_estudios2').checked || document.getElementById('input_estudios3').checked){
+    if(document.getElementById('input_estudios4').checked || document.getElementById('input_estudios5').checked){
     document.getElementById('div_evidencia_estudios').style.display="none";
   }
   }
@@ -270,11 +274,11 @@ No
   }
   break;
   case "actualizacion":
-  if(document.getElementById('input_actualizacion').checked){
+  if(document.getElementById('input_actualizacion').checked || document.getElementById('input_actualizacion2').checked){
     document.getElementById('div_evidencia_actualizacion').style.display="block";
   }
   else{
-    if(document.getElementById('input_actualizacion2').checked || document.getElementById('input_actualizacion3').checked){
+    if(document.getElementById('input_actualizacion3').checked || document.getElementById('input_actualizacion4').checked){
     document.getElementById('div_evidencia_actualizacion').style.display="none";
   }
   }

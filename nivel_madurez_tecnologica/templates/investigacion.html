@@ -6,7 +6,7 @@
 <div class="wrapper">
   <div class="form-box login">
     <h2>Investigación</h2> <br>
-    <form action="/guardar_investigacion/" method="POST">
+    <form action="{% url 'guardar_investigacion' %}" method="POST">
       {% csrf_token %}
       <div  id ="div_investigacion" class="input-box">
         <p>¿Finalizó con la investigación básica de su idea?</p>
@@ -61,7 +61,7 @@
           No se
           </label>
       </div>
-      <div id="div_analisis" class="input-box">
+      <div id="div_analisis" class="input-box" style="position: absolute; top:15%; right: 2%;">
         <p>¿Realizó un análisis de los artículos científicos, modelos o teorías científicas que respaldan la aplicación de la idea en algún área tecnológica?</p>
         <label>
         <input id="input_analisis" type="radio" class="res" name="analisis" value="Sí" required onclick="javascript:activar_desactivar('analisis');">
@@ -74,7 +74,7 @@
           No se
           </label>
       </div>
-      <div  id="div_evidencia_analisis" class="input-box">
+      <div  id="div_evidencia_analisis" class="input-box" style="position: absolute; top:38%; right: 2%;">
         <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
     <label>
 
@@ -149,7 +149,7 @@
 <style>
 .wrapper{
             width: 1100px;
-            height: 880px;
+            height: 700px;
             background: transparent;
             border: 8px solid #d49d11;
             position: relative;
@@ -228,14 +228,15 @@
           color:#fff;
           font-weight: 500;
           position: absolute;
-          top: 60%;
+          top: 55%;
           left: 60%;
           
         }
         .img{
           position: absolute;
-          top: 50%;
-          left: 45%;
+          top: 90%;
+          left: 65%;
+          height: 50%;
         }
         
     </style>
