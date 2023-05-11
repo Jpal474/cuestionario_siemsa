@@ -43,7 +43,7 @@ urlpatterns = [
     path('guardar_usuarios_producto/', views.guardar_usuarios_producto, name="guardar_usuarios"),
     path('aspectos_organizativos/', views.aspectos, name="aspectos"),
     path('guardar_aspectos_organizativos/', views.guardar_aspectos, name="guardar_aspectos"),
-    path('resultados/', views.resultados, name="resultados"),
-    path('exportar/', views.exportar_pdf, name="exportar"),
+    path('resultados/<int:id>', views.resultados, name="resultados"),
+    path('exportar/<int:id>', views.exportar_pdf, name="exportar"),
     
 ]+ static (settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

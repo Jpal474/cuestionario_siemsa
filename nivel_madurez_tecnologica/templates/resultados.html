@@ -2,7 +2,7 @@
 {%block title%} Resultados {%endblock title%}
 {% block text %} Resultados {%endblock text%}
 {%block body %}
-<a href="{% url 'exportar' %}" class="btn btn-primary" target="_blank">Exportar PDF</a>
+<a href="{% url 'exportar' evaluacion.id %}" class="btn btn-primary" target="_blank">Exportar PDF</a>
 
 
 <table class="table">
