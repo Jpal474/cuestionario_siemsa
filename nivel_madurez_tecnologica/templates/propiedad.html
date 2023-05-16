@@ -9,7 +9,7 @@
     <form action="{% url 'guardar_propiedad' %}" method="POST">
       {% csrf_token %}
       <div  id ="div_busqueda" class="input-box">
-        <p>¿Realizó estudios de búsqueda y análisis de protección intelectual a nivel nacional e internacional, y los resultados indicaron que no existe un desarrollo igual a su idea? (benchmark tecnológico)</p>
+        <p>{{pregunta17.texto}}</p>
         <label>
         <input type="radio" class="res" id="input_busqueda" name="busqueda" value="Sí" required onclick="javascript:activar_desactivar('busqueda');">
          Sí
@@ -35,7 +35,7 @@
         </label>
       </div>
       <div  id ="div_estudios" class="input-box">
-        <p>¿Ha actualizado los estudios de búsqueda y análisis de protección intelectual a nivel nacional e internacional y los resultados indicaron que no existe un desarrollo igual a su idea? (benchmark tecnológico)  ¿Cuántas veces? </p>
+        <p>{{pregunta18.texto}} </p>
         <label>
         <input id="input_estudios" type="radio" class="res" name="estudios" value="1" onclick="javascript:activar_desactivar('estudios');">
          1
@@ -67,7 +67,7 @@
           </label>
       </div>
       <div id="div_resultados" class="input-box">
-        <p>¿Los resultados de la búsqueda y análisis de protección intelectual indicaron que la invención puede ser protegida mediante algún mecanismo? </p>
+        <p>{{pregunta19.texto}}</p>
         <label>
         <input id="input_resultados" type="radio" class="res" name="resultados"  value="Sí"  onclick="javascript:activar_desactivar('resultados');">
          Sí
@@ -93,7 +93,7 @@
       </label>
   </div>
   <div  id ="div_licenciamiento" class="input-box">
-    <p>¿Tiene contemplado un plan de licenciamiento de tecnología a terceros?</p>
+    <p>{{pregunta20.texto}}</p>
     <label>
     <input id="input_licenciamiento" type="radio" class="res" name="licenciamiento" value="Sí" required onclick="javascript:activar_desactivar('licenciamiento');">
      Sí
@@ -119,7 +119,7 @@ No
   </label>
 </div>
 <div  id ="div_producto_actuailizacion" class="input-box2">
-    <p>¿Ha actualizado su plan de licenciamiento de tecnología a terceros? ¿Cuántas veces?</p>
+    <p>{{pregunta21.texto}}</p>
     <label>
     <input id="input_actualizacion" type="radio" class="res" name="actualizacion" value="1" required onclick="javascript:activar_desactivar('actualizacion');">
      1
@@ -149,7 +149,7 @@ No
   </label>
 </div>
 <div  id ="div_estrategia" class="input-box2"  style="top:32%">
-    <p>¿Ha identificado y definido una estrategia de protección intelectual? (tiempos, redacción, componentes a proteger, mecanismo de protección: patente, modelo de utilidad, diseño industrial, derechos de autor, etc)</p>
+    <p>{{pregunta22.texto}}</p>
     <label>
     <input id="input_estrategia" type="radio" class="res" name="estrategia" value="Sí" onclick="javascript:activar_desactivar('estrategia');">
      Sí
@@ -175,7 +175,7 @@ No
   </label>
 </div>
 <div  id ="div_producto_proteccion" class="input-box2" style="top:59%">
-    <p>¿Ha ejecutado la estrategia de protección intelectual?</p>
+    <p>{{pregunta23.texto}}</p>
     <label>
     <input id="input_proteccion" type="radio" class="res" name="estrategia_proteccion" value="Sí"  onclick="javascript:activar_desactivar('proteccion');">
      Sí

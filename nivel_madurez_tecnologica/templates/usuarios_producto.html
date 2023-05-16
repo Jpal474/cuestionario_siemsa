@@ -9,7 +9,7 @@
     <form action="{% url 'guardar_usuarios'%}" method="POST">
       {% csrf_token %}
       <div  id ="div_usuarios" class="input-box">
-        <p>¿Ha explorado posibles usuarios y/o clientes de la invención?</p>
+        <p>{{pregunta35.texto}}</p>
         <label>
         <input type="radio" class="res" id="input_usuarios" name="usuarios" value="Sí" required onclick="javascript:activar_desactivar('usuarios');">
          Sí
@@ -35,7 +35,7 @@
         </label>
       </div>
       <div  id ="div_proceso_validacion" class="input-box">
-        <p>¿Ha llevado a cabo algún proceso de validación de mercado sobre su invención? (Innovación & Desarrollo en laboratorio y primeras pláticas con posibles usuarios)</p>
+        <p>{{pregunta36.texto}}</p>
         <label>
         <input id="input_proceso_validacion" type="radio" class="res" name="proceso_validacion" value="Sí" required onclick="javascript:activar_desactivar('proceso');">
          Sí
@@ -61,7 +61,7 @@
           </label>
       </div>
       <div id="div_validacion_mercado" class="input-box">
-        <p>¿Ha actualizado la validación de mercado de su invención con más entrevistas con usuarios potenciales y estudios de mercado? ¿Cuántas veces?</p>
+        <p>{{pregunta37.texto}}</p>
         <label>
         <input id="input_validacion_mercado" type="radio" value="Sí" class="res" name="validacion_mercado"  onclick="javascript:activar_desactivar('validacion');">
          Sí
@@ -87,7 +87,7 @@
       </label>
   </div>
   <div  id ="div_usuarios_potenciales" class="input-box">
-    <p>¿Cuenta con usuarios potenciales que prueben la producción a baja escala?</p>
+    <p>{{pregunta39.texto}}</p>
     <label>
     <input id="input_usuarios_potenciales" type="radio" value="Sí" class="res" name="usuarios_potenciales" required onclick="javascript:activar_desactivar('usuarios_potenciales');">
      Sí
@@ -113,7 +113,7 @@ No
   </label>
 </div>
 <div  id ="div_version_final" class="input-box2">
-    <p>¿Cuenta con usuarios potenciales que prueben la versión final del version_final?</p>
+    <p>{{pregunta40.texto}}</p>
     <label>
     <input id="input_version_final" type="radio" value="Sí" class="res" name="version_final" required onclick="javascript:activar_desactivar('version_final');">
      Sí

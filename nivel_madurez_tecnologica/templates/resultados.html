@@ -866,9 +866,25 @@
   </table><br>
 
 
-<figure class="highcharts-figure"> <div id="first"></div></figure>
+<figure class="highcharts-figure"> <div id="first"></div></figure><br>
 
   <div id="second"></div>
+  <div class="square" style="background-color:#2caffe"></div>
+  <label style="position:absolute; right:28%; top:1215%; font-size:12px">Investigación</label>
+  <div class="square" style="background-color:#544fc5; right:26%;"></div>
+  <label style="position:absolute; right:21%; top:1215%; font-size:12px">Desarrollo</label>
+  <div class="square" style="background-color:#00e272; right:18%;"></div>
+  <label style="position:absolute; right:10%; top:1215%; font-size:12px">Integración Tec.</label>
+  <div class="square" style="background-color:#fe6a35; top:1220%; right:34%;"></div>
+  <label style="position:absolute; right:27%; top:1220%; font-size:12px ">Propiedad Int.</label>
+  <div class="square" style="background-color:#6b8abc; top:1220%; right:25%;"></div>
+  <label style="position:absolute; right:18%; top:1220%; font-size:12px">Normatividad</label>
+  <div class="square" style="background-color:#d568fb; top:1220%; right:16%;"></div>
+  <label style="position:absolute; right:9%; top:1220%; font-size:12px">Manufactura</label>
+  <div class="square" style="background-color:#2ee0ca; top:1225%; right:28%;"></div>
+  <label style="position:absolute; right:19%; top:1225%; font-size:12px">Usuarios del Prod.</label>
+  <div class="square" style="background-color:#daa9a2; top:1225%; right:17%;"></div>
+  <label style="position:absolute; right:110%; top:1225%; font-size:12px">Aspectos Org.</label>
 
   <div id="third"></div>
 
@@ -972,7 +988,7 @@
   
   chart: {
       type: 'solidgauge',
-      height: '150%',
+      height: '80%',
     
       
       //backgroundColor: 'transparent',
@@ -1287,6 +1303,14 @@
   
   .highcharts-data-table tr:hover {
       background: #f1f7ff;
+  }
+  .square{
+    height: 20px;
+    width: 20px;
+    background-color: #555;
+    position:absolute;
+    right:35%; 
+    top:1215%;
   }
   </style>
 {%endblock body%}

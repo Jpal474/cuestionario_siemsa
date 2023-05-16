@@ -44,36 +44,32 @@
         <div class="menu-bar">
             <div class="menu">
 
-                <li class="search-box">
-                    <i class='bx bx-search icon_search' style="color: white;"></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-
                 <!-- <ul class="menu-links"> -->
                 <li class="nav-link">
                     <a href="{%url 'cuestionario_administrador'%}">
-                        <img src="https://media.discordapp.net/attachments/713043245214597160/1083115183741866107/signo-de-interrogacion1.png" class="icon">
+                        <ion-icon name="help-circle-outline"  size="large" class="icon"></ion-icon>
                         <span class="text nav-text" style="color: white;">Preguntas</span>
                     </a>
                 </li>
 
                 <li class="nav-link">
                     <a href="{%url 'ver_usuarios'%}">
-                        <img src="https://media.discordapp.net/attachments/713043245214597160/1083115184245178418/programador1.png" class="icon">
+                        <ion-icon name="people-outline" class="icon"></ion-icon>
                         <span class="text nav-text">Usuarios</span>
                     </a>
                 </li>
 
                 <li class="nav-link">
                     <a href="{%url 'respuestas'%}">
-                        <img src="https://media.discordapp.net/attachments/713043245214597160/1083115183540535296/respuestas.png" class="icon">
+                        <ion-icon name="chatbox-outline"  class="icon"></ion-icon>
+                    
                         <span class="text nav-text">Respuestas</span>
                     </a>
                 </li>
 
                 <li class="nav-link">
                     <a href="{%url 'nomenclatura'%}">
-                        <img src="https://media.discordapp.net/attachments/713043245214597160/1083115183221772298/informacion.png" class="icon">
+                        <ion-icon name="information-circle-outline" class="icon"></ion-icon>
                         <span class="text nav-text">Nomenclatura</span>
                     </a>
                 </li>
@@ -246,7 +242,7 @@ body.dark{
     font-size: 20px;
 }
 .sidebar .icon{
-    min-width: 30px;
+    min-width: 60px;
     border-radius: 6px;
     height: 100%;
     display: flex;
