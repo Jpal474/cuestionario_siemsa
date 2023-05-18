@@ -86,7 +86,7 @@
         No se
         </label>
     </div>
-    <div id="div_estandares_prototipo" class="input-box" style="position: absolute; top:12%; left: 52%;">
+    <div id="div_estandares_prototipo" class="input-box">
       <p>¿Su prototipo cumple con estándares de la industria en cuestión?</p>
       <label>
       <input id="input_estandares_prototipo" type="radio" class="res" name="estandares_prototipo" value="Sí"  onclick="javascript:activar_desactivar('estandares');">
@@ -99,7 +99,7 @@
         No se
         </label>
     </div>
-    <div  id="div_evidencia_estandares_prototipo" class="input-box" style="position: absolute; top:26%; left: 52%;">
+    <div  id="div_evidencia_estandares_prototipo" class="input-box">
       <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
   <label>
   <input type="radio" class="res" name="evidencia_estandares_prototipo" value="Sí" >
@@ -179,7 +179,7 @@
 <style>
   .wrapper{
               width: 1100px;
-              height: 950px;
+              height: 680px;
               background: transparent;
               border: 8px solid #d49d11;
               position: relative;
@@ -189,78 +189,82 @@
               box-shadow: 20px 20px 20px 0px rgba(0, 0, 0,.9);
               top:15%;
               left: 8%;
-             /*display: flex;
              justify-content: center;
-             align-items: center;*/
+             align-items: center;
              margin-bottom: 10px;
+            overflow-y:scroll
     
              
           }
           .wrapper .form-box{
               width: 100%;
               padding: 40px;
+              align-items: center;
+              text-align: center;
           }
-          .form-box h2{
-          font-size: 2em;
-          color: white;
-          text-align: center;
-
-        }
-        #div_evidencia_estudio, #div_evidencia_prototipo, #div_proceso_registro, #div_evidencia_proceso_registro, #div_estandares_protipo, #div_evidencia_estandares_prototipo{
-          display: none;
-        }
-         
-        .input-box{
-    width: 500px;
-   border-radius: 10px;
-    background: transparent;
-    color: white;
-    border-bottom: 2px solid #d49d11;
-    border-top: 2px solid #d49d11;
-    margin-bottom: 10px;
-                
-                
-            }
-      .res{
-        margin-bottom: 15px;
-      }
-      .input-box p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-            }
-  .input-box label{
-    display: line;
-  position: relative;
-  left: 30%;
-  margin-right:10px ;
-  
-  border-bottom: 2px solid #d49d11;
-  margin-bottom: 20px;
-  }
-  .btn{
-          width: 30%;
-          height: 45px;
-          background: #162938;
-          border: none;
-          outline:none;
-          border-radius: 6px;
-          cursor: pointer;
-          font-size: 1em;
-          color:#fff;
-          font-weight: 500;
-          margin-top: 10px;
-          position: absolute;
-          top: 40%;
-          right:8% ;
           
+          .form-box h2{
+            font-size: 2em;
+            color: white;
+            text-align: center;
+  
+          }
+          #div_evidencia_estudio, #div_evidencia_prototipo, #div_proceso_registro, #div_evidencia_proceso_registro, #div_estandares_protipo, #div_evidencia_estandares_prototipo{
+            display: none;
+          }
+           
+          .input-box{
+            width: 1000px;
+     border-radius: 10px;
+      background: transparent;
+      color: white;
+      border-bottom: 2px solid #d49d11;
+      border-top: 2px solid #d49d11;
+      margin-bottom: 10px;
+      text-align: center;         
+          }
+        .res{
+          margin-bottom: 15px;
         }
-        .img{
-          position: absolute;
-          width:200px;
-          top: 135%;
-          right: 10%;
-        }
-        
-    </style>
+        .input-box p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+              }
+    .input-box label{
+      display: line;
+    position: relative;
+    margin-right:10px ;
+    
+    border-bottom: 2px solid #d49d11;
+    margin-bottom: 20px;
+    }
+  
+    
+      
+    .btn{
+            width: 30%;
+            height: 45px;
+            background: #162938;
+            border: none;
+            outline:none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            color:#fff;
+            font-weight: 500;
+            margin-top: 10px;
+            align-items: center;
+            text-align: center;
+            
+           
+          }
+          .img{
+            position: absolute;
+            width:200px;
+            top: 135%;
+            right: 10%;
+          }
+          
+      </style>
 {% endblock body %}        

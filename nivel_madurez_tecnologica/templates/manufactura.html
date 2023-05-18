@@ -112,7 +112,7 @@ No
   No se
   </label>
 </div>
-<div  id ="div_producto_comercializable" class="input-box2">
+<div  id ="div_producto_comercializable" class="input-box">
     <p>¿Cuenta con un proceso de manufactura operacional en baja escala? (produciendo productos comerciales)</p>
     <label>
     <input id="input_producto" type="radio" class="res" name="producto" value="Sí" required onclick="javascript:activar_desactivar('producto');">
@@ -125,7 +125,7 @@ No
       No se
       </label>
   </div>
-  <div  id="div_evidencia_producto" class="input-box2" style="top:23%">
+  <div  id="div_evidencia_producto" class="input-box">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
 <input type="radio" class="res" name="evidencia_producto" value="Sí" >
@@ -138,7 +138,7 @@ No
   No se
   </label>
 </div>
-<div  id ="div_version" class="input-box2" style="top:31.5%">
+<div  id ="div_version" class="input-box">
     <p>¿Se encuentra manufacturando el producto en su versión final?</p>
     <label>
     <input id="input_version" type="radio" class="res" name="version" value="Sí"  onclick="javascript:activar_desactivar('version');">
@@ -151,7 +151,7 @@ No
       No se
       </label>
   </div>
-  <div  id="div_evidencia_version" class="input-box2" style="top:44%">
+  <div  id="div_evidencia_version" class="input-box">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
 <input type="radio" class="res" name="evidencia_version" value="Sí" >
@@ -164,7 +164,7 @@ No
   No se
   </label>
 </div>
-<div  id ="div_procesos_manufactura" class="input-box2" style="top:53%">
+<div  id ="div_procesos_manufactura" class="input-box">
     <p>¿Los procesos de manufactura y producción son optimizados a través de innovaciones incrementales?</p>
     <label>
     <input id="input_procesos" type="radio" class="res" name="procesos" value="Sí" onclick="javascript:activar_desactivar('procesos');">
@@ -177,7 +177,7 @@ No
       No se
       </label>
   </div>
-  <div  id="div_evidencia_procesos" class="input-box2" style="top:66%">
+  <div  id="div_evidencia_procesos" class="input-box">
     <p>¿Cuenta con evidencia documentada que avale lo anterior?</p>        
 <label>
 <input type="radio" class="res" name="evidencia_procesos" value="Sí">
@@ -297,126 +297,112 @@ No
 
 
 <style>
-.wrapper{
-            width: 1100px;
-            height: 1150px;
-            background: transparent;
-            border: 8px solid #d49d11;
-            position: relative;
-            margin: -25px 0 0 -25px;
-           
-            backdrop-filter: blur(15px);
-            box-shadow: 20px 20px 20px 0px rgba(0, 0, 0,.9);
-            top:15%;
-            left: 8%;
-           /*display: flex;
-           justify-content: center;
-           align-items: center;*/
-           margin-bottom: 10px;
-  
-           
-        }
-        .wrapper .form-box{
-            width: 100%;
-            padding: 40px;
-        }
-        
-        .form-box h2{
-          font-size: 2em;
-          color: white;
-          text-align: center;
-
-        }
-        #div_evidencia, #div_exploracion, #div_evidencia_exploracion, #div_evidencia_aspectos, #div_piloto{
-          display: none;
-        }
-        #div_evidencia_piloto, #div_version, #div_evidencia_producto, #div_procesos_manufactura, #div_evidencia_version, #div_evidencia_procesos{
-          display: none;
-        }
-         
-        .input-box{
-    width: 500px;
-   border-radius: 10px;
-    background: transparent;
-    color: white;
-    border-bottom: 2px solid #d49d11;
-    border-top: 2px solid #d49d11;
-    margin-bottom: 10px;
-                
-                
-            }
-    .input-box2{
-    position: absolute;
-    top:10.8%; 
-    left: 50%;
+  .wrapper{
+              width: 1100px;
+              height: 680px;
+              background: transparent;
+              border: 8px solid #d49d11;
+              position: relative;
+              margin: -25px 0 0 -25px;
+             
+              backdrop-filter: blur(15px);
+              box-shadow: 20px 20px 20px 0px rgba(0, 0, 0,.9);
+              top:15%;
+              left: 8%;
+             justify-content: center;
+             align-items: center;
+             margin-bottom: 10px;
+            overflow-y:scroll
     
-     margin-left: 10px;
-     width: 500px;
-   border-radius: 10px;
-    background: transparent;
-    color: white;
-    border-bottom: 2px solid #d49d11;
-    border-top: 2px solid #d49d11;
-    margin-bottom: 10px;
-    }
-      .res{
-        margin-bottom: 15px;
-      }
-
-        
-        
-       
-         .input-box p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-            }
-  .input-box label{
-    display: line;
-  position: relative;
-  left: 30%;
-  margin-right:10px ;
-  
-  border-bottom: 2px solid #d49d11;
-  margin-bottom: 20px;
-  }
-  .input-box2 label{
-    display: line;
-  position: relative;
-  left: 30%;
-  margin-right:10px ;
-  
-  border-bottom: 2px solid #d49d11;
-  margin-bottom: 20px;
-  }
-
-  
-      
-        .btn{
-          width: 30%;
-          height: 45px;
-          background: #162938;
-          border: none;
-          outline:none;
-          border-radius: 6px;
-          cursor: pointer;
-          font-size: 1em;
-          color:#fff;
-          font-weight: 500;
-          margin-top: 10px;
-          position: absolute;
-          bottom: 5%;
-          right:10% ;
+             
+          }
+          .wrapper .form-box{
+              width: 100%;
+              padding: 40px;
+              align-items: center;
+              text-align: center;
+          }
           
+          .form-box h2{
+            font-size: 2em;
+            color: white;
+            text-align: center;
+  
+          }
+          #div_evidencia, #div_exploracion, #div_evidencia_exploracion, #div_evidencia_aspectos, #div_piloto{
+            display: none;
+          }
+          #div_evidencia_piloto, #div_version, #div_evidencia_producto, #div_procesos_manufactura, #div_evidencia_version, #div_evidencia_procesos{
+            display: none;
+          }
+           
+          .input-box{
+            width: 1000px;
+     border-radius: 10px;
+      background: transparent;
+      color: white;
+      border-bottom: 2px solid #d49d11;
+      border-top: 2px solid #d49d11;
+      margin-bottom: 10px;
+      text-align: center;         
+          }
+        .res{
+          margin-bottom: 15px;
         }
-        .img{
-          position: absolute;
-          top: 145%;
-          right:25% ;
-          width: 150px;
-        }
+  
+          
+          
+         
+           .input-box p{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+              }
+    .input-box label{
+      display: line;
+    position: relative;
+    margin-right:10px ;
+    
+    border-bottom: 2px solid #d49d11;
+    margin-bottom: 20px;
+    }
+    .input-box2 label{
+      display: line;
+    position: relative;
+    left: 30%;
+    margin-right:10px ;
+    
+    border-bottom: 2px solid #d49d11;
+    margin-bottom: 20px;
+    }
+  
+    
         
-    </style>
+    .btn{
+            width: 30%;
+            height: 45px;
+            background: #162938;
+            border: none;
+            outline:none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+            color:#fff;
+            font-weight: 500;
+            margin-top: 10px;
+            align-items: center;
+            text-align: center;
+            
+           
+          }
+          .img{
+            position: absolute;
+            top: 110%;
+            right:5% ;
+            width: 120px;
+          }
+          
+      </style>
            
       
 
