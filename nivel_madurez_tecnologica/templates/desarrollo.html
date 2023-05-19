@@ -9,7 +9,7 @@
     <form action="{% url 'guardar_desarrollo'%}" method="POST">
       {% csrf_token %}
       <div  id ="div_pruebas" class="input-box">
-        <p>¿Ha realizado pruebas de validación de efectividad de su invención en laboratorio?</p>
+        <p>{{pregunta4.texto}}</p>
         <label>
         <input type="radio" class="res" id="input_pruebas" name="pruebas"  value="Sí" required onclick="javascript:activar_desactivar('pruebas');">
          Sí
@@ -35,7 +35,7 @@
         </label>
       </div>
       <div  id ="div_invencion" class="input-box">
-        <p>¿Su invencion tecnologica funciona a nivel laboratorio?</p>
+        <p>{{pregunta5.texto}}</p>
         <label>
         <input type="radio" class="res" id="input_inven1" name="invencion"  value="Sí" onclick="javascript:activar_desactivar('invencion');">
          Sí
@@ -61,7 +61,7 @@
       </label>
       </div>
       <div  id ="div_riesgos" class="input-box">
-        <p>¿Identificó los riesgos tecnológicos de mercado y financieros con un plan de mitigación de los mismos?</p>
+        <p>{{pregunta6.texto}}</p>
         <label>
         <input id="input_riesgos" type="radio" class="res" name="riesgos" value="Sí"  required onclick="javascript:activar_desactivar('riesgos');">
          Sí
@@ -87,7 +87,7 @@
         </label>
       </div>
       <div id="div_prototipo" class="input-box">
-        <p>¿Ha probado su prototipo en laboratorio en condiciones de un ambiente real?</p>
+        <p>{{pregunta7.texto}}</p>
         <label>
         <input id="input_prototipo" type="radio" class="res" name="prototipo" value="Sí"  required onclick="javascript:activar_desactivar('prototipo');">
          Sí
@@ -113,7 +113,7 @@
     </label>
   </div>
   <div id="div_prototipo_sistema" class="input-box">
-    <p>¿Ha probado su prototipo_sistema a nivel sistema en condiciones de un ambiente real?</p>
+    <p>{{pregunta8.texto}}</p>
     <label>
     <input id="input_prototipo_sistema" type="radio" class="res" name="prototipo_sistema" value="Sí"  required onclick="javascript:activar_desactivar('prototipo_sistema');">
      Sí
@@ -139,7 +139,7 @@ No
 </label>
 </div>
   <div  id ="div_producto" class="input-box" style="position:absolute; top:7%; right:2%;">
-    <p>¿Cuenta con un producto terminado para prueba de primeros clientes?</p>
+    <p>{{pregunta9.texto}}</p>
     <label>
     <input id="input_producto" type="radio" class="res" name="producto"  value="Sí"  onclick="javascript:activar_desactivar('producto');">
      Sí
@@ -164,8 +164,8 @@ No
   No se
 </label>
 </div>
-<div  id ="div_producto_comercializable" class="input-box">
-    <p>¿Tiene un producto comercializable?</p>
+<div  id ="div_producto_comercializable" class="input-box" style="position:absolute; top:25%; right:2%;">
+    <p>{{pregunta10.texto}}</p>
     <label>
     <input id="input_producto_comercializable" type="radio" class="res" name="producto_comercializable" value="Sí"  onclick="javascript:activar_desactivar('producto_comercializable');">
      Sí
@@ -190,8 +190,8 @@ No
   No se
 </label>
 </div>
-<div  id ="div_produccion" class="input-box">
-    <p>¿Cuenta con producción sostenida?</p>
+<div  id ="div_produccion" class="input-box" style="position:absolute; top:41%; right:2%;">
+    <p>{{pregunta11.texto}}</p>
     <label>
     <input id="input_produccion" type="radio" class="res" name="produccion" value="Sí"  onclick="javascript:activar_desactivar('produccion');">
      Sí
@@ -216,8 +216,8 @@ No
   No se
 </label>
 </div>
-<div  id ="div_cambios" class="input-box">
-    <p>¿Cuenta con cambios incrementales de producto que le lleven a crear nuevas versiones?</p>
+<div  id ="div_cambios" class="input-box2" style="position:absolute; top:57%; right:2%;">
+    <p>{{pregunta12.texto}}</p>
     <label>
     <input id="input_cambios" type="radio" class="res" name="cambios" value="Sí"  onclick="javascript:activar_desactivar('cambios');">
      Sí

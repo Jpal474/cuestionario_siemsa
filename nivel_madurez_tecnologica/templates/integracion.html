@@ -9,7 +9,7 @@
     <form action="{% url 'guardar_integracion' %}" method="POST">
       {% csrf_token %}
       <div  id ="div_investigacion" class="input-box">
-        <p>¿Cuenta con un grupo de investigación que pueda facilitar la evaluación inicial de factibilidad de la tecnología?</p>
+        <p>{{pregunta13.texto}}</p>
         <label>
         <input type="radio" class="res" id="input_investigacion" name="investigacion" value="Sí" required onclick="javascript:activar_desactivar('investigacion');">
          Sí
@@ -35,7 +35,7 @@
         </label>
       </div>
       <div  id ="div_componentes" class="input-box">
-        <p>¿Tiene identificados todos los componentes de su invención tecnológica?</p>
+        <p>{{pregunta14.texto}}</p>
         <label>
         <input id="input_componentes" type="radio" class="res" name="componentes" value="Sí" required onclick="javascript:activar_desactivar('componentes');">
          Sí
@@ -61,7 +61,7 @@
         </label>
       </div>
       <div id="div_integracion_componentes" class="input-box" >
-        <p>¿Ha integrado los componentes principales de su invención tecnológica?</p>
+        <p>{{pregunta15.texto}}</p>
         <label>
         <input id="input_integracion_componentes" type="radio" class="res" name="integracion_componentes" value="Sí"  onclick="javascript:activar_desactivar('integracion_componentes');">
          Sí
@@ -88,8 +88,8 @@
   </div>
   
   
-<div id="div_producto" class="input-box">
-    <p>¿Tiene alineado el nuevo producto con las tecnologías de producción?</p>
+<div id="div_producto" class="input-box" style="position: absolute; top:13%; left: 52%;">
+    <p>{{pregunta16.texto}}</p>
     <label>
     <input id="input_producto" type="radio" class="res" name="producto" value="Sí" required onclick="javascript:activar_desactivar('producto');">
      Sí

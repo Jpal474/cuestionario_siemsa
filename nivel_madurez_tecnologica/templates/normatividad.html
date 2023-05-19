@@ -9,7 +9,7 @@
     <form action="{%url 'guardar_normatividad' %}" method="POST">
       {% csrf_token %}
       <div  id ="div_estudio" class="input-box">
-        <p>¿Ha realizado un estudio sobre los aspectos regulatorios (comités de ética, normas, ISO´s, y certificaciones) que son requeridos para su invención tecnológica?</p>
+        <p>{{pregunta24.texto}}</p>
         <label>
         <input type="radio" class="res" id="input_estudio" name="estudio" value="Sí" required onclick="javascript:activar_desactivar('estudio');">
          Sí
@@ -35,7 +35,7 @@
         </label>
       </div>
       <div  id ="div_prototipo" class="input-box">
-        <p>¿El prototipo a escala real cumple con los requisitos de las normas y/o previsiones legales o del medio ambiente del sector?</p>
+        <p>{{pregunta25.texto}}</p>
         <label>
         <input id="input_prototipo" type="radio" class="res" name="prototipo" value="Sí" required onclick="javascript:activar_desactivar('prototipo');">
          Sí
@@ -61,7 +61,7 @@
           </label>
       </div>
       <div id="div_proceso_registro" class="input-box">
-        <p>¿Inició el proceso sobre el registro de las certificaciones requeridas por instancias gubernamentales para la producción y despliegue del prototipo?</p>
+        <p>{{pregunta26.texto}}</p>
         <label>
         <input id="input_proceso_registro" type="radio" class="res" name="proceso_registro" value="Sí"  onclick="javascript:activar_desactivar('proceso');">
          Sí
@@ -86,8 +86,8 @@
         No se
         </label>
     </div>
-    <div id="div_estandares_prototipo" class="input-box">
-      <p>¿Su prototipo cumple con estándares de la industria en cuestión?</p>
+    <div id="div_estandares_prototipo" class="input-box" style="position: absolute; top:12%; left: 52%;">
+      <p>{{pregunta27.texto}}</p>
       <label>
       <input id="input_estandares_prototipo" type="radio" class="res" name="estandares_prototipo" value="Sí"  onclick="javascript:activar_desactivar('estandares');">
        Sí

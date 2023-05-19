@@ -9,7 +9,7 @@
     <form action="{% url 'guardar_aspectos' %}" method="POST">
       {% csrf_token %}
       <div  id ="div_organizacion" class="input-box">
-        <p>¿Cuenta con una organización operativa acorde a las necesidades de operación de la producción? (mercadotecnia, logística, producción y otros)</p>
+        <p>{{pregunta41.texto}}</p>
         <label>
         <input type="radio" class="res" id="input_organizacion" value="Sí" name="organizacion" required onclick="javascript:activar_desactivar('organizacion');">
          Sí
@@ -35,7 +35,7 @@
         </label>
       </div>
       <div  id ="div_estructura" class="input-box">
-        <p>¿Cuenta con una estructura organizacional adecuada para la implementación?</p>
+        <p>{{pregunta42.texto}}</p>
         <label>
         <input id="input_estructura" type="radio" class="res" value="Sí" name="estructura" required onclick="javascript:activar_desactivar('proceso');">
          Sí
@@ -61,7 +61,7 @@
         </label>
       </div>
       <div id="div_operativa" class="input-box">
-        <p>¿Su organización es operativa al 100%?</p>
+        <p>{{pregunta43.texto}}</p>
         <label>
         <input id="input_operativa" type="radio" class="res" value="Sí" name="operativa" required onclick="javascript:activar_desactivar('operativa');">
          Sí
@@ -86,8 +86,8 @@
       No se
       </label>
   </div>
-  <div  id ="div_producto" class="input-box">
-    <p>¿Cuenta con un producto que tiene un crecimiento de mercado?</p>
+  <div  id ="div_producto" class="input-box" style="position: absolute; top: 14.8%; left: 52%;">
+    <p>{{pregunta44.texto}}</p>
     <label>
     <input id="input_producto" type="radio" class="res" value="Sí" name="producto" required onclick="javascript:activar_desactivar('producto');">
      Sí

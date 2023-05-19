@@ -9,7 +9,7 @@
     <form action="{%url 'guardar_manufactura'%}" method="POST">
       {% csrf_token %}
       <div  id ="div_manufacturabilidad" class="input-box">
-        <p>¿Ha explorado principios básicos de manufacturabilidad?</p>
+        <p>{{pregunta28.texto}}</p>
         <label>
         <input type="radio" class="res" id="input_manufacturabilidad" name="manufacturabilidad" value="Sí" required onclick="javascript:activar_desactivar('manufacturabilidad');">
          Sí
@@ -35,7 +35,7 @@
         </label>
       </div>
       <div  id ="div_exploracion" class="input-box">
-        <p>¿Ha explorado con mayor profundidad aspectos / certificaciones de manufacturabilidad relacionados con el desarrollo de su invención tecnológica? </p>
+        <p>{{pregunta29.texto}} </p>
         <label>
         <input id="input_exploracion" type="radio" class="res" name="exploracion" value="Sí"  onclick="javascript:activar_desactivar('exploracion');">
          Sí
@@ -61,7 +61,7 @@
           </label>
       </div>
       <div id="div_aspectos" class="input-box">
-        <p>¿Tiene plenamente identificados y considerados aspectos de manufacturabilidad del futuro producto?</p>
+        <p>{{pregunta30.texto}}</p>
         <label>
         <input id="input_aspectos" type="radio" class="res" name="aspectos" value="Sí" required onclick="javascript:activar_desactivar('aspectos');">
          Sí
@@ -87,7 +87,7 @@
       </label>
   </div>
   <div  id ="div_piloto" class="input-box">
-    <p>¿Tiene integradas las tecnologías de producto y manufactura en una planta piloto? (considerando todos los aspectos de manufacturabilidad)</p>
+    <p>{{pregunta31.texto}}</p>
     <label>
     <input id="input_piloto" type="radio" class="res" name="piloto" value="Sí" onclick="javascript:activar_desactivar('piloto');">
      Sí
@@ -112,8 +112,8 @@ No
   No se
   </label>
 </div>
-<div  id ="div_producto_comercializable" class="input-box">
-    <p>¿Cuenta con un proceso de manufactura operacional en baja escala? (produciendo productos comerciales)</p>
+<div  id ="div_producto_comercializable" class="input-box2">
+    <p>{{pregunta32.texto}}</p>
     <label>
     <input id="input_producto" type="radio" class="res" name="producto" value="Sí" required onclick="javascript:activar_desactivar('producto');">
      Sí
@@ -138,8 +138,8 @@ No
   No se
   </label>
 </div>
-<div  id ="div_version" class="input-box">
-    <p>¿Se encuentra manufacturando el producto en su versión final?</p>
+<div  id ="div_version" class="input-box2" style="top:31.5%">
+    <p>{{pregunta33.texto}}</p>
     <label>
     <input id="input_version" type="radio" class="res" name="version" value="Sí"  onclick="javascript:activar_desactivar('version');">
      Sí
@@ -164,8 +164,8 @@ No
   No se
   </label>
 </div>
-<div  id ="div_procesos_manufactura" class="input-box">
-    <p>¿Los procesos de manufactura y producción son optimizados a través de innovaciones incrementales?</p>
+<div  id ="div_procesos_manufactura" class="input-box2" style="top:53%">
+    <p>{{pregunta34.texto}}</p>
     <label>
     <input id="input_procesos" type="radio" class="res" name="procesos" value="Sí" onclick="javascript:activar_desactivar('procesos');">
      Sí

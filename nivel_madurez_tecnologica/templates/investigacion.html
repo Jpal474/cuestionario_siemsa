@@ -9,7 +9,7 @@
     <form action="{% url 'guardar_investigacion' %}" method="POST">
       {% csrf_token %}
       <div  id ="div_investigacion" class="input-box">
-        <p>¿Finalizó con la investigación básica de su idea?</p>
+        <p>{{pregunta1.texto}}</p>
         <label>
         <input type="radio" class="res" id="input_investigacion" name="investigacion" value="Sí"required onclick="javascript:activar_desactivar('investigacion');">
          Sí
@@ -35,7 +35,7 @@
       </label>
       </div>
       <div  id ="div_principios" class="input-box">
-        <p>¿Identificó principios básicos de investigación que pudieran ser utilizados en nuevas tecnologías?</p>
+        <p>{{pregunta2.texto}}</p>
         <label>
         <input id="input_principios" type="radio" class="res" name="principios" value="Sí" onclick="javascript:activar_desactivar('principios');">
          Sí
@@ -61,8 +61,8 @@
           No se
           </label>
       </div>
-      <div id="div_analisis" class="input-box">
-        <p>¿Realizó un análisis de los artículos científicos, modelos o teorías científicas que respaldan la aplicación de la idea en algún área tecnológica?</p>
+      <div id="div_analisis" class="input-box" style="position: absolute; top:15%; right: 2%;">
+        <p>{{pregunta3.texto}}</p>
         <label>
         <input id="input_analisis" type="radio" class="res" name="analisis" value="Sí" required onclick="javascript:activar_desactivar('analisis');">
          Sí

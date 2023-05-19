@@ -5,6 +5,7 @@ from Cuestionario.models import *
 from weasyprint import HTML
 from django.template.loader import render_to_string
 from django.http import HttpResponse
+from Administrador.models import Pregunta
 
 
 def registrar(request):
@@ -30,7 +31,10 @@ def guardar_registro(request):
     return redirect ('investigacion')
 
 def investigación(request):
-    return render(request, 'investigacion.html')
+    pregunta1=Pregunta.objects.get(pk=1)
+    pregunta2=Pregunta.objects.get(pk=2)
+    pregunta3=Pregunta.objects.get(pk=3)
+    return render(request, 'investigacion.html', {"pregunta1": pregunta1, "pregunta2":pregunta2, "pregunta3": pregunta3})
 
 def guardar_investigacion(request):
     nombre=Registro.objects.filter(nombre_proyecto=nombre_proyecto, fecha=fecha).values('nombre')
@@ -91,7 +95,16 @@ def guardar_investigacion(request):
     return redirect ('desarrollo')
 
 def desarrollo(request):
-    return render(request, 'desarrollo.html')
+    pregunta4=Pregunta.objects.get(pk=4)
+    pregunta5=Pregunta.objects.get(pk=5)
+    pregunta6=Pregunta.objects.get(pk=6)
+    pregunta7=Pregunta.objects.get(pk=7)
+    pregunta8=Pregunta.objects.get(pk=8)
+    pregunta9=Pregunta.objects.get(pk=9)
+    pregunta10=Pregunta.objects.get(pk=10)
+    pregunta11=Pregunta.objects.get(pk=11)
+    pregunta12=Pregunta.objects.get(pk=12)
+    return render(request, 'desarrollo.html', {"pregunta4":pregunta4, "pregunta5":pregunta5, "pregunta6":pregunta6, "pregunta7":pregunta7, "pregunta8":pregunta8, "pregunta9":pregunta9, "pregunta10":pregunta10, "pregunta11":pregunta11, "pregunta12":pregunta12})
 
 def guardar_desarrollo(request): 
     desarrollo=Respuestas_Desarrollo()
@@ -159,7 +172,12 @@ def guardar_desarrollo(request):
     return redirect ('integracion')
 
 def integracion(request):
-    return render(request, 'integracion.html')
+    pregunta13=Pregunta.objects.get(pk=13)
+    pregunta14=Pregunta.objects.get(pk=14)
+    pregunta15=Pregunta.objects.get(pk=15)
+    pregunta16=Pregunta.objects.get(pk=16)
+    
+    return render(request, 'integracion.html',{ "pregunta13":pregunta13, "pregunta14":pregunta14, "pregunta15":pregunta15, "pregunta16":pregunta16})
 
 def guardar_integracion(request):
     integracion=Respuestas_Integracion()
@@ -210,7 +228,14 @@ def guardar_integracion(request):
 
 
 def propiedad(request):
-    return render(request, 'propiedad.html')
+    pregunta17=Pregunta.objects.get(pk=17)
+    pregunta18=Pregunta.objects.get(pk=18)
+    pregunta19=Pregunta.objects.get(pk=19)
+    pregunta20=Pregunta.objects.get(pk=20)
+    pregunta21=Pregunta.objects.get(pk=21)
+    pregunta22=Pregunta.objects.get(pk=22)
+    pregunta23=Pregunta.objects.get(pk=23)
+    return render(request, 'propiedad.html', {"pregunta17":pregunta17, "pregunta18":pregunta18, "pregunta19":pregunta19, "pregunta20":pregunta20, "pregunta21":pregunta21, "pregunta22":pregunta22, "pregunta23":pregunta23})
 
 def guardar_propiedad(request):
     propiedad=Respuestas_Propiedad()
@@ -308,7 +333,11 @@ def guardar_propiedad(request):
 
 
 def normatividad(request):
-    return render(request, 'normatividad.html')
+    pregunta24=Pregunta.objects.get(pk=24)
+    pregunta25=Pregunta.objects.get(pk=25)
+    pregunta26=Pregunta.objects.get(pk=26)
+    pregunta27=Pregunta.objects.get(pk=27)
+    return render(request, 'normatividad.html', {"pregunta24":pregunta24, "pregunta25":pregunta25, "pregunta26":pregunta26, "pregunta27":pregunta27})
 
 def guardar_normatividad(request):
     normatividad=Respuestas_Normatividad()
@@ -360,7 +389,15 @@ def guardar_normatividad(request):
     return redirect('manufactura')
 
 def manufactura(request):
-    return render(request, 'manufactura.html')
+    pregunta28=Pregunta.objects.get(pk=28)
+    pregunta29=Pregunta.objects.get(pk=29)
+    pregunta30=Pregunta.objects.get(pk=30)
+    pregunta31=Pregunta.objects.get(pk=31)
+    pregunta32=Pregunta.objects.get(pk=23)
+    pregunta33=Pregunta.objects.get(pk=33)
+    pregunta34=Pregunta.objects.get(pk=34)
+    
+    return render(request, 'manufactura.html', {"pregunta28":pregunta28, "pregunta29":pregunta29, "pregunta30":pregunta30, "pregunta31":pregunta31, "pregunta32":pregunta32, "pregunta33":pregunta33, "pregunta34":pregunta34})
 
 def guardar_manufactura(request):
     manufactura=Respuestas_Manufactura()
@@ -423,7 +460,13 @@ def guardar_manufactura(request):
     return redirect('usuarios')
     
 def usuarios_producto(request):
-    return render(request, 'usuarios_producto.html')
+    pregunta35=Pregunta.objects.get(pk=35)
+    pregunta36=Pregunta.objects.get(pk=36)
+    pregunta37=Pregunta.objects.get(pk=37)
+    pregunta38=Pregunta.objects.get(pk=38)
+    pregunta39=Pregunta.objects.get(pk=39)
+    pregunta40=Pregunta.objects.get(pk=40)
+    return render(request, 'usuarios_producto.html', {"pregunta35":pregunta35, "pregunta36":pregunta36, "pregunta37":pregunta37, "pregunta38":pregunta38, "pregunta39":pregunta39, "pregunta40":pregunta40})
 
 def guardar_usuarios_producto(request):
     usuarios_producto=Respuestas_Usuarios()
@@ -482,7 +525,11 @@ def guardar_usuarios_producto(request):
     return redirect('aspectos')
 
 def aspectos(request):
-    return render(request, 'aspectos.html')
+    pregunta41=Pregunta.objects.get(pk=41)
+    pregunta42=Pregunta.objects.get(pk=42)
+    pregunta43=Pregunta.objects.get(pk=34)
+    pregunta44=Pregunta.objects.get(pk=44)
+    return render(request, 'aspectos.html', {"pregunta41":pregunta41, "pregunta42":pregunta42, "pregunta43":pregunta43, "pregunta44":pregunta44})
 
 def guardar_aspectos(request):
     aspectos=Respuestas_Aspectos()

@@ -1670,3 +1670,4 @@ def exportar_pdf(request,id):
     response["Content-Disposition"] = "inline; report.pdf"
     HTML(string=html).write_pdf(response)
     return response
+
