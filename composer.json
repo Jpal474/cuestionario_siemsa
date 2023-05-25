@@ -1,0 +1,8 @@
+{
+    "require": {
+        "drush/drush": "^11.5"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    }
+}
