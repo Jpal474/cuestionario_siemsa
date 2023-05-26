@@ -1458,22 +1458,29 @@ def export_users_xls(request):
 
     wb = xlwt.Workbook(encoding='utf-8')
     ws = wb.add_sheet('Evaluacion')
-    ws2 = wb.add_sheet('User')
+    ws2 = wb.add_sheet('Concluciones')
+    ws3 = wb.add_sheet('Recomendaciones')
 
     row_num = 0
     row_num2 = 0
+    row_num3 = 0
 
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
 
     columns = ['nombre','nombre_proyecto','institucion','pregunta1_1','pregunta1_2','promedio_trl1','pregunta2_1','pregunta2_2','pregunta2_3','pregunta2_4','pregunta2_5','pregunta2_6','promedio_trl2','pregunta3_1','pregunta3_2','pregunta3_3','pregunta3_4','pregunta3_5','pregunta3_6','promedio_trl3','pregunta4_1','pregunta4_2','pregunta4_3','pregunta4_4','pregunta4_5','pregunta4_6','pregunta4_7','pregunta4_8','promedio_trl4','pregunta5_1','pregunta5_2','pregunta5_3','pregunta5_4','promedio_trl5','pregunta6_0','pregunta6','pregunta6_1','pregunta6_2','pregunta6_3','pregunta6_4','pregunta6_5','promedio_trl6','pregunta7','pregunta7_1','pregunta7_2','pregunta7_3','pregunta7_4','promedio_trl7','pregunta8_1','pregunta8_2','pregunta8_3','pregunta8_4','pregunta8_5','promedio_trl8','pregunta9_1','pregunta9_2','pregunta9_3','pregunta9_4','promedio_trl9','promedio_trl_global','promedio_investigacion','promedio_desarrollo','promedio_integracion','promedio_propiedad','promedio_normatividad','promedio_manufactura','promedio_usuarios','promedio_aspectos']
     columns2 = [ 'nombre_proyecto','conclusion_investigacion','conclusion_desarrollo','conclusion_integracion','conclusion_propiedad','conclusion_normatividad','conclusion_manufactura','conclusion_usuarios','conclusion_aspectos']
+    columns3 = ['nombre_proyecto','recomendacion_investigacion','recomendacion_desarrollo','recomendacion_integracion','recomendacion_propiedad','recomendacion_normatividad','recomendacion_manufactura','recomendacion_usuarios','recomendacion_aspectos','recomendacion_pregunta1_1','recomendacion_pregunta1_2','recomendacion_pregunta2_1','recomendacion_pregunta2_2','recomendacion_pregunta2_3','recomendacion_pregunta2_4','recomendacion_pregunta2_5','recomendacion_pregunta2_6','recomendacion_pregunta3_1','recomendacion_pregunta3_2','recomendacion_pregunta3_3','recomendacion_pregunta3_4','recomendacion_pregunta3_5','recomendacion_pregunta3_6','recomendacion_pregunta4_1','recomendacion_pregunta4_2','recomendacion_pregunta4_3','recomendacion_pregunta4_4','recomendacion_pregunta4_5','recomendacion_pregunta4_6','recomendacion_pregunta4_7','recomendacion_pregunta4_8','recomendacion_pregunta5_1','recomendacion_pregunta5_2','recomendacion_pregunta5_3','recomendacion_pregunta5_4','recomendacion_pregunta6_0','recomendacion_pregunta6','recomendacion_pregunta6_1','recomendacion_pregunta6_2','recomendacion_pregunta6_3','recomendacion_pregunta6_4','recomendacion_pregunta6_5','recomendacion_pregunta7','recomendacion_pregunta7_1','recomendacion_pregunta7_2','recomendacion_pregunta7_3','recomendacion_pregunta7_4','recomendacion_pregunta8_1','recomendacion_pregunta8_2','recomendacion_pregunta8_3','recomendacion_pregunta8_4','recomendacion_pregunta8_5','recomendacion_pregunta9_1','recomendacion_pregunta9_2','recomendacion_pregunta9_3','recomendacion_pregunta9_4']
+    
     print(len(columns))
 
     for col_num in range(len(columns)):
         ws.write(row_num, col_num, columns[col_num], font_style)
     
     for col_num2 in range(len(columns2)):
+        ws2.write(row_num, col_num2, columns2[col_num2], font_style)
+
+    for col_num3 in range(len(columns3)):
         ws2.write(row_num, col_num2, columns2[col_num2], font_style)
 
     font_style = xlwt.XFStyle()
@@ -1490,7 +1497,15 @@ def export_users_xls(request):
         row_num2 += 1
         for col_num2 in range(len(row)):
             ws2.write(row_num2, col_num2, row[col_num2], font_style)
-
+    
+    
+    
+    rows3=Recomendaciones.objects.all().values_list('nombre_proyecto','recomendacion_investigacion','recomendacion_desarrollo','recomendacion_integracion','recomendacion_propiedad','recomendacion_normatividad','recomendacion_manufactura','recomendacion_usuarios','recomendacion_aspectos','recomendacion_pregunta1_1','recomendacion_pregunta1_2','recomendacion_pregunta2_1','recomendacion_pregunta2_2','recomendacion_pregunta2_3','recomendacion_pregunta2_4','recomendacion_pregunta2_5','recomendacion_pregunta2_6','recomendacion_pregunta3_1','recomendacion_pregunta3_2','recomendacion_pregunta3_3','recomendacion_pregunta3_4','recomendacion_pregunta3_5','recomendacion_pregunta3_6','recomendacion_pregunta4_1','recomendacion_pregunta4_2','recomendacion_pregunta4_3','recomendacion_pregunta4_4','recomendacion_pregunta4_5','recomendacion_pregunta4_6','recomendacion_pregunta4_7','recomendacion_pregunta4_8','recomendacion_pregunta5_1','recomendacion_pregunta5_2','recomendacion_pregunta5_3','recomendacion_pregunta5_4','recomendacion_pregunta6_0','recomendacion_pregunta6','recomendacion_pregunta6_1','recomendacion_pregunta6_2','recomendacion_pregunta6_3','recomendacion_pregunta6_4','recomendacion_pregunta6_5','recomendacion_pregunta7','recomendacion_pregunta7_1','recomendacion_pregunta7_2','recomendacion_pregunta7_3','recomendacion_pregunta7_4','recomendacion_pregunta8_1','recomendacion_pregunta8_2','recomendacion_pregunta8_3','recomendacion_pregunta8_4','recomendacion_pregunta8_5','recomendacion_pregunta9_1','recomendacion_pregunta9_2','recomendacion_pregunta9_3','recomendacion_pregunta9_4')
+    for row in rows3:
+        row_num3 += 1
+        for col_num2 in range(len(row)):
+            ws3.write(row_num3, col_num3, row[col_num3], font_style)
+    
     wb.save(response)
 
     return response
